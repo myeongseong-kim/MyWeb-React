@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function Nav() {
     return (
-        <div className="Nav">
+        <nav>
             <div className="nav-logo"> myeongseong.kim </div>
 
             <button type="button" className="nav-toggle" aria-controls="navbar-menu" aria-expanded="false">
@@ -19,7 +19,7 @@ function Nav() {
                     <li> Contact </li>
                 </ul>
             </div>
-        </div>
+        </nav>
     );
 }
 

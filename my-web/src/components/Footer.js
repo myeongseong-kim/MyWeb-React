@@ -8,8 +8,7 @@ function Footer() {
     let year = new Date().getFullYear();
 
     return (
-        <div className="Footer">
-
+        <footer>
             {/* socials: github, youtube, linkedin, instagram */}
             <div className="socials">
                 <div className="icon" onClick={() => window.open("https://github.com/MyeongseongKim", "_blank")}>
@@ -34,7 +33,7 @@ function Footer() {
             <div className="copyright">
                 © {year} Myeongseong Kim
             </div>
-        </div>
+        </footer>
     );
 }
 

@@ -3,9 +3,9 @@ import './Main.css';
 
 function Main() {
     return (
-        <div className="Main">
+        <main>
 
-        </div>
+        </main>
     );
 }
 
