@@ -16,6 +16,7 @@ footer {
     font-size: 1em;
     padding: 2em;
     color: gray;
+    white-space: nowrap;
 }
 
 .icon {
