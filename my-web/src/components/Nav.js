@@ -1,27 +1,83 @@
 import { Link } from 'react-router-dom'
+import styled from "styled-components";
 
-import './Nav.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 
+const StyledNav = styled.nav`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-size: 1.6rem;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: var(--basic-bg);
+`;
+
+const NavLogo = styled(Link)`
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    text-decoration: none;
+    &:link, :visited, :hover, :active {
+        color: black;
+    }
+`;
+
+const NavToggle = styled.button`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1em;
+    padding: 0.5em;
+    
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+`;
+
+const NavMenu = styled.div`
+    
+`;
+
+const MenuItem = styled(Link)`
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    text-decoration: none;
+    &:link, :visited, :hover, :active {
+        color: black;
+    }
+`;
+
+
 function Nav() {
     return (
-        <nav>
-            <Link to='/' className="nav-logo"> myeongseong.kim </Link>
+        <StyledNav>
+            <NavLogo to='/'> myeongseong.kim </NavLogo>
 
-            <button type="button" className="nav-toggle" aria-controls="navbar-menu" aria-expanded="false">
+            <NavToggle type="button" aria-controls="NavMenu" aria-expanded="false">
                 <FontAwesomeIcon icon={faBars} />
-            </button>
+            </NavToggle>
 
-            <div className="nav-menu">
-                <ul>
-                    <li> <Link to='/about' className='menu-item'> About </Link> </li>
-                    <li> <Link to='/projects' className='menu-item'> Projects </Link> </li>
-                    <li> <Link to='/contact' className='menu-item'> Contact </Link> </li>
-                </ul>
-            </div>
-        </nav>
+            <NavMenu>
+                <MenuItem to='/about'> About </MenuItem>
+                <MenuItem to='/projects'> Projects </MenuItem>
+                <MenuItem to='/contact'> Contact </MenuItem>
+            </NavMenu>
+        </StyledNav>
     );
 }
 
