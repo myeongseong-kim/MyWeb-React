@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import styled, { css } from "styled-components";
 
 import headerImg from '../assets/test.jpg'
@@ -44,17 +45,24 @@ const TranslucentBox = styled.div`
 `;
 
 
-function Header() {
-    return (
-        <StyledHeader>
-            {/* header image */}
-            <HeaderImg src={headerImg} />
-            {/* translucent & black box */}
-            <TranslucentBox></TranslucentBox>
-            {/* <text on header */}
-            <HeaderText>"I make, <br /> &emsp; therefore I am."</HeaderText>
-        </StyledHeader>
-    );
+class Header extends Component {
+    state = { scrollTop: 0 }
+    handleScroll = () => {
+        console.log('scroll');
+    }
+
+    render() {
+        return (
+            <StyledHeader onScroll={this.handleScroll}>
+                {/* header image */}
+                <HeaderImg src={headerImg} />
+                {/* translucent & black box */}
+                <TranslucentBox></TranslucentBox>
+                {/* <text on header */}
+                <HeaderText>"I make, <br /> &emsp; therefore I am."</HeaderText>
+            </StyledHeader>
+        );
+    }
 }
 
 export default Header;

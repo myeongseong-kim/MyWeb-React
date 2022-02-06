@@ -2,7 +2,8 @@
 
 :root {
     font-size: 62.5%;
-    --basic-bg: #f2f2f2
+    --white-smoky: #f2f2f2;
+    --yellow-daisy: #ffc500;
 }
 
 body {
@@ -14,4 +15,6 @@ body {
     
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+
+    overflow-x: hidden;
 }

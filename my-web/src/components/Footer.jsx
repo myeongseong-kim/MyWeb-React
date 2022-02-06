@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import styled, { css } from "styled-components";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +10,7 @@ const StyledFooter = styled.footer`
     font-size: 1.2rem;
     font-weight: 400;
     padding: 4em;
-    background-color: var(--basic-bg);
+    background-color: var(--white-smoky);
 `;
 
 const Socials = styled.div`
@@ -42,6 +43,8 @@ const Icon = styled.div`
 `;
 
 const Brands = styled(FontAwesomeIcon)`
+    z-index: 0;
+
     ${(props) => props.type === 'bw' &&
         css`
             position: absolute;
@@ -78,43 +81,45 @@ const Brands = styled(FontAwesomeIcon)`
                 radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
                 radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent 100%), 
                 linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-            color: var(--basic-bg);
+            color: var(--white-smoky);
         `
     }
 `;
 
 
-function Footer() {
-    let year = new Date().getFullYear();
+class Footer extends Component {
+    render() {
+        let year = new Date().getFullYear();
+        
+        return (
+            <StyledFooter>
+                {/* socials: github, youtube, linkedin, instagram */}
+                <Socials>
+                    <Icon onClick={() => window.open("https://github.com/MyeongseongKim", "_blank")}>
+                        <Brands name='github' type='color' icon={faGithub} />
+                        <Brands name='github' type='bw' icon={faGithub} />
+                    </Icon>
+                    <Icon onClick={() => window.open("https://www.youtube.com/channel/UCNO9pBEjRyb-8NW2R75SeUQ", "_blank")}>
+                        <Brands name='youtube' type='color' icon={faYoutube} />
+                        <Brands name='youtube' type='bw' icon={faYoutube} />
+                    </Icon>
+                    <Icon onClick={() => window.open("https://www.linkedin.com/in/myeongseong-kim-27a30015b", "_blank")}>
+                        <Brands name='linkedin' type='color' icon={faLinkedin} />
+                        <Brands name='linkedin' type='bw' icon={faLinkedin} />
+                    </Icon>
+                    <Icon onClick={() => window.open("https://www.instagram.com/", "_blank")}>
+                        <Brands name='instagram' type='color' icon={faInstagram} mask={faSquareFull} inverse />
+                        <Brands name='instagram' type='bw' icon={faInstagram} />
+                    </Icon>
+                </Socials>
 
-    return (
-        <StyledFooter>
-            {/* socials: github, youtube, linkedin, instagram */}
-            <Socials>
-                <Icon onClick={() => window.open("https://github.com/MyeongseongKim", "_blank")}>
-                    <Brands name='github' type='color' icon={faGithub} />
-                    <Brands name='github' type='bw' icon={faGithub} />
-                </Icon>
-                <Icon onClick={() => window.open("https://www.youtube.com/channel/UCNO9pBEjRyb-8NW2R75SeUQ", "_blank")}>
-                    <Brands name='youtube' type='color' icon={faYoutube} />
-                    <Brands name='youtube' type='bw' icon={faYoutube} />
-                </Icon>
-                <Icon onClick={() => window.open("https://www.linkedin.com/in/myeongseong-kim-27a30015b", "_blank")}>
-                    <Brands name='linkedin' type='color' icon={faLinkedin} />
-                    <Brands name='linkedin' type='bw' icon={faLinkedin} />
-                </Icon>
-                <Icon onClick={() => window.open("https://www.instagram.com/", "_blank")}>
-                    <Brands name='instagram' type='color' icon={faInstagram} mask={faSquareFull} inverse />
-                    <Brands name='instagram' type='bw' icon={faInstagram} />
-                </Icon>
-            </Socials>
-
-            {/* a copyright */}
-            <Copyright>
-                © {year} Myeongseong Kim
-            </Copyright>
-        </StyledFooter>
-    );
+                {/* a copyright */}
+                <Copyright>
+                    © {year} Myeongseong Kim
+                </Copyright>
+            </StyledFooter>
+        );
+    }
 }
 
 export default Footer;
