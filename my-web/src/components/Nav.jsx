@@ -71,11 +71,12 @@ const NavMenu = styled.div`
     z-index: -1;
 
     width: 62.5vw;
-    height: 100.0vh;
-    background: rgba(0, 0, 0, 0.8);
+    height: calc(100vh - 100%);
+    background: rgba(0, 0, 0, 0.625);
+    backdrop-filter: blur(0.25em);
 
-    position: fixed;
-    top: 0%;
+    position: absolute;
+    top: 100%;
     left: 100%;
     transform: translate(0%, 0%);
 
@@ -83,8 +84,8 @@ const NavMenu = styled.div`
 
     ${(props) => props.stateToggle === true &&
     css`
-        position: fixed;
-        top: 0%;
+        position: absolute;
+        top: 100%;
         left: 100%;
         transform: translate(-100%, 0%);
     `}
@@ -98,9 +99,10 @@ const NavMenu = styled.div`
         width: auto;
         height: auto;
         background: transparent;
+        backdrop-filter: none;
 
         position: relative;
-        top: 0%;
+        top: 100%;
         left: 0%;
         transform: translate(0%, 0%);
 
@@ -109,11 +111,17 @@ const NavMenu = styled.div`
 `;
 
 const MenuItem = styled(Link)`
+    display: flex;
+    justify-content: center;
+
     font-size: 1em;
     font-weight: 300;
-    padding: 0.5em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 
     transition: color 0.5s ease-in-out;
 
@@ -123,6 +131,13 @@ const MenuItem = styled(Link)`
     }
     &:hover, :active {
         color: var(--yellow-daisy);
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: auto;
+        padding: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
     }
 `;
 
