@@ -9,6 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     
     position: sticky;
@@ -28,9 +29,6 @@ const NavLogo = styled(Link)`
     margin-right: 0.5em;
 
     text-decoration: none;
-
-    transition: color 0.5s ease-in-out;
-
     &:link, :visited, :hover, :active  {
         color: white;
     }
@@ -38,28 +36,40 @@ const NavLogo = styled(Link)`
 
 const NavToggle = styled.button`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
 
     font-size: 1.25em;
     padding: 0.5em;
     margin-left: 0.5em;
     margin-right: 0.5em;
+
+    width: 2em;
+    height: 2em;
     
     cursor: pointer;
     border: none;
     background: transparent;
     color: white;
 
-    ${(props) => props.stateToggle === true &&
-    css`
-        color: white;
-    `}
-
     @media screen and (min-width: 1024px) {
         display: none;
     }
+`;
+
+const DotBar = styled.div`
+    width: 12.5%;
+    height: 12.5%;
+    background-color: white;
+
+    transition: width 0.5s ease-in-out;
+
+    ${(props) => props.stateToggle === true &&
+    css`
+        width: 100%;
+    `}
+
 `;
 
 const NavMenu = styled.div`
@@ -68,13 +78,11 @@ const NavMenu = styled.div`
     flex-direction: column;
     align-items: center;
 
-    z-index: -1;
-
     width: 62.5vw;
     height: calc(100vh - 100%);
     background: rgba(0, 0, 0, 0.625);
     backdrop-filter: blur(0.25em);
-
+    
     position: absolute;
     top: 100%;
     left: 100%;
@@ -141,6 +149,24 @@ const MenuItem = styled(Link)`
     }
 `;
 
+const FakeBox = styled.div`
+    display: none;
+
+    width: 37.5vw;
+    height: 100%;
+    background: transparent;
+       
+    position: absolute;
+    top: 0%;
+    right: 100%;
+    transform: translate(0%, 0%);
+
+    ${(props) => props.stateToggle === true &&
+    css`
+        display: block;
+    `}
+`;
+
 
 class Nav extends Component {
     state = { clicked: false }
@@ -160,13 +186,17 @@ class Nav extends Component {
                     // type="button" aria-controls="NavMenu" aria-expanded="false"
                     onClick={this.handleToggle}
                 >
-                    <FontAwesomeIcon icon={faBars} />
+                    {/* <FontAwesomeIcon icon={faBars} /> */}
+                    <DotBar stateToggle={this.state.clicked}> </DotBar>
+                    <DotBar stateToggle={this.state.clicked}> </DotBar>
+                    <DotBar stateToggle={this.state.clicked}> </DotBar>
                 </NavToggle>
 
                 <NavMenu stateToggle={this.state.clicked}>
                     <MenuItem to='/about' onClick={this.closeMenu}> About </MenuItem>
                     <MenuItem to='/projects' onClick={this.closeMenu}> Projects </MenuItem>
                     <MenuItem to='/contact' onClick={this.closeMenu}> Contact </MenuItem>
+                    <FakeBox stateToggle={this.state.clicked} onClick={this.closeMenu}></FakeBox>
                 </NavMenu>
             </StyledNav>
         );
