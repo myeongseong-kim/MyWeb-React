@@ -45,24 +45,21 @@ const TranslucentBox = styled.div`
 `;
 
 
-class Header extends Component {
-    state = { scrollTop: 0 }
-    handleScroll = () => {
+function Header() {
+    const handleScroll = () => {
         console.log('scroll');
     }
 
-    render() {
-        return (
-            <StyledHeader onScroll={this.handleScroll}>
-                {/* header image */}
-                <HeaderImg src={headerImg} />
-                {/* translucent & black box */}
-                <TranslucentBox></TranslucentBox>
-                {/* <text on header */}
-                <HeaderText>"I make, <br /> &emsp; therefore I am."</HeaderText>
-            </StyledHeader>
-        );
-    }
+    return (
+        <StyledHeader onScroll={handleScroll}>
+            {/* header image */}
+            <HeaderImg src={headerImg} />
+            {/* translucent & black box */}
+            <TranslucentBox></TranslucentBox>
+            {/* <text on header */}
+            <HeaderText>"I make, <br /> &emsp; therefore I am."</HeaderText>
+        </StyledHeader>
+    );
 }
 
 export default Header;

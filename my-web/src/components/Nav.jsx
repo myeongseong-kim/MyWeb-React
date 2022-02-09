@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import React, { useState, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom'
 import styled, { css } from "styled-components";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 
 const StyledNav = styled.nav`
@@ -69,7 +66,6 @@ const DotBar = styled.div`
     css`
         width: 100%;
     `}
-
 `;
 
 const NavMenu = styled.div`
@@ -168,39 +164,40 @@ const FakeBox = styled.div`
 `;
 
 
-class Nav extends Component {
-    state = { clicked: false }
-    handleToggle = () => {
-        this.setState({ clicked: !this.state.clicked });
+function Nav() {  
+    const [toggle, setToggle] = useState(false);
+    const handleToggle = () => {
+        setToggle(!toggle);
     }
-    closeMenu = () => {
-        this.setState({ clicked: false });
+    const closeMenu = () => {
+        setToggle(false);
     }
 
-    render() {
-        return (
-            <StyledNav>
-                <NavLogo to='/' onClick={this.closeMenu}> Myeongseong Kim </NavLogo>
+    const location = useLocation();
+    const chapter = location.pathname.split("/")[1];
+    console.log(chapter);
 
-                <NavToggle stateToggle={this.state.clicked}
-                    // type="button" aria-controls="NavMenu" aria-expanded="false"
-                    onClick={this.handleToggle}
-                >
-                    {/* <FontAwesomeIcon icon={faBars} /> */}
-                    <DotBar stateToggle={this.state.clicked}> </DotBar>
-                    <DotBar stateToggle={this.state.clicked}> </DotBar>
-                    <DotBar stateToggle={this.state.clicked}> </DotBar>
-                </NavToggle>
+    return (
+        <StyledNav>
+            <NavLogo to='/' onClick={closeMenu}> Myeongseong Kim </NavLogo>
 
-                <NavMenu stateToggle={this.state.clicked}>
-                    <MenuItem to='/about' onClick={this.closeMenu}> About </MenuItem>
-                    <MenuItem to='/projects' onClick={this.closeMenu}> Projects </MenuItem>
-                    <MenuItem to='/contact' onClick={this.closeMenu}> Contact </MenuItem>
-                    <FakeBox stateToggle={this.state.clicked} onClick={this.closeMenu}></FakeBox>
-                </NavMenu>
-            </StyledNav>
-        );
-    }
+            <NavToggle stateToggle={toggle}
+                // type="button" aria-controls="NavMenu" aria-expanded="false"
+                onClick={handleToggle}
+            >
+                <DotBar stateToggle={toggle}> </DotBar>
+                <DotBar stateToggle={toggle}> </DotBar>
+                <DotBar stateToggle={toggle}> </DotBar>
+            </NavToggle>
+
+            <NavMenu stateToggle={toggle}>
+                <MenuItem to='/about' onClick={closeMenu}> About </MenuItem>
+                <MenuItem to='/projects' onClick={closeMenu}> Projects </MenuItem>
+                <MenuItem to='/contact' onClick={closeMenu}> Contact </MenuItem>
+                <FakeBox stateToggle={toggle} onClick={closeMenu}></FakeBox>
+            </NavMenu>
+        </StyledNav>
+    );
 }
 
 export default Nav;
