@@ -53,6 +53,7 @@ const Brands = styled(FontAwesomeIcon)`
             transform: translate(-50%, -50%);
 
             color: gray;
+            background: var(--white-smoky);
             opacity: 1;
             transition: opacity 0.5s ease-in-out;
 
@@ -62,13 +63,13 @@ const Brands = styled(FontAwesomeIcon)`
         `
     }
     ${(props) => (props.type === 'color' && props.name === 'github') &&
-        css` color: #24292f; `
+        css` color: #24292f; background: var(--white-smoky); `
     }
     ${(props) => (props.type === 'color' && props.name === 'youtube') &&
-        css` color: #ff0000; `
+        css` color: #ff0000; background: var(--white-smoky); `
     }
     ${(props) => (props.type === 'color' && props.name === 'linkedin') &&
-        css` color: #2867b2; `
+        css` color: #2867b2; background: var(--white-smoky); `
     }
     ${(props) => (props.type === 'color' && props.name === 'instagram') &&
         css` 

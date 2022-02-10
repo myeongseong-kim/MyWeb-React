@@ -134,7 +134,6 @@ const MenuItem = styled(Link)`
     }
     border-bottom: 0.5px solid gray;
 
-
     @media screen and (min-width: 1024px) {
         width: auto;
         padding: 0.5em;
@@ -160,7 +159,6 @@ const MenuItem = styled(Link)`
         css`
             color: var(--yellow-daisy);
             text-shadow: 
-                0em 0em 0.5em currentColor, 
                 0em 0em 0.25em currentColor,
                 0em 0em 0.125em currentColor;
         `}
@@ -168,7 +166,6 @@ const MenuItem = styled(Link)`
     &:hover, :active {
         color: var(--yellow-daisy);
     }
-
 `;
 
 const FakeBox = styled.div`
