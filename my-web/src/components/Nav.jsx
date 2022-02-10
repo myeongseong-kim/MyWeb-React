@@ -14,7 +14,7 @@ const StyledNav = styled.nav`
     z-index: 1;
 
     font-size: 1.6rem;
-    padding: 0.5em 0em;
+    padding: 0.5em;
     background-color: black;
 `;
 
@@ -56,11 +56,14 @@ const NavToggle = styled.button`
 `;
 
 const DotBar = styled.div`
+    font-size: 0.125em;
     width: 12.5%;
     height: 12.5%;
     background-color: white;
+    border-radius: 0.25em;
 
     transition: width 0.5s ease-in-out;
+    transition-delay: 0.25s;
 
     ${(props) => props.stateToggle === true &&
     css`
@@ -85,6 +88,7 @@ const NavMenu = styled.div`
     transform: translate(0%, 0%);
 
     transition: transform 0.5s ease-in-out;
+    transition-delay: 0.25s;
 
     ${(props) => props.stateToggle === true &&
     css`
@@ -121,28 +125,50 @@ const MenuItem = styled(Link)`
     font-size: 1em;
     font-weight: 300;
 
-    width: 100%;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    width: 50%;
+    padding: 1em;
+    margin: 0em;
 
-    transition: color 0.5s ease-in-out;
+    &:first-child {
+        border-top: 0.5px solid gray;
+    }
+    border-bottom: 0.5px solid gray;
+
+
+    @media screen and (min-width: 1024px) {
+        width: auto;
+        padding: 0.5em;
+        margin-top: 0em;
+        margin-bottom: 0em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+
+        &:first-child {
+            border: none;
+        }
+        border: none;
+    }
+
+    transition: 
+        color 0.5s ease-in-out,
+        text-shadow 0.5s ease-in-out;
 
     text-decoration: none;
     &:link, :visited {
         color: white;
+        ${(props) => props.to === props.chapter &&
+        css`
+            color: var(--yellow-daisy);
+            text-shadow: 
+                0em 0em 0.5em currentColor, 
+                0em 0em 0.25em currentColor,
+                0em 0em 0.125em currentColor;
+        `}
     }
     &:hover, :active {
         color: var(--yellow-daisy);
     }
 
-    @media screen and (min-width: 1024px) {
-        width: auto;
-        padding: 0.5em;
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-    }
 `;
 
 const FakeBox = styled.div`
@@ -174,15 +200,14 @@ function Nav() {
     }
 
     const location = useLocation();
-    const chapter = location.pathname.split("/")[1];
-    console.log(chapter);
+    const chapter = '/' + location.pathname.split('/')[1];
+    // console.log(chapter);
 
     return (
         <StyledNav>
             <NavLogo to='/' onClick={closeMenu}> Myeongseong Kim </NavLogo>
 
             <NavToggle stateToggle={toggle}
-                // type="button" aria-controls="NavMenu" aria-expanded="false"
                 onClick={handleToggle}
             >
                 <DotBar stateToggle={toggle}> </DotBar>
@@ -191,9 +216,9 @@ function Nav() {
             </NavToggle>
 
             <NavMenu stateToggle={toggle}>
-                <MenuItem to='/about' onClick={closeMenu}> About </MenuItem>
-                <MenuItem to='/projects' onClick={closeMenu}> Projects </MenuItem>
-                <MenuItem to='/contact' onClick={closeMenu}> Contact </MenuItem>
+                <MenuItem to='/about' chapter={chapter} onClick={closeMenu}> About </MenuItem>
+                <MenuItem to='/projects' chapter={chapter} onClick={closeMenu}> Projects </MenuItem>
+                <MenuItem to='/contact' chapter={chapter} onClick={closeMenu}> Contact </MenuItem>
                 <FakeBox stateToggle={toggle} onClick={closeMenu}></FakeBox>
             </NavMenu>
         </StyledNav>
