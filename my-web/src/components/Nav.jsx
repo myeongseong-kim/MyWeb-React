@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom'
 import styled, { css } from "styled-components";
 
@@ -58,46 +58,61 @@ const NavToggle = styled.button`
 const DotBar = styled.div`
     font-size: 0.125em;
     width: 12.5%;
-    height: 12.5%;
-    background-color: white;
-    border-radius: 0.25em;
-
-    transition: width 0.5s ease-in-out;
-    transition-delay: 0.25s;
-
     ${(props) => props.stateToggle === true &&
     css`
         width: 100%;
     `}
+    height: 12.5%;
+
+    border-radius: 0.25em;
+    background-color: white;
+
+    transition: width 0.5s ease-in-out;
 `;
 
 const NavMenu = styled.div`
+    width: 100vw;
+    height: calc(100vh - 100%);
+    overflow-x: hidden;
+    
+    position: absolute;
+    top: 100%;
+    left: 0%;
+
+    @media screen and (min-width: 1024px) {
+        width: auto;
+        height: auto;
+        overflow-x: auto;
+
+        position: relative;
+        top: 100%;
+        left: 0%;
+    }
+`;
+
+
+const MenuList = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 
-    width: 62.5vw;
-    height: calc(100vh - 100%);
+    width: 62.5%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.625);
     backdrop-filter: blur(0.25em);
-    
+
     position: absolute;
-    top: 100%;
+    top: 0%;
     left: 100%;
     transform: translate(0%, 0%);
-
-    transition: transform 0.5s ease-in-out;
-    transition-delay: 0.25s;
-
     ${(props) => props.stateToggle === true &&
     css`
-        position: absolute;
-        top: 100%;
-        left: 100%;
         transform: translate(-100%, 0%);
     `}
 
+    transition: transform 0.5s ease-in-out;
+    
     @media screen and (min-width: 1024px) {
         display: flex;
         justify-content: center;
@@ -170,6 +185,10 @@ const MenuItem = styled(Link)`
 
 const FakeBox = styled.div`
     display: none;
+    ${(props) => props.stateToggle === true &&
+    css`
+        display: block;
+    `}
 
     width: 37.5vw;
     height: 100%;
@@ -180,10 +199,6 @@ const FakeBox = styled.div`
     right: 100%;
     transform: translate(0%, 0%);
 
-    ${(props) => props.stateToggle === true &&
-    css`
-        display: block;
-    `}
 `;
 
 
@@ -212,11 +227,13 @@ function Nav() {
                 <DotBar stateToggle={toggle}> </DotBar>
             </NavToggle>
 
-            <NavMenu stateToggle={toggle}>
-                <MenuItem to='/about' chapter={chapter} onClick={closeMenu}> About </MenuItem>
-                <MenuItem to='/projects' chapter={chapter} onClick={closeMenu}> Projects </MenuItem>
-                <MenuItem to='/contact' chapter={chapter} onClick={closeMenu}> Contact </MenuItem>
-                <FakeBox stateToggle={toggle} onClick={closeMenu}></FakeBox>
+            <NavMenu>
+                <MenuList stateToggle={toggle}>
+                    <MenuItem to='/about' chapter={chapter} onClick={closeMenu}> About </MenuItem>
+                    <MenuItem to='/projects' chapter={chapter} onClick={closeMenu}> Projects </MenuItem>
+                    <MenuItem to='/contact' chapter={chapter} onClick={closeMenu}> Contact </MenuItem>
+                    <FakeBox stateToggle={toggle} onClick={closeMenu}></FakeBox>
+                </MenuList>
             </NavMenu>
         </StyledNav>
     );

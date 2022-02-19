@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled, { css } from "styled-components";
 
 import headerImg from '../assets/test.jpg'
@@ -47,8 +47,9 @@ const TranslucentBox = styled.div`
 
 function Header() {
     const handleScroll = () => {
-        console.log('scroll');
+        console.log(window.scrollY);
     }
+    window.addEventListener('scroll', handleScroll);
 
     return (
         <StyledHeader onScroll={handleScroll}>
