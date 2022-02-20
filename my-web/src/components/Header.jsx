@@ -46,8 +46,37 @@ const TranslucentBox = styled.div`
 
 
 function Header() {
-    const handleScroll = () => {
-        console.log(window.scrollY);
+    let onSnapping = false;
+    const snapTo = (y) => {
+        if (!onSnapping) {
+            onSnapping = true;
+            console.log("Snap to : " + y);
+            window.scrollTo({
+                top: y,
+                behavior: 'smooth'
+            });
+        }
+        if (Math.round(window.scrollY) === y) {
+            onSnapping = false;
+            console.log("Snap end");
+        }
+    }
+
+    let lastScrollY = window.scrollY;
+    const handleScroll = () => {       
+        const threshold = 0;
+        var delta = window.scrollY - lastScrollY;
+        if (window.scrollY <= window.innerHeight && window.scrollY >= 0) {
+            if (delta > +threshold) {
+                // console.log("Snap Down");
+                snapTo(window.innerHeight);
+            }
+            else if (delta < -threshold) {
+                // console.log("Snap Up");
+                snapTo(0);
+            }
+        }
+        lastScrollY = window.scrollY;
     }
     window.addEventListener('scroll', handleScroll);
 
