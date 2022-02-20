@@ -71,6 +71,16 @@ const DotBar = styled.div`
 `;
 
 const NavMenu = styled.div`
+    visibility: hidden;
+    transition: visibility 0.0s ease-in-out;
+    transition-delay: 0.5s;
+    ${(props) => props.stateToggle === true &&
+    css`
+        visibility: visible;
+        transition: visibility 0.0s ease-in-out;
+        transition-delay: 0.0s;
+    `}
+    
     width: 100vw;
     height: calc(100vh - 100%);
     overflow-x: hidden;
@@ -227,7 +237,7 @@ function Nav() {
                 <DotBar stateToggle={toggle}> </DotBar>
             </NavToggle>
 
-            <NavMenu>
+            <NavMenu stateToggle={toggle}>
                 <MenuList stateToggle={toggle}>
                     <MenuItem to='/about' chapter={chapter} onClick={closeMenu}> About </MenuItem>
                     <MenuItem to='/projects' chapter={chapter} onClick={closeMenu}> Projects </MenuItem>
