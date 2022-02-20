@@ -49,36 +49,49 @@ function Header() {
     let onSnapping = false;
     const snapTo = (y) => {
         if (!onSnapping) {
-            onSnapping = true;
-            console.log("Snap to : " + y);
             window.scrollTo({
                 top: y,
                 behavior: 'smooth'
             });
+            console.log("Snap to : " + y);
         }
         if (Math.round(window.scrollY) === y) {
             onSnapping = false;
-            console.log("Snap end");
+            // console.log("Snap end");
         }
     }
-
+    
+    const threshold = 0.25;
     let lastScrollY = window.scrollY;
-    const handleScroll = () => {       
-        const threshold = 0;
+    const handleScroll = () => {
         var delta = window.scrollY - lastScrollY;
+        // console.log(delta);
+
         if (window.scrollY <= window.innerHeight && window.scrollY >= 0) {
-            if (delta > +threshold) {
-                // console.log("Snap Down");
-                snapTo(window.innerHeight);
+            if (delta > 0) {
+                if (window.scrollY > threshold * window.innerHeight) {
+                    snapTo(window.innerHeight);
+                }
+                else  snapTo(0);
             }
-            else if (delta < -threshold) {
-                // console.log("Snap Up");
-                snapTo(0);
+            else if (delta < 0) {
+                if (window.scrollY < (1 - threshold) * window.innerHeight) {
+                    snapTo(0);
+                }
+                else  snapTo(window.innerHeight);
             }
         }
         lastScrollY = window.scrollY;
     }
-    window.addEventListener('scroll', handleScroll);
+
+    var timer = null;
+    window.addEventListener('scroll', function() {
+        if(timer !== null) {
+            clearTimeout(timer);        
+        }
+        timer = setTimeout(handleScroll, 125);
+    }, false);
+
 
     return (
         <StyledHeader onScroll={handleScroll}>
