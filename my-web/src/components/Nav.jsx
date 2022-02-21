@@ -90,6 +90,8 @@ const NavMenu = styled.div`
     left: 0%;
 
     @media screen and (min-width: 1024px) {
+        visibility: visible;
+        
         width: auto;
         height: auto;
         overflow-x: auto;
