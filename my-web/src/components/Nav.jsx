@@ -210,7 +210,6 @@ const FakeBox = styled.div`
     top: 0%;
     right: 100%;
     transform: translate(0%, 0%);
-
 `;
 
 
@@ -244,7 +243,7 @@ function Nav() {
                     <MenuItem to='/about' chapter={chapter} onClick={closeMenu}> About </MenuItem>
                     <MenuItem to='/projects' chapter={chapter} onClick={closeMenu}> Projects </MenuItem>
                     <MenuItem to='/contact' chapter={chapter} onClick={closeMenu}> Contact </MenuItem>
-                    <FakeBox stateToggle={toggle} onClick={closeMenu}></FakeBox>
+                    <FakeBox stateToggle={toggle} onPointerDown={closeMenu}></FakeBox>
                 </MenuList>
             </NavMenu>
         </StyledNav>
