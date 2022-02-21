@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled, { css } from "styled-components";
 
 import headerImg from '../assets/test.jpg'
@@ -46,6 +46,14 @@ const TranslucentBox = styled.div`
 
 
 function Header() {
+    const [height, setHeight] = useState(0);
+    const headerRef = useRef(null);
+
+    useEffect(() => {
+        setHeight(headerRef.current.clientHeight);
+        // console.log(height);
+    })
+
     let onSnapping = false;
     const snapTo = (y) => {
         if (!onSnapping) {
@@ -53,7 +61,7 @@ function Header() {
                 top: y,
                 behavior: 'smooth'
             });
-            console.log("Snap to : " + y);
+            // console.log("Snap to : " + y);
         }
         if (Math.round(window.scrollY) === y) {
             onSnapping = false;
@@ -67,18 +75,18 @@ function Header() {
         var delta = window.scrollY - lastScrollY;
         // console.log(delta);
 
-        if (window.scrollY <= window.innerHeight && window.scrollY >= 0) {
+        if (window.scrollY <= height && window.scrollY >= 0) {
             if (delta > 0) {
-                if (window.scrollY > threshold * window.innerHeight) {
-                    snapTo(window.innerHeight);
+                if (window.scrollY > threshold * height) {
+                    snapTo(height);
                 }
                 else  snapTo(0);
             }
             else if (delta < 0) {
-                if (window.scrollY < (1 - threshold) * window.innerHeight) {
+                if (window.scrollY < (1 - threshold) * height) {
                     snapTo(0);
                 }
-                else  snapTo(window.innerHeight);
+                else  snapTo(height);
             }
         }
         lastScrollY = window.scrollY;
@@ -94,7 +102,7 @@ function Header() {
 
 
     return (
-        <StyledHeader onScroll={handleScroll}>
+        <StyledHeader ref={headerRef} onScroll={handleScroll}>
             {/* header image */}
             <HeaderImg src={headerImg} />
             {/* translucent & black box */}
