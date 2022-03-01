@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { css } from "styled-components";
 
-import headerImg from '../assets/test.jpg'
+import headerImg from '../assets/test.jpg';
 
 
 const StyledHeader = styled.header`

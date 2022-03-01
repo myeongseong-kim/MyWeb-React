@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { css } from "styled-components";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faYoutube, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faSquareFull } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faYoutube, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
 
 
 const StyledFooter = styled.footer`
