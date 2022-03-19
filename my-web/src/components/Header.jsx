@@ -46,13 +46,13 @@ const TranslucentBox = styled.div`
 
 
 function Header() {
-    const [height, setHeight] = useState(0);
     const headerRef = useRef(null);
-
-    useEffect(() => {
-        setHeight(headerRef.current.clientHeight);
-        // console.log(height);
-    })
+    
+    let height;
+    const handleResize = () => {
+        height = headerRef.current.clientHeight;
+        console.log(height);
+    }
 
     let onSnapping = false;
     const snapTo = (y) => {
@@ -61,7 +61,7 @@ function Header() {
                 top: y,
                 behavior: 'smooth'
             });
-            // console.log("Snap to : " + y);
+            console.log("Snap to : " + y);
         }
         if (Math.round(window.scrollY) === y) {
             onSnapping = false;
@@ -73,8 +73,6 @@ function Header() {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
         var delta = window.scrollY - lastScrollY;
-        // console.log(delta);
-
         if (window.scrollY <= height && window.scrollY >= 0) {
             if (delta > 0) {
                 if (window.scrollY > threshold * height) {
@@ -92,13 +90,20 @@ function Header() {
         lastScrollY = window.scrollY;
     }
 
-    var timer = null;
-    window.addEventListener('scroll', function() {
-        if(timer !== null) {
-            clearTimeout(timer);        
-        }
-        timer = setTimeout(handleScroll, 125);
-    }, false);
+    useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', () => {
+            handleResize();
+        });
+
+        var timer = null;
+        window.addEventListener('scroll', () => {
+            if(timer !== null) {
+                clearTimeout(timer);        
+            }
+            timer = setTimeout(handleScroll, 125);
+        }, false);
+    })    
 
 
     return (
