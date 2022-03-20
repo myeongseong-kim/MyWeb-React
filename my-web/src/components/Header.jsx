@@ -51,7 +51,7 @@ function Header() {
     let height;
     const handleResize = () => {
         height = headerRef.current.clientHeight;
-        console.log(height);
+        // console.log(height);
     }
 
     let onSnapping = false;
@@ -61,7 +61,7 @@ function Header() {
                 top: y,
                 behavior: 'smooth'
             });
-            console.log("Snap to : " + y);
+            // console.log("Snap to : " + y);
         }
         if (Math.round(window.scrollY) === y) {
             onSnapping = false;
