@@ -55,18 +55,14 @@ function Header() {
     }
 
     let onSnapping = false;
+
     const snapTo = (y) => {
-        if (!onSnapping) {
-            window.scrollTo({
-                top: y,
-                behavior: 'smooth'
-            });
-            // console.log("Snap to : " + y);
-        }
-        if (Math.round(window.scrollY) === y) {
-            onSnapping = false;
-            // console.log("Snap end");
-        }
+        onSnapping = true;
+        console.log("Snap to : " + y);
+        window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+        });
     }
     
     const threshold = 0.25;
@@ -87,7 +83,7 @@ function Header() {
                 else  snapTo(height);
             }
         }
-        lastScrollY = window.scrollY;
+        lastScrollY = window.scrollY; 
     }
 
     useEffect(() => {
@@ -96,18 +92,27 @@ function Header() {
             handleResize();
         });
 
-        var timer = null;
-        window.addEventListener('scroll', () => {
-            if(timer !== null) {
-                clearTimeout(timer);        
+        var timer1 = null;
+        window.addEventListener('wheel', () => {
+            if(timer1 !== null) {
+                clearTimeout(timer1);        
             }
-            timer = setTimeout(handleScroll, 125);
+            timer1 = setTimeout(handleScroll, 250);
+        }, false);
+
+        var timer2 = null
+        window.addEventListener('touchmove', () => {
+            if(timer2 !== null) {
+                clearTimeout(timer2);        
+            }
+            timer2 = setTimeout(handleScroll, 250);
         }, false);
     })    
 
 
     return (
-        <StyledHeader ref={headerRef} onScroll={handleScroll}>
+        // <StyledHeader ref={headerRef} onScroll={handleScroll}>
+        <StyledHeader ref={headerRef}>
             {/* header image */}
             <HeaderImg src={headerImg} />
             {/* translucent & black box */}

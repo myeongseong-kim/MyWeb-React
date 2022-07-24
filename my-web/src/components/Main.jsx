@@ -14,6 +14,8 @@ const StyledMain = styled.main`
     justify-content: center;
     flex-direction: row;
     align-items: center;
+
+    margin: 20px;
 `;
 
 
