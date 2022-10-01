@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef, forwardRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
@@ -9,25 +9,44 @@ const StyledNav = styled.nav`
     flex-direction: row;
     align-items: center;
     
-    position: sticky;
+    position: absolute;
     top: 0%;
+    left: 0%;
+    right: 0%;
     z-index: 1;
 
     font-size: 1.6rem;
     padding: 0.5em;
-    background-color: black;
+
+    background-color: rgba(0, 0, 0, 0);
 `;
 
 const NavLogo = styled(Link)`
-    font-size: 1.25em;
-    font-weight: 500;
+    font-family: 'Zen Kaku Gothic New';
+    font-size: 1.5em;
+    font-weight: 300;
+    
     padding: 0.5em;
     margin-left: 0.5em;
     margin-right: 0.5em;
 
+    transition: 
+        color 0.5s ease-in-out,
+        text-shadow 0.5s ease-in-out;
+
     text-decoration: none;
-    &:link, :visited, :hover, :active  {
+    &:link, :visited {
         color: white;
+        ${(props) => props.to === props.chapter &&
+        css`
+            color: var(--yellow-daisy);
+            text-shadow: 
+                /* 0em 0em 0.25em currentColor, */
+                0em 0em 0.125em currentColor;
+        `}
+    }
+    &:hover, :active {
+        color: var(--yellow-daisy);
     }
 `;
 
@@ -36,6 +55,8 @@ const NavToggle = styled.button`
     justify-content: space-between;
     flex-direction: column;
     align-items: end;
+
+    z-index: 2;
 
     font-size: 1.25em;
     padding: 0.5em;
@@ -58,13 +79,13 @@ const NavToggle = styled.button`
 const DotBar = styled.div`
     font-size: 0.125em;
     width: 12.5%;
+    height: 6.25%;
     ${(props) => props.stateToggle === true &&
     css`
         width: 100%;
     `}
-    height: 12.5%;
 
-    border-radius: 0.25em;
+    border-radius: 0.125em;
     background-color: white;
 
     transition: width 0.5s ease-in-out;
@@ -82,11 +103,15 @@ const NavMenu = styled.div`
     `}
     
     width: 100vw;
-    height: calc(100vh - 100%);
+    height: 100vh;
     overflow-x: hidden;
     
+    padding: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    
     position: absolute;
-    top: 100%;
+    top: 0%;
     left: 0%;
 
     @media screen and (min-width: 1024px) {
@@ -186,7 +211,7 @@ const MenuItem = styled(Link)`
         css`
             color: var(--yellow-daisy);
             text-shadow: 
-                0em 0em 0.25em currentColor,
+                /* 0em 0em 0.25em currentColor, */
                 0em 0em 0.125em currentColor;
         `}
     }
@@ -213,7 +238,7 @@ const FakeBox = styled.div`
 `;
 
 
-function Nav() {  
+const Nav = forwardRef((props, ref) => {
     const [toggle, setToggle] = useState(false);
     const handleToggle = () => {
         setToggle(!toggle);
@@ -227,8 +252,9 @@ function Nav() {
     // console.log(chapter);
 
     return (
-        <StyledNav>
-            <NavLogo to='/' onClick={closeMenu}> Myeongseong Kim </NavLogo>
+        <StyledNav ref={ref}>
+            {/* <NavLogo to='/' chapter={chapter} onClick={closeMenu}> MYEONGSEONG KIM </NavLogo> */}
+            <NavLogo to='/' chapter={chapter} onClick={closeMenu}> 明星 </NavLogo>
 
             <NavToggle stateToggle={toggle}
                 onClick={handleToggle}
@@ -240,14 +266,14 @@ function Nav() {
 
             <NavMenu stateToggle={toggle}>
                 <MenuList stateToggle={toggle}>
-                    <MenuItem to='/about' chapter={chapter} onClick={closeMenu}> About </MenuItem>
-                    <MenuItem to='/projects' chapter={chapter} onClick={closeMenu}> Projects </MenuItem>
-                    <MenuItem to='/contact' chapter={chapter} onClick={closeMenu}> Contact </MenuItem>
+                    <MenuItem to='/about' chapter={chapter} onClick={closeMenu}> ABOUT </MenuItem>
+                    <MenuItem to='/projects' chapter={chapter} onClick={closeMenu}> PROJECTS </MenuItem>
+                    <MenuItem to='/contact' chapter={chapter} onClick={closeMenu}> CONTACT </MenuItem>
                     <FakeBox stateToggle={toggle} onPointerDown={closeMenu}></FakeBox>
                 </MenuList>
             </NavMenu>
         </StyledNav>
     );
-}
+});
 
 export default Nav;

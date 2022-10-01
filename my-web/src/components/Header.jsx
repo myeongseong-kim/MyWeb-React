@@ -1,18 +1,42 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef, forwardRef } from 'react';
 import styled, { css } from "styled-components";
 
+import Nav from './Nav';
 import headerImg from '../assets/test.jpg';
 
 
 const StyledHeader = styled.header`
-    position: relative;
+    position: sticky;
+    top: 0%;
     width: 100vw;
     height: 100vh;
+    z-index: 1;
+
+    ${(props) => props.snap === true &&
+    css`
+        height: ${(props) => props.thickness}px;
+    `}
+
+    transition: height 0.5s ease-in-out;
+`;
+
+const ImgBox = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
 `;
 
 const HeaderImg = styled.img`
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
     object-fit: cover;
 `;
 
@@ -30,6 +54,14 @@ const HeaderText = styled.div`
     padding: 0.5em;
 
     color: white;
+    opacity: 1.0;
+
+    ${(props) => props.snap === true &&
+    css`
+        opacity: 0;
+    `}
+
+    transition: opacity 0.5s ease-in-out;
 `;
 
 const TranslucentBox = styled.div`
@@ -41,84 +73,38 @@ const TranslucentBox = styled.div`
     height: 100%;
 
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.625;
+
+    ${(props) => props.snap === true &&
+    css`
+        opacity: 1.0;
+    `}
+
+    transition: opacity 0.5s ease-in-out;
 `;
 
 
-function Header() {
-    const headerRef = useRef(null);
+const Header = (props) => {
+    const navRef = useRef();
+    let navHeight;
+    const [thickness, setThickness] = useState(0);
     
-    let height;
-    const handleResize = () => {
-        height = headerRef.current.clientHeight;
-        // console.log(height);
-    }
-
-    let onSnapping = false;
-
-    const snapTo = (y) => {
-        onSnapping = true;
-        console.log("Snap to : " + y);
-        window.scrollTo({
-            top: y,
-            behavior: 'smooth'
-        });
-    }
-    
-    const threshold = 0.25;
-    let lastScrollY = window.scrollY;
-    const handleScroll = () => {
-        var delta = window.scrollY - lastScrollY;
-        if (window.scrollY <= height && window.scrollY >= 0) {
-            if (delta > 0) {
-                if (window.scrollY > threshold * height) {
-                    snapTo(height);
-                }
-                else  snapTo(0);
-            }
-            else if (delta < 0) {
-                if (window.scrollY < (1 - threshold) * height) {
-                    snapTo(0);
-                }
-                else  snapTo(height);
-            }
-        }
-        lastScrollY = window.scrollY; 
-    }
-
-    useEffect(() => {
-        handleResize();
-        window.addEventListener('resize', () => {
-            handleResize();
-        });
-
-        var timer1 = null;
-        window.addEventListener('wheel', () => {
-            if(timer1 !== null) {
-                clearTimeout(timer1);        
-            }
-            timer1 = setTimeout(handleScroll, 250);
-        }, false);
-
-        var timer2 = null
-        window.addEventListener('touchmove', () => {
-            if(timer2 !== null) {
-                clearTimeout(timer2);        
-            }
-            timer2 = setTimeout(handleScroll, 250);
-        }, false);
-    })    
-
+    useEffect (() => {
+        navHeight = navRef.current.clientHeight;
+        setThickness(navHeight);
+        // console.log(thickness);
+    });
 
     return (
-        // <StyledHeader ref={headerRef} onScroll={handleScroll}>
-        <StyledHeader ref={headerRef}>
-            {/* header image */}
-            <HeaderImg src={headerImg} />
-            {/* translucent & black box */}
-            <TranslucentBox></TranslucentBox>
-            {/* <text on header */}
-            <HeaderText>"I make, <br /> &emsp; therefore I am."</HeaderText>
+        <StyledHeader snap={props.snap} thickness={thickness}>
+            <ImgBox> 
+                <HeaderImg src={headerImg} />
+            </ImgBox>
+            <TranslucentBox snap={props.snap}></TranslucentBox>
+            <HeaderText snap={props.snap}>
+                "I make, <br /> &emsp; therefore I am."
+            </HeaderText>
+            <Nav ref={navRef} />
         </StyledHeader>
     );
 }

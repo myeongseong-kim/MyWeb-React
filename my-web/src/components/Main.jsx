@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import styled, { css } from "styled-components";
@@ -19,8 +19,7 @@ const StyledMain = styled.main`
 `;
 
 
-function Main() {
-   
+const Main = () => {
     return (
         <StyledMain>
             <Routes>

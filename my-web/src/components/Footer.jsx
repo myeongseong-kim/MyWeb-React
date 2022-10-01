@@ -88,7 +88,7 @@ const Brands = styled(FontAwesomeIcon)`
 `;
 
 
-function Footer() {
+const Footer = () => {
     let year = new Date().getFullYear();
     
     return (
