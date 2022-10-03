@@ -12,14 +12,12 @@ const StyledHome = styled.div`
 `;
 
 
-class Home extends Component {
-    render() {
-        return (
-            <StyledHome>
-                <h1> Home </h1>
-            </StyledHome>
-        );
-    }
+const Home = () => {
+    return (
+        <StyledHome>
+            <h1> Home </h1>
+        </StyledHome>
+    );
 }
 
 export default Home;

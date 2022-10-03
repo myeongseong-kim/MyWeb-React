@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import Card from '../components/Card';
+
+import All from './projects/All';
+import Test from './projects/Test';
+
 
 
 const StyledProjects = styled.div`
@@ -14,19 +17,17 @@ const StyledProjects = styled.div`
 `;
 
 
-class Projects extends Component {
-    render() {
-        return (
-            <StyledProjects>
-                {/* <h1> Projects </h1> */}
-                <Card 
-                    title='Test' 
-                    imgURL={require('../assets/test.jpg')} 
-                    summary='This is ...'
-                ></Card>
-            </StyledProjects>
-        );
-    }
+const Projects = () => {
+    
+    return (
+        <StyledProjects>
+            {/* <h1> Projects </h1> */}
+            <Routes>
+                <Route exact path='/' element={<All />} />
+                <Route path='/test' element={<Test />} />
+            </Routes>
+        </StyledProjects>
+    );
 }
 
 export default Projects;

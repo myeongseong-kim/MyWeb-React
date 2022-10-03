@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
@@ -12,14 +12,12 @@ const StyledContact = styled.div`
 `;
 
 
-class Contact extends Component {
-    render() {
-        return (
-            <StyledContact>
-                <h1> Contact </h1>
-            </StyledContact>
-        );
-    }
+const Contact = () => {
+    return (
+        <StyledContact>
+            <h1> Contact </h1>
+        </StyledContact>
+    );
 }
 
 export default Contact;

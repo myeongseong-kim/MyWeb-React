@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
 // import testImg from '../assets/test.jpg';
 
 
-const StyledCard = styled.div`
+const StyledCard = styled(Link)`
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -32,10 +33,10 @@ const Summary = styled.p`
 `;
 
 
-function Card(props) {
+const Card = (props) => {
    
     return (
-        <StyledCard>
+        <StyledCard to={props.address}>
             <HeroShot src={props.imgURL} />
             <Title> {props.title} </Title>
             <Summary> {props.summary} </Summary>
