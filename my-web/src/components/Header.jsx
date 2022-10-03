@@ -6,7 +6,7 @@ import headerImg from '../assets/test.jpg';
 
 
 const StyledHeader = styled.header`
-    position: sticky;
+    position: fixed;
     top: 0%;
     width: 100vw;
     height: 100vh;
@@ -14,6 +14,7 @@ const StyledHeader = styled.header`
 
     ${(props) => props.snap === true &&
     css`
+        /* height: 0px; */
         height: ${(props) => props.thickness}px;
     `}
 

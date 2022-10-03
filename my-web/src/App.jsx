@@ -10,17 +10,39 @@ import Main from './components/Main';
 
 function App() {
     let lastScrollY = window.scrollY;
+    let ready = true;
+
     const handleScroll = () => {
-        if (lastScrollY === 0) {
-            if (window.scrollY === 0) {
-                setSnap(false);
-                console.log("UP!");
+        var delta = window.scrollY - lastScrollY;
+        // console.log(delta);
+
+        if (delta < 0) {
+            if (snap && window.scrollY === 0) {
+                if (ready) {
+                    setSnap(false);
+                }
+                else {
+                    window.scrollTo({
+                        top: 0.875,
+                        behavior: 'auto'
+                    });
+                    ready = true; 
+                }
             }
-            else {
-                setSnap(true);
-                console.log("DOWN!");
-            }
+            else ready = false;
         }
+        else if (delta > 0) {
+            if (!snap && lastScrollY === 0) {
+                setSnap(true);
+                window.scrollTo({
+                    top: 0.875,
+                    behavior: 'auto'
+                });
+            }
+            else ready = false;
+        }
+
+
         lastScrollY = window.scrollY;
         // console.log(lastScrollY);
     }
@@ -28,6 +50,7 @@ function App() {
 
     useEffect(() => {
         lastScrollY = window.scrollY;
+        ready = true;
 
         var timer = null
         var onScroll = () => {
@@ -37,12 +60,14 @@ function App() {
             timer = setTimeout(handleScroll, 125);            
         };
 
-        window.addEventListener('wheel', onScroll, false);
-        window.addEventListener('touchmove', onScroll, false);
+        window.addEventListener('scroll', onScroll, false);
+        // window.addEventListener('wheel', onScroll, false);
+        // window.addEventListener('touchmove', onScroll, false);
 
         return() => {
-            window.removeEventListener('wheel', onScroll, false);
-            window.removeEventListener('touchmove', onScroll, false);
+            window.removeEventListener('scroll', onScroll, false);
+            // window.removeEventListener('wheel', onScroll, false);
+            // window.removeEventListener('touchmove', onScroll, false);
         }
     })
     
