@@ -10,7 +10,7 @@ const StyledCard = styled(Link)`
     align-items: center;
 `;
 
-const HeroShot = styled.img`
+const Thumbnail = styled.img`
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -35,7 +35,7 @@ const Card = (props) => {
    
     return (
         <StyledCard to={props.address}>
-            <HeroShot src={props.imgurl} />
+            <Thumbnail src={props.imgurl} />
             <Title> {props.title} </Title>
             <Summary> {props.summary} </Summary>
         </StyledCard>

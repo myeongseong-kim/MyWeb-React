@@ -23,7 +23,7 @@ const Projects = () => {
             <Routes>
                 <Route exact path='/' element={<All />} />
                 {/* <Route path='/test' element={<Test />} /> */}
-                <Route path='/:key' element={<Each />} />
+                <Route path='/:id' element={<Each />} />
             </Routes>
         </StyledProjects>
     );

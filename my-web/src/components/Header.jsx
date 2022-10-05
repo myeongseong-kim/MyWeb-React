@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, forwardRef } from 'react';
 import styled, { css } from "styled-components";
 
 import Nav from './Nav';
-import headerImg from '../assets/test.jpg';
+import headerImg from '../assets/images/test.jpg';
 
 
 const StyledHeader = styled.header`

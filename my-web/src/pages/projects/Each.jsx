@@ -3,17 +3,35 @@ import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
 
-const Each = () => {
-    const params = useParams();
-    console.log(params.key);
+const Heroshot = styled.img`
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+`;
 
+
+const Each = () => {
+    const images = require.context('../../assets/images', true);
+
+    const params = useParams();
+    // console.log(params.key);
+    
+    let data = require(`./data/${params.id}.json`);
+    // console.log(data);
+
+    let title = data.title;
+    let heroshot = images(`./${data.heroshot}`);
+    let summary = data.summary;
+    let fullcontent = data.fullcontent;
+
+    
     return (
-        <h1 
-            title = 'Test'
-            address = '/projects/test'
-            imgurl = '../../assets/test.jpg'
-            summary = 'This is a test...'
-        > Test </h1>
+        <>
+            <h1> {title} </h1>
+            <Heroshot src={heroshot}></Heroshot>
+            <h2> {summary} </h2>
+            <h3> {fullcontent} </h3>
+        </>
         
     );
 }
