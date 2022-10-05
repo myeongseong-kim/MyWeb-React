@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-// import testImg from '../assets/test.jpg';
-
 
 const StyledCard = styled(Link)`
     display: flex;
@@ -37,7 +35,7 @@ const Card = (props) => {
    
     return (
         <StyledCard to={props.address}>
-            <HeroShot src={props.imgURL} />
+            <HeroShot src={props.imgurl} />
             <Title> {props.title} </Title>
             <Summary> {props.summary} </Summary>
         </StyledCard>

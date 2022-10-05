@@ -2,10 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-
 import All from './projects/All';
 import Test from './projects/Test';
-
 
 
 const StyledProjects = styled.div`

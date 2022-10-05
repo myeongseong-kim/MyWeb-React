@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Header';
-import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Main from './components/Main';
 
@@ -23,7 +22,7 @@ function App() {
                 }
                 else {
                     window.scrollTo({
-                        top: 0.875,
+                        top: 1,
                         behavior: 'auto'
                     });
                     ready = true; 
@@ -35,7 +34,7 @@ function App() {
             if (!snap && lastScrollY === 0) {
                 setSnap(true);
                 window.scrollTo({
-                    top: 0.875,
+                    top: 1,
                     behavior: 'auto'
                 });
             }
@@ -49,9 +48,6 @@ function App() {
 
 
     useEffect(() => {
-        lastScrollY = window.scrollY;
-        ready = true;
-
         var timer = null
         var onScroll = () => {
             if(timer != null) {
