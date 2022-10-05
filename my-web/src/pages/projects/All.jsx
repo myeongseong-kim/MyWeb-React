@@ -1,16 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
 import Card from '../../components/Card';
 
-import Test from './Test'
+import Each from './Each'
 
 
 const All = (props) => {
-
-    console.log(Test.current);
-    
+   
     return (
         <>
             <Card 

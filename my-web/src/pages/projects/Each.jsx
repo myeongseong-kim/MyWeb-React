@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
 
-const Test = () => {
-    
+const Each = () => {
+    const params = useParams();
+    console.log(params.key);
+
     return (
         <h1 
             title = 'Test'
@@ -16,4 +18,4 @@ const Test = () => {
     );
 }
 
-export default Test;
+export default Each;
