@@ -1,7 +1,8 @@
 {
     "title" : "Test",
-    "address" : "projects/test",
+    "id" : 1,
+    "address" : "/projects/test",
     "heroshot" : "test.jpg",
     "summary" : "This is a test...",
-    "fullcontent" : "..."
+    "fullcontent" : "..."    
 }

@@ -16,13 +16,13 @@ const Each = () => {
     const params = useParams();
     // console.log(params.key);
     
-    let data = require(`./data/${params.id}.json`);
+    let obj = require(`../../assets/data/${params.id}.json`);
     // console.log(data);
 
-    let title = data.title;
-    let heroshot = images(`./${data.heroshot}`);
-    let summary = data.summary;
-    let fullcontent = data.fullcontent;
+    let title = obj.title;
+    let heroshot = images(`./${obj.heroshot}`);
+    let summary = obj.summary;
+    let fullcontent = obj.fullcontent;
 
     
     return (
