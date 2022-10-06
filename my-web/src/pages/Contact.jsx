@@ -5,10 +5,11 @@ import styled, { css } from "styled-components";
 
 const StyledContact = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    flex-direction: column;
     
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 `;
 
 

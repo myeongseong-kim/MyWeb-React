@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, forwardRef } from 'react';
+import React, { useEffect, useState, forwardRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
@@ -16,7 +16,7 @@ const StyledNav = styled.nav`
     z-index: 1;
 
     font-size: 1.6rem;
-    padding: 0.5em;
+    padding: 1rem;
 
     background-color: rgba(0, 0, 0, 0);
 `;
@@ -26,9 +26,9 @@ const NavLogo = styled(Link)`
     font-size: 1.5em;
     font-weight: 300;
     
-    padding: 0.5em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 
     transition: 
         color 0.5s ease-in-out,
@@ -48,6 +48,12 @@ const NavLogo = styled(Link)`
     &:hover, :active {
         color: var(--yellow-daisy);
     }
+
+    @media screen and (min-width: 1024px) {
+        padding: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
 `;
 
 const NavToggle = styled.button`
@@ -59,9 +65,9 @@ const NavToggle = styled.button`
     z-index: 2;
 
     font-size: 1.25em;
-    padding: 0.5em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 
     width: 2em;
     height: 2em;
@@ -106,7 +112,6 @@ const NavMenu = styled.div`
     height: 100vh;
     overflow-x: hidden;
     
-    padding: 0.5em;
     margin-left: 0.5em;
     margin-right: 0.5em;
     
@@ -189,8 +194,6 @@ const MenuItem = styled(Link)`
     @media screen and (min-width: 1024px) {
         width: auto;
         padding: 0.5em;
-        margin-top: 0em;
-        margin-bottom: 0em;
         margin-left: 0.5em;
         margin-right: 0.5em;
 
@@ -253,8 +256,12 @@ const Nav = forwardRef((props, ref) => {
 
     return (
         <StyledNav ref={ref}>
-            {/* <NavLogo to='/' chapter={chapter} onClick={closeMenu}> MYEONGSEONG KIM </NavLogo> */}
-            <NavLogo to='/' chapter={chapter} onClick={closeMenu}> 明星 </NavLogo>
+            <NavLogo to='/' chapter={chapter} 
+                onClick={(event) => {
+                    closeMenu();
+                    props.toggleSnap(false);
+                }}
+            > 明星 </NavLogo>
 
             <NavToggle stateToggle={toggle}
                 onClick={handleToggle}
@@ -266,9 +273,24 @@ const Nav = forwardRef((props, ref) => {
 
             <NavMenu stateToggle={toggle}>
                 <MenuList stateToggle={toggle}>
-                    <MenuItem to='/about' chapter={chapter} onClick={closeMenu}> ABOUT </MenuItem>
-                    <MenuItem to='/projects' chapter={chapter} onClick={closeMenu}> PROJECTS </MenuItem>
-                    <MenuItem to='/contact' chapter={chapter} onClick={closeMenu}> CONTACT </MenuItem>
+                    <MenuItem to='/about' chapter={chapter} 
+                        onClick={(event) => {
+                            closeMenu();
+                            props.toggleSnap(true);
+                        }}
+                    > ABOUT </MenuItem>
+                    <MenuItem to='/projects' chapter={chapter} 
+                        onClick={(event) => {
+                            closeMenu();
+                            props.toggleSnap(true);
+                        }}
+                    > PROJECTS </MenuItem>
+                    <MenuItem to='/contact' chapter={chapter} 
+                        onClick={(event) => {
+                            closeMenu();
+                            props.toggleSnap(true);
+                        }}
+                    > CONTACT </MenuItem>
                     <FakeBox stateToggle={toggle} onPointerDown={closeMenu}></FakeBox>
                 </MenuList>
             </NavMenu>

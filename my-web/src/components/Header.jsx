@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, forwardRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { css } from "styled-components";
 
 import Nav from './Nav';
@@ -7,16 +7,10 @@ import headerImg from '../assets/images/test.jpg';
 
 const StyledHeader = styled.header`
     position: fixed;
+    z-index: 1;
     top: 0%;
     width: 100vw;
-    height: 100vh;
-    z-index: 1;
-
-    ${(props) => props.snap === true &&
-    css`
-        /* height: 0px; */
-        height: ${(props) => props.thickness}px;
-    `}
+    height: ${(props) => props.height}px;
 
     transition: height 0.5s ease-in-out;
 `;
@@ -86,18 +80,9 @@ const TranslucentBox = styled.div`
 
 
 const Header = (props) => {
-    const navRef = useRef();
-    let navHeight;
-    const [thickness, setThickness] = useState(0);
-    
-    useEffect (() => {
-        navHeight = navRef.current.clientHeight;
-        setThickness(navHeight);
-        // console.log(thickness);
-    });
 
     return (
-        <StyledHeader snap={props.snap} thickness={thickness}>
+        <StyledHeader height={props.height}>
             <ImgBox> 
                 <HeaderImg src={headerImg} />
             </ImgBox>
@@ -105,7 +90,6 @@ const Header = (props) => {
             <HeaderText snap={props.snap}>
                 "I make, <br /> &emsp; therefore I am."
             </HeaderText>
-            <Nav ref={navRef} />
         </StyledHeader>
     );
 }

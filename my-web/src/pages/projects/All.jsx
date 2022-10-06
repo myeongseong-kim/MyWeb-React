@@ -4,6 +4,11 @@ import styled, { css } from "styled-components";
 import Card from '../../components/Card';
 
 
+const StyledAll = styled.div`
+    width: 100%;
+    
+`;
+
 
 const All = (props) => {
     const data = require.context('../../assets/data', true, /\.json$/ );
@@ -29,9 +34,9 @@ const All = (props) => {
 
 
     return (
-        <>
+        <StyledAll>
             {cards}
-        </>
+        </StyledAll>
     );
 }
 

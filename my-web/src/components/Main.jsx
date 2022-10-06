@@ -12,16 +12,17 @@ import Contact from '../pages/Contact'
 const StyledMain = styled.main`
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 
-    margin: 20px;
+    padding: 2.0rem;
+    margin-top: ${(props) => props.topMargin}px;
 `;
 
 
-const Main = () => {
+const Main = (props) => {
     return (
-        <StyledMain>
+        <StyledMain topMargin={props.topMargin}>
             <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
