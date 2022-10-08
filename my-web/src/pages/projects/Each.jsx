@@ -26,6 +26,7 @@ const Each = () => {
     // console.log(data);
 
     let title = obj.title;
+    let team = obj.team;
     let heroshot = images(`./${obj.heroshot}`);
     let summary = obj.summary;
     let fullcontent = obj.fullcontent;

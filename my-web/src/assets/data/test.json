@@ -1,8 +1,11 @@
 {
-    "title" : "Test",
-    "id" : 1,
+    "id" : 2,
     "address" : "/projects/test",
+    
+    "title" : "Test",
     "heroshot" : "test.jpg",
+    "team" : "Myeongseong Kim",
     "summary" : "This is a test...",
-    "fullcontent" : "..."    
+    
+    "fullcontent" : "..."
 }

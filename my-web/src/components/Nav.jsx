@@ -58,8 +58,8 @@ const NavLogo = styled(Link)`
 
 const NavToggle = styled.button`
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
     align-items: end;
 
     z-index: 2;
@@ -135,8 +135,8 @@ const NavMenu = styled.div`
 
 const MenuList = styled.div`
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     width: 62.5%;
@@ -157,8 +157,8 @@ const MenuList = styled.div`
     
     @media screen and (min-width: 1024px) {
         display: flex;
-        justify-content: center;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
 
         width: auto;
@@ -184,12 +184,12 @@ const MenuItem = styled(Link)`
 
     width: 50%;
     padding: 1em;
-    margin: 0em;
+    margin: 0em 0em;
 
-    &:first-child {
-        border-top: 0.5px solid gray;
+    /* &:first-child {
+        border-top: 0.5px solid var(--white-smoky);
     }
-    border-bottom: 0.5px solid gray;
+    border-bottom: 0.5px solid var(--white-smoky); */
 
     @media screen and (min-width: 1024px) {
         width: auto;

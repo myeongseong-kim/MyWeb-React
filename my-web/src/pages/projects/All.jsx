@@ -25,9 +25,10 @@ const All = (props) => {
 
     const cards = objs.map((obj) => (
         <Card key={obj.id}
-            title={obj.title}
-            address={obj.address}
             imgurl={images(`./${obj.heroshot}`)}
+            address={obj.address}
+            title={obj.title}
+            team={obj.team}
             summary={obj.summary}
         ></Card>
     ));

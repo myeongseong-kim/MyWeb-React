@@ -15,8 +15,10 @@ const StyledMain = styled.main`
     flex-direction: column;
     align-items: center;
 
-    padding: 2.0rem;
+    /* padding: 2.0rem; */
     margin-top: ${(props) => props.topMargin}px;
+    margin-left: 2.0rem;
+    margin-right: 2.0rem;
 `;
 
 
