@@ -34,7 +34,14 @@ const Summary = styled.p`
 const Card = (props) => {
    
     return (
-        <StyledCard to={props.address}>
+        <StyledCard to={props.address}
+            onClick={() => {
+                window.scrollTo({
+                    top: 1,
+                    behavior: 'auto'
+                });
+            }}
+        >
             <Thumbnail src={props.imgurl} />
             <Title> {props.title} </Title>
             <Summary> {props.summary} </Summary>

@@ -10,7 +10,12 @@ const StyledHeader = styled.header`
     z-index: 1;
     top: 0%;
     width: 100vw;
-    height: ${(props) => props.height}px;
+    /* height: ${(props) => props.height}px; */
+    height: 100vh;
+    ${(props) => props.snap === true &&
+    css`
+        height: ${(props) => props.minHeight}px;
+    `}
 
     transition: height 0.5s ease-in-out;
 `;
@@ -82,7 +87,7 @@ const TranslucentBox = styled.div`
 const Header = (props) => {
 
     return (
-        <StyledHeader height={props.height}>
+        <StyledHeader snap={props.snap} minHeight={props.minHeight}>
             <ImgBox> 
                 <HeaderImg src={headerImg} />
             </ImgBox>

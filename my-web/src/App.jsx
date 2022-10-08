@@ -21,7 +21,6 @@ function App() {
             if (snap && window.scrollY === 0) {
                 if (ready) {
                     // setSnap(false);
-                    // setHeaderHeight(window.innerHeight);
                     // window.scrollTo({
                     //     top: 0,
                     //     behavior: 'auto'
@@ -41,7 +40,6 @@ function App() {
         else if (delta > 0) {
             if (!snap && lastScrollY === 0) {
                 // setSnap(true);
-                // setHeaderHeight(navRef.current.clientHeight);
                 // window.scrollTo({
                 //     top: 1,
                 //     behavior: 'auto'
@@ -74,8 +72,8 @@ function App() {
     useEffect(() => {
         const handleRefresh = () => {
             // console.log('refresh');
-            setHeaderHeight(window.innerHeight);
             setNavHeight(navRef.current.clientHeight);
+            // console.log(navHeight);
         }
         
         window.addEventListener('load', handleRefresh, false);
@@ -84,28 +82,14 @@ function App() {
         }
     })
 
-    useEffect(() => {
-        const handleResize = () => {
-            // console.log('resize');
-            setHeaderHeight(window.innerHeight);
-        }
-
-        window.addEventListener('resize', handleResize, false);
-        return () => {
-            window.removeEventListener('resize', handleResize, false);
-        }
-    })
-
     
     const [snap, setSnap] = useState(false);
-    const [headerHeight, setHeaderHeight] = useState(window.innerHeight);
     const [navHeight, setNavHeight] = useState(0);
     const toggleSnap = (state) => {
         // console.log(`snap ${state}`);
 
         setSnap(state);
         if (state) {
-            setHeaderHeight(navRef.current.clientHeight);
             window.scrollTo({
                 top: 1,
                 behavior: 'auto'
@@ -113,7 +97,6 @@ function App() {
             lastScrollY = 1;
         } 
         else {
-            setHeaderHeight(window.innerHeight);
             window.scrollTo({
                 top: 0,
                 behavior: 'auto'
@@ -125,7 +108,7 @@ function App() {
 
     return (
         <Router>
-            <Header snap={snap} height={headerHeight} />
+            <Header snap={snap} minHeight={navHeight} />
             <Nav ref={navRef} toggleSnap={toggleSnap} />
             <Main topMargin={navHeight}/>
             <Footer />
