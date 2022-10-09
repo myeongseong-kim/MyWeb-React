@@ -83,7 +83,6 @@ const NavToggle = styled.button`
 `;
 
 const DotBar = styled.div`
-    font-size: 0.125em;
     width: 12.5%;
     height: 6.25%;
     ${(props) => props.stateToggle === true &&

@@ -6,8 +6,9 @@ import headerImg from '../assets/images/test.jpg';
 
 
 const StyledHeader = styled.header`
-    position: fixed;
     z-index: 1;
+    
+    position: fixed;
     top: 0%;
     width: 100vw;
     /* height: ${(props) => props.height}px; */
@@ -42,16 +43,20 @@ const HeaderImg = styled.img`
 
 const HeaderText = styled.div`
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    overflow: hidden;
     white-space: nowrap;
     font-weight: 700;
     font-size: 8vw;
     text-align: left;
-
-    padding: 0.5em;
 
     color: white;
     opacity: 1.0;

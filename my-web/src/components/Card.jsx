@@ -8,30 +8,58 @@ const StyledCard = styled(Link)`
     flex-direction: column;
     justify-content: start;
 
-    margin-top: 4.0rem;
-    margin-bottom: 4.0rem;
-
-    @media screen and (min-width: 1024px) {
-        
+    text-decoration: none;
+    &:link, :visited {
+        color: var(--black-ink);
     }
+    &:hover, :active {
+        color: var(--black-ink);
+    }
+
+    @media screen and (min-width: 768px) {
+        width: calc(100%/2);
+    }  
+    @media screen and (min-width: 1024px) {
+        width: calc(100%/2);
+    }
+    @media screen and (min-width: 1920px) {
+        width: calc(100%/3);
+    }
+    @media screen and (min-width: 2560px) {
+        width: calc(100%/4);
+    }
+`;
+
+const CardBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 20px 0px;
 
     transition: 
         box-shadow 0.25s ease-in-out;
 
-    text-decoration: none;
     &:link, :visited {
-        color: var(--black-ink);
         box-shadow: 0 0 0.5em 0em lightgray;
     }
     &:hover, :active {
-        color: var(--black-ink);
         box-shadow: 0 0 1em 0.5em lightgray;
     }
-`;
+
+    @media screen and (min-width: 768px) {
+        width: 360px;
+        margin: 20px auto;
+    }  
+    @media screen and (min-width: 1024px) {
+        width: 480px;
+        margin: 20px auto;
+    }    
+`
 
 const Thumbnail = styled.img`
     width: 100%;
-    height: calc(width * 0.5);
+    aspect-ratio: 3/2;
     object-fit: cover;
 `;
 
@@ -40,12 +68,10 @@ const CardText = styled.div`
     flex-direction: column;
     align-items: start;
 
-    /* padding: 1rem; */
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
+    width: auto;
+    height: 12rem;
+    padding: 0rem 1.0rem;
+    
     background-color: var(--white-smoky);
 `;
 
@@ -53,18 +79,29 @@ const Title = styled.p`
     font-weight: 500;
     font-size: 1.6rem;
     margin: 0.5em 0em;
+
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    background-color: var(--white-smoky);
 `;
 
-const Member  = styled.p`
+const Members  = styled.p`
     font-weight: 300;
-    font-style: oblique;
     font-size: 1.0rem;
+    font-style: oblique;
     margin: 0.25em 0em;
 
     width: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+`;
+
+const Me = styled.strong`
+    font-weight: 500;
 `;
 
 const Summary = styled.p`
@@ -78,9 +115,10 @@ const Summary = styled.p`
     word-break: break-word;
 
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical
 `;
+
 
 
 const Card = (props) => {
@@ -91,9 +129,9 @@ const Card = (props) => {
         // console.log(others);
 
         return (
-            <Member> 
-                {others[0]}<b>{me}</b>{others[1]} 
-            </Member>
+            <Members> 
+                {others[0]}<Me>{me}</Me>{others[1]} 
+            </Members>
         );
     }
 
@@ -106,12 +144,14 @@ const Card = (props) => {
                 });
             }}
         >
-            <Thumbnail src={props.imgurl} />
-            <CardText>
-                <Title> {props.title} </Title>
-                <Team> </Team>
-                <Summary> {props.summary} </Summary>
-            </CardText>
+            <CardBox>
+                <Thumbnail src={props.imgurl} />
+                <CardText>
+                    <Title> {props.title} </Title>
+                    <Team> </Team>
+                    <Summary> {props.summary} </Summary>
+                </CardText>
+            </CardBox>
         </StyledCard>
     );
 }

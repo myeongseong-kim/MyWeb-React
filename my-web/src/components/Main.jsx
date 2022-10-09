@@ -10,15 +10,37 @@ import Contact from '../pages/Contact'
 
 
 const StyledMain = styled.main`
+    z-index: 0;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 
-    /* padding: 2.0rem; */
-    margin-top: ${(props) => props.topMargin}px;
     margin-left: 2.0rem;
     margin-right: 2.0rem;
+    margin-top: ${(props) => props.topMargin}px;
+
+    @media screen and (min-width: 768px) {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 1920px) {
+        width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 2560px) {
+        width: 2000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 

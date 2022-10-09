@@ -5,8 +5,16 @@ import Card from '../../components/Card';
 
 
 const StyledAll = styled.div`
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 2.0rem 0rem;
     
+    @media screen and (min-width: 768px) {
+        flex-flow: row wrap;
+        justify-content: left;
+    }    
 `;
 
 
