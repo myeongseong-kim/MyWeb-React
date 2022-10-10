@@ -28,6 +28,9 @@ const StyledCard = styled(Link)`
     @media screen and (min-width: 2560px) {
         width: calc(100%/4);
     }
+    @media screen and (min-width: 3840px) {
+        width: calc(100%/6);
+    }
 `;
 
 const CardBox = styled.div`
@@ -41,10 +44,12 @@ const CardBox = styled.div`
         box-shadow 0.25s ease-in-out;
 
     &:link, :visited {
-        box-shadow: 0 0 0.5em 0em lightgray;
+        box-shadow: 0 0 0em 0em lightgray;
+        /* box-shadow: 0 0 0em 0em var(--yellow-daisy); */
     }
     &:hover, :active {
         box-shadow: 0 0 1em 0.5em lightgray;
+        /* box-shadow: 0 0 0.5em 0em var(--yellow-daisy); */
     }
 
     @media screen and (min-width: 768px) {
@@ -88,6 +93,14 @@ const Title = styled.p`
     background-color: var(--white-smoky);
 `;
 
+// const BarLine = styled.hr`
+//     width: 100%;
+//     height: 0.1rem;
+//     border: none;
+//     margin: 0rem 0rem;
+//     background-color: lightgray;
+// `;
+
 const Members  = styled.p`
     font-weight: 300;
     font-size: 1.0rem;
@@ -102,6 +115,7 @@ const Members  = styled.p`
 
 const Me = styled.strong`
     font-weight: 500;
+    background-color: var(--yellow-daisy-trans);
 `;
 
 const Summary = styled.p`

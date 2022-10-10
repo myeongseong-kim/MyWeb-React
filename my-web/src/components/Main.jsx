@@ -41,6 +41,11 @@ const StyledMain = styled.main`
         margin-left: auto;
         margin-right: auto;
     }
+    @media screen and (min-width: 3840px) {
+        width: 3000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 
