@@ -4,15 +4,64 @@ import styled, { css } from "styled-components";
 
 
 const StyledEach = styled.div`
-    width: 100%;
-    
+    margin: 2.0rem 0rem;
+    color: var(--black-ink);
 `;
 
+const Title = styled.p`
+    font-weight: 500;
+    font-size: 2.4rem;
+    margin: 0.5em 0em;
+`;
+
+const Date = styled.span`
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin: 0.5em 0em;
+    color: gray;
+`;
+
+const Members  = styled.p`
+    font-weight: 300;
+    font-size: 1.2rem;
+    font-style: oblique;
+    margin: 0.5em 0em;
+`;
+
+const Me = styled.strong`
+    font-weight: 500;
+    background-color: var(--yellow-daisy-trans);
+`;
+
+const Text = styled.p`
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin: 0.5rem 0rem;
+`;
 
 const Heroshot = styled.img`
     width: 100%;
     height: auto;
     object-fit: cover;
+
+    margin: 0.5rem 0rem;
+`;
+
+const Shot = styled.img`
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    margin: 0.5rem 0rem;
+`;
+
+const YouTube = styled.iframe`
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border: none;
+
+    margin: 0.5rem 0rem;
 `;
 
 
@@ -26,18 +75,62 @@ const Each = () => {
     // console.log(data);
 
     let title = obj.title;
+    let date = obj.date;
     let team = obj.team;
     let heroshot = images(`./${obj.heroshot}`);
     let summary = obj.summary;
     let fullcontent = obj.fullcontent;
 
+    const contents = fullcontent.map((item, index) => {
+        var pair = Object.entries(item)[0];
+        // console.log(pair[0]);
+
+        var content;
+        switch (pair[0]) {
+            case 'text' :
+                content = <Text key={index} > {pair[1]} </Text>;
+                return content;
+            case 'img' :
+                content = 
+                    <Shot 
+                        key={index} 
+                        src={images(`./${pair[1]}`)} 
+                    />;
+                return content;
+            case 'video' :
+                var embedCode = pair[1] + '?fs=1&rel=0';
+                content = 
+                    <YouTube 
+                        key={index}
+                        src={embedCode}
+                        allow="fullscreen"
+                    ></YouTube>
+                return content;
+            default : 
+                console.log(`{${pair[0]} : ${pair[1]}} is not predefined.`);
+                content = <p key={index} > error </p>
+                return content;
+        }          
+    });
+
+    const Team = () => {
+        const me = 'Myeongseong Kim';
+        let others = team.split(me);
+        // console.log(others);
+
+        return (
+            <Members> 
+                {others[0]}<Me>{me}</Me>{others[1]} 
+            </Members>
+        );
+    }
+
     
     return (
         <StyledEach>
-            <h1> {title} </h1>
-            <Heroshot src={heroshot}></Heroshot>
-            <h2> {summary} </h2>
-            <h3> {fullcontent} </h3>
+            <Title> {title} <Date>({date})</Date> </Title>
+            <Team></Team>
+            {contents}
         </StyledEach>
     );
 }

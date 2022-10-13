@@ -10,6 +10,7 @@ const StyledAll = styled.div`
     justify-content: center;
 
     margin: 2.0rem 0rem;
+    color: var(--black-ink);
     
     @media screen and (min-width: 768px) {
         flex-flow: row wrap;

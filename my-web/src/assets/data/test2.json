@@ -7,5 +7,8 @@
     "team" : "Myeongseong Kim",
     "summary" : "This is another test...",
     
-    "fullcontent" : "..."    
+    "fullcontent" : 
+        [
+            {"text" : "..."}
+        ]  
 }

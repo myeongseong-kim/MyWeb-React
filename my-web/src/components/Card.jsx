@@ -68,7 +68,7 @@ const Thumbnail = styled.img`
     object-fit: cover;
 `;
 
-const CardText = styled.div`
+const CardTextBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -80,7 +80,7 @@ const CardText = styled.div`
     background-color: var(--white-smoky);
 `;
 
-const Title = styled.p`
+const CardTitle = styled.p`
     font-weight: 500;
     font-size: 1.6rem;
     margin: 0.5em 0em;
@@ -89,8 +89,6 @@ const Title = styled.p`
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-
-    background-color: var(--white-smoky);
 `;
 
 // const BarLine = styled.hr`
@@ -101,7 +99,7 @@ const Title = styled.p`
 //     background-color: lightgray;
 // `;
 
-const Members  = styled.p`
+const CardMembers  = styled.p`
     font-weight: 300;
     font-size: 1.0rem;
     font-style: oblique;
@@ -113,12 +111,12 @@ const Members  = styled.p`
     white-space: nowrap;
 `;
 
-const Me = styled.strong`
+const CardMe = styled.strong`
     font-weight: 500;
     background-color: var(--yellow-daisy-trans);
 `;
 
-const Summary = styled.p`
+const CardSummary = styled.p`
     font-weight: 300;
     font-size: 1.2rem;
     margin: 0.25em 0em;
@@ -130,7 +128,7 @@ const Summary = styled.p`
 
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical
+    -webkit-box-orient: vertical;
 `;
 
 
@@ -143,9 +141,9 @@ const Card = (props) => {
         // console.log(others);
 
         return (
-            <Members> 
-                {others[0]}<Me>{me}</Me>{others[1]} 
-            </Members>
+            <CardMembers> 
+                {others[0]}<CardMe>{me}</CardMe>{others[1]} 
+            </CardMembers>
         );
     }
 
@@ -160,11 +158,11 @@ const Card = (props) => {
         >
             <CardBox>
                 <Thumbnail src={props.imgurl} />
-                <CardText>
-                    <Title> {props.title} </Title>
+                <CardTextBox>
+                    <CardTitle> {props.title} </CardTitle>
                     <Team> </Team>
-                    <Summary> {props.summary} </Summary>
-                </CardText>
+                    <CardSummary> {props.summary} </CardSummary>
+                </CardTextBox>
             </CardBox>
         </StyledCard>
     );
