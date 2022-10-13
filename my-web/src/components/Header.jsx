@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css } from "styled-components";
 
-import Nav from './Nav';
 import headerImg from '../assets/images/test.jpg';
+import { ReactComponent as Phrase } from '../assets/phrase.svg';
 
 
 const StyledHeader = styled.header`
@@ -41,7 +41,35 @@ const HeaderImg = styled.img`
     object-fit: cover;
 `;
 
-const HeaderText = styled.div`
+// const HeaderText = styled.div`
+//     position: absolute;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+    
+//     height: 100%;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+
+//     overflow: hidden;
+//     white-space: nowrap;
+//     font-weight: 700;
+//     font-size: 8vw;
+//     text-align: left;
+
+//     color: white;
+//     opacity: 1.0;
+
+//     ${(props) => props.snap === true &&
+//     css`
+//         opacity: 0;
+//     `}
+
+//     transition: opacity 0.5s ease-in-out;
+// `;
+
+const HeaderPhrase = styled.div`
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -54,7 +82,6 @@ const HeaderText = styled.div`
 
     overflow: hidden;
     white-space: nowrap;
-    font-weight: 700;
     font-size: 8vw;
     text-align: left;
 
@@ -97,9 +124,12 @@ const Header = (props) => {
                 <HeaderImg src={headerImg} />
             </ImgBox>
             <TranslucentBox snap={props.snap}></TranslucentBox>
-            <HeaderText snap={props.snap}>
+            {/* <HeaderText snap={props.snap}>
                 "I make, <br /> &emsp; therefore I am."
-            </HeaderText>
+            </HeaderText> */}
+            <HeaderPhrase snap={props.snap}>
+                <Phrase width="62.5vmin" height="62.5vmin" />
+            </HeaderPhrase>
         </StyledHeader>
     );
 }
