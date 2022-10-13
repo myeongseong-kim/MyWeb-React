@@ -21,3 +21,8 @@ body {
 
     overflow-x: hidden;
 }
+
+::selection {
+    background: var(--yellow-daisy-trans);
+    color: var(--black-ink);
+ }
