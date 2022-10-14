@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { useLocation  } from 'react-router-dom';
 
 
 import './App.css';
@@ -13,42 +14,35 @@ import Main from './components/Main';
 function App() {
     const navRef = useRef();
 
+
     let lastScrollY = window.scrollY;
     let ready = true;
 
     const handleSnap = () => {
         var delta = window.scrollY - lastScrollY;
 
-        if (delta < 0) {
-            if (snap && window.scrollY === 0) {
-                if (ready) {
-                    // setSnap(false);
-                    // window.scrollTo({
-                    //     top: 0,
-                    //     behavior: 'auto'
-                    // });
-                    toggleSnap(false);
+        if (!lock) {
+            if (delta < 0) {
+                if (snap && window.scrollY === 0) {
+                    if (ready) {
+                        toggleSnap(false);
+                    }
+                    else {
+                        window.scrollTo({
+                            top: 1,
+                            behavior: 'auto'
+                        });
+                        ready = true; 
+                    }
                 }
-                else {
-                    window.scrollTo({
-                        top: 1,
-                        behavior: 'auto'
-                    });
-                    ready = true; 
+                else ready = false;
+            }
+            else if (delta > 0) {
+                if (!snap && lastScrollY === 0) {
+                    toggleSnap(true);
                 }
+                else ready = false;
             }
-            else ready = false;
-        }
-        else if (delta > 0) {
-            if (!snap && lastScrollY === 0) {
-                // setSnap(true);
-                // window.scrollTo({
-                //     top: 1,
-                //     behavior: 'auto'
-                // });
-                toggleSnap(true);
-            }
-            else ready = false;
         }
 
         lastScrollY = window.scrollY;
@@ -68,8 +62,7 @@ function App() {
         return() => {
             window.removeEventListener('scroll', handleScroll, false);
         }
-    })
-
+    });
 
     useEffect(() => {
         const handleRefresh = () => {
@@ -82,13 +75,13 @@ function App() {
         return () => {
             window.removeEventListener('load ', handleRefresh, false);
         }
-    })
+    });
+ 
 
     const [snap, setSnap] = useState(false);
-    const [navHeight, setNavHeight] = useState(0);
+    const [navHeight, setNavHeight] = useState(remToPixels(7.5));
     const toggleSnap = (state) => {
         // console.log(`snap ${state}`);
-
         setSnap(state);
         if (state) {
             window.scrollTo({
@@ -106,10 +99,16 @@ function App() {
         }    
     }
 
+    const [lock, setLock] = useState(false);
+
+    function remToPixels(rem) {    
+        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+
 
     return (
         <Router>
-            <Header snap={snap} minHeight={navHeight} />
+            <Header snap={snap} minHeight={navHeight} setLock={setLock}/>
             <Nav ref={navRef} toggleSnap={toggleSnap} />
             <Main topMargin={navHeight}/>
             <Footer />

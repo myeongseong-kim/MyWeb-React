@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
 import headerImg from '../assets/images/test.jpg';
@@ -118,16 +119,29 @@ const TranslucentBox = styled.div`
 
 const Header = (props) => {
 
+    const location = useLocation();
+    const chapter = '/' + location.pathname.split('/')[1];
+    // console.log(chapter);
+
+    let snap = props.snap || chapter!=='/';
+
+    useEffect(() => {
+        if (chapter === '/')
+            props.setLock(false);
+        else 
+            props.setLock(true);
+    });
+
     return (
-        <StyledHeader snap={props.snap} minHeight={props.minHeight}>
+        <StyledHeader snap={snap} minHeight={props.minHeight}>
             <ImgBox> 
                 <HeaderImg src={headerImg} />
             </ImgBox>
-            <TranslucentBox snap={props.snap}></TranslucentBox>
-            {/* <HeaderText snap={props.snap}>
+            <TranslucentBox snap={snap}></TranslucentBox>
+            {/* <HeaderText snap={snap}>
                 "I make, <br /> &emsp; therefore I am."
             </HeaderText> */}
-            <HeaderPhrase snap={props.snap}>
+            <HeaderPhrase snap={snap}>
                 <Phrase width="62.5vmin" height="62.5vmin" />
             </HeaderPhrase>
         </StyledHeader>

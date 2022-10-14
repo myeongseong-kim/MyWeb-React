@@ -241,6 +241,7 @@ const FakeBox = styled.div`
 
 
 const Nav = forwardRef((props, ref) => {
+    
     const [toggle, setToggle] = useState(false);
     const handleToggle = () => {
         setToggle(!toggle);
@@ -251,7 +252,6 @@ const Nav = forwardRef((props, ref) => {
 
     const location = useLocation();
     const chapter = '/' + location.pathname.split('/')[1];
-    // console.log(chapter);
 
     return (
         <StyledNav ref={ref}>
