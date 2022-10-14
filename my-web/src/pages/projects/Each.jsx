@@ -10,22 +10,34 @@ const StyledEach = styled.div`
 
 const Title = styled.p`
     font-weight: 500;
-    font-size: 2.4rem;
-    margin: 0.5em 0em;
+    font-size: 1.6rem;
+    margin: 1.0em 0em;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2.4rem;
+    }
 `;
 
 const Date = styled.span`
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin: 0.5em 0em;
     color: gray;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
 `;
 
 const Members  = styled.p`
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-style: oblique;
     margin: 0.5em 0em;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.2rem;
+    }
 `;
 
 const Me = styled.strong`
@@ -35,8 +47,12 @@ const Me = styled.strong`
 
 const Text = styled.p`
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0rem;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
 `;
 
 const Heroshot = styled.img`

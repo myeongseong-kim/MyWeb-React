@@ -4,8 +4,8 @@
     
     "title" : "Snow Clock",
     "date" : "DEC, 2019",
-    "heroshot" : "snowclock/snowclock_heroshot.jpg",
     "team" : "Myeongseong Kim, Donghyuk Yun, and Woohun Lee",
+    "heroshot" : "snowclock/snowclock_heroshot.jpg",
     "summary" : 
         "Snow Clock is a digital clock of snow globe theme. By giving a feeling like accumulating and disappearing of snow, It expresses ephemerality of time flow.",
     
