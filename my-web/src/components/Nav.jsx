@@ -25,7 +25,7 @@ const NavLogo = styled(Link)`
     z-index: 2;
 
     font-family: 'Zen Kaku Gothic New';
-    font-size: 1.5em;
+    font-size: 2.4rem;
     font-weight: 300;
     
     padding: 1rem;
@@ -66,7 +66,7 @@ const NavToggle = styled.button`
 
     z-index: 2;
 
-    font-size: 1.25em;
+    font-size: 2.0rem;
     padding: 1rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;

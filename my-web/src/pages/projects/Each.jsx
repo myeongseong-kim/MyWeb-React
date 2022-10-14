@@ -69,7 +69,7 @@ const Each = () => {
     const images = require.context('../../assets/images', true);
 
     const params = useParams();
-    // console.log(params.key);
+    // console.log(params);
     
     let obj = require(`../../assets/data/${params.id}.json`);
     // console.log(data);

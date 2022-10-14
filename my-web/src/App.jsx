@@ -16,7 +16,7 @@ function App() {
     let lastScrollY = window.scrollY;
     let ready = true;
 
-    const handleScroll = () => {
+    const handleSnap = () => {
         var delta = window.scrollY - lastScrollY;
 
         if (delta < 0) {
@@ -57,16 +57,16 @@ function App() {
 
     useEffect(() => {
         var timer = null
-        var onScroll = () => {
+        var handleScroll = () => {
             if(timer != null) {
                 clearTimeout(timer);        
             }
-            timer = setTimeout(handleScroll, 250);            
+            timer = setTimeout(handleSnap, 250);
         };
-        window.addEventListener('scroll', onScroll, false);
+        window.addEventListener('scroll', handleScroll, false);
 
         return() => {
-            window.removeEventListener('scroll', onScroll, false);
+            window.removeEventListener('scroll', handleScroll, false);
         }
     })
 
@@ -84,7 +84,6 @@ function App() {
         }
     })
 
-    
     const [snap, setSnap] = useState(false);
     const [navHeight, setNavHeight] = useState(0);
     const toggleSnap = (state) => {
