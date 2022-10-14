@@ -37,6 +37,7 @@ const All = (props) => {
             imgurl={images(`./${obj.heroshot}`)}
             address={obj.address}
             title={obj.title}
+            date={obj.date}
             team={obj.team}
             summary={obj.summary}
         ></Card>

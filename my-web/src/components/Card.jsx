@@ -91,6 +91,13 @@ const CardTitle = styled.p`
     white-space: nowrap;
 `;
 
+const CardDate = styled.span`
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 0.5em 0em;
+    color: gray;
+`;
+
 // const BarLine = styled.hr`
 //     width: 100%;
 //     height: 0.1rem;
@@ -159,7 +166,7 @@ const Card = (props) => {
             <CardBox>
                 <Thumbnail src={props.imgurl} />
                 <CardTextBox>
-                    <CardTitle> {props.title} </CardTitle>
+                    <CardTitle> {props.title} <CardDate>({props.date})</CardDate> </CardTitle>
                     <Team> </Team>
                     <CardSummary> {props.summary} </CardSummary>
                 </CardTextBox>
