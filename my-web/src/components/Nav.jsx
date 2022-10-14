@@ -22,6 +22,8 @@ const StyledNav = styled.nav`
 `;
 
 const NavLogo = styled(Link)`
+    z-index: 2;
+
     font-family: 'Zen Kaku Gothic New';
     font-size: 1.5em;
     font-weight: 300;
@@ -110,10 +112,7 @@ const NavMenu = styled.div`
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    
+
     position: absolute;
     top: 0%;
     left: 0%;
@@ -138,7 +137,8 @@ const MenuList = styled.div`
     justify-content: center;
     align-items: center;
 
-    width: 62.5%;
+    width: 100%;
+    /* width: 62.5%; */
     height: 100%;
     background: rgba(0, 0, 0, 0.625);
     backdrop-filter: blur(0.25em);
@@ -290,7 +290,7 @@ const Nav = forwardRef((props, ref) => {
                             props.toggleSnap(true);
                         }}
                     > CONTACT </MenuItem>
-                    <FakeBox stateToggle={toggle} onPointerDown={closeMenu}></FakeBox>
+                    {/* <FakeBox stateToggle={toggle} onPointerDown={closeMenu}></FakeBox> */}
                 </MenuList>
             </NavMenu>
         </StyledNav>
