@@ -16,33 +16,6 @@ const StyledCard = styled(Link)`
         color: var(--black-ink);
     }
 
-    @media screen and (min-width: 768px) {
-        width: calc(100%/2);
-    }  
-    @media screen and (min-width: 1024px) {
-        width: calc(100%/2);
-    }
-    @media screen and (min-width: 1920px) {
-        width: calc(100%/3);
-    }
-    @media screen and (min-width: 2560px) {
-        width: calc(100%/4);
-    }
-    @media screen and (min-width: 3840px) {
-        width: calc(100%/6);
-    }
-`;
-
-const CardBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    margin: 20px 0px;
-
-    transition: 
-        box-shadow 0.25s ease-in-out;
-
     &:link, :visited {
         box-shadow: 0 0 0em 0em lightgray;
         /* box-shadow: 0 0 0em 0em var(--yellow-daisy); */
@@ -52,15 +25,9 @@ const CardBox = styled.div`
         /* box-shadow: 0 0 0.5em 0em var(--yellow-daisy); */
     }
 
-    @media screen and (min-width: 768px) {
-        width: 360px;
-        margin: 20px auto;
-    }  
-    @media screen and (min-width: 1024px) {
-        width: 480px;
-        margin: 20px auto;
-    }    
-`
+    transition: 
+        box-shadow 0.25s ease-in-out;
+`;
 
 const Thumbnail = styled.img`
     width: 100%;
@@ -97,14 +64,6 @@ const CardDate = styled.span`
     margin: 0.5em 0em;
     color: gray;
 `;
-
-// const BarLine = styled.hr`
-//     width: 100%;
-//     height: 0.1rem;
-//     border: none;
-//     margin: 0rem 0rem;
-//     background-color: lightgray;
-// `;
 
 const CardMembers  = styled.p`
     font-weight: 300;
@@ -163,14 +122,12 @@ const Card = (props) => {
                 });
             }}
         >
-            <CardBox>
-                <Thumbnail src={props.imgurl} />
-                <CardTextBox>
-                    <CardTitle> {props.title} <CardDate>({props.date})</CardDate> </CardTitle>
-                    <Team> </Team>
-                    <CardSummary> {props.summary} </CardSummary>
-                </CardTextBox>
-            </CardBox>
+            <Thumbnail src={props.imgurl} />
+            <CardTextBox>
+                <CardTitle> {props.title} <CardDate>({props.date})</CardDate> </CardTitle>
+                <Team> </Team>
+                <CardSummary> {props.summary} </CardSummary>
+            </CardTextBox>
         </StyledCard>
     );
 }

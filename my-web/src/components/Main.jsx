@@ -17,8 +17,8 @@ const StyledMain = styled.main`
     flex-direction: column;
     align-items: center;
 
-    margin-left: 2.0rem;
-    margin-right: 2.0rem;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: ${(props) => props.topMargin}px;
 
     @media screen and (min-width: 768px) {
