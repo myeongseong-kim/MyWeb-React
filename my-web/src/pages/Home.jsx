@@ -10,6 +10,8 @@ const StyledHome = styled.div`
     
     width: 100%;
     min-height: 100vh;
+    margin: 2.0rem 0rem;
+    color: var(--black-ink);
 `;
 
 

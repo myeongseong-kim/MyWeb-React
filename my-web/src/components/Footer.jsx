@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from "styled-components";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +8,7 @@ import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
 
 const StyledFooter = styled.footer`
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 300;
     padding: 4em;
     background-color: var(--white-smoky);
 `;
@@ -16,14 +16,14 @@ const StyledFooter = styled.footer`
 const Socials = styled.div`
     display: flex;
     justify-content: center;
-    font-size: 1em;
+    font-size: 1.2rem;
     padding: 2em;
 `;
 
 const Copyright = styled.div`
     display: flex;
     justify-content: center;
-    font-size: 1em;
+    font-size: 1.2rem;
     padding: 2em;
     color: gray;
     white-space: nowrap;
@@ -34,7 +34,7 @@ const Icon = styled.div`
     justify-content: center;
     position: relative;
 
-    font-size: 2em;
+    font-size: 2.4rem;
     text-align: center;
     margin-left: 1em;
     margin-right: 1em;
@@ -88,11 +88,11 @@ const Brands = styled(FontAwesomeIcon)`
 `;
 
 
-const Footer = () => {
+const Footer = forwardRef((props, ref) => {
     let year = new Date().getFullYear();
     
     return (
-        <StyledFooter>
+        <StyledFooter ref={ref}>
             {/* socials: github, youtube, linkedin, instagram */}
             <Socials>
                 <Icon onClick={() => window.open("https://github.com/MyeongseongKim", "_blank")}>
@@ -119,6 +119,6 @@ const Footer = () => {
             </Copyright>
         </StyledFooter>
     );
-}
+});
 
 export default Footer;

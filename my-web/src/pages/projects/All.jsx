@@ -8,10 +8,7 @@ const StyledAll = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    margin: 2.0rem 0rem;
-    color: var(--black-ink);
-    
+   
     @media screen and (min-width: 768px) {
         flex-flow: row wrap;
         justify-content: left;

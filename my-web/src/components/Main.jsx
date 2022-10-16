@@ -9,17 +9,20 @@ import Projects from '../pages/Projects'
 import Contact from '../pages/Contact'
 
 
-const StyledMain = styled.main`
+const StyledMain = styled.main`   
     z-index: 0;
 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
+    width: auto;
+    min-height: 
+        calc(
+            100vh 
+            - ${(props) => props.topMargin}px
+            - ${(props) => props.bottomMargin}px
+        );
+        
+    padding-top: ${(props) => props.topMargin}px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: ${(props) => props.topMargin}px;
 
     @media screen and (min-width: 768px) {
         width: 750px;
@@ -51,7 +54,7 @@ const StyledMain = styled.main`
 
 const Main = (props) => {
     return (
-        <StyledMain topMargin={props.topMargin}>
+        <StyledMain topMargin={props.topMargin} bottomMargin={props.bottomMargin}>
             <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />

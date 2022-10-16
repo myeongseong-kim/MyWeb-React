@@ -4,8 +4,9 @@ import styled, { css } from "styled-components";
 
 
 const StyledEach = styled.div`
-    margin: 2.0rem 0rem;
-    color: var(--black-ink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const Title = styled.p`

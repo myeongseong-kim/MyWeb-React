@@ -3,7 +3,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useLocation  } from 'react-router-dom';
 
-
 import './App.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
@@ -13,7 +12,7 @@ import Main from './components/Main';
 
 function App() {
     const navRef = useRef();
-
+    const footerRef = useRef();
 
     let lastScrollY = window.scrollY;
     let ready = true;
@@ -69,6 +68,8 @@ function App() {
             // console.log('refresh');
             setNavHeight(navRef.current.clientHeight);
             // console.log(navHeight);
+            setFooterHeight(footerRef.current.clientHeight);
+            // console.log(footerHeight);
         }
         
         window.addEventListener('load', handleRefresh, false);
@@ -78,8 +79,10 @@ function App() {
     });
  
 
-    const [snap, setSnap] = useState(false);
     const [navHeight, setNavHeight] = useState(remToPixels(7.5));
+    const [footerHeight, setFooterHeight] = useState(remToPixels(23.2));
+
+    const [snap, setSnap] = useState(false);
     const toggleSnap = (state) => {
         // console.log(`snap ${state}`);
         setSnap(state);
@@ -108,10 +111,10 @@ function App() {
 
     return (
         <Router>
-            <Header snap={snap} minHeight={navHeight} setLock={setLock}/>
+            <Header snap={snap} minHeight={navHeight} setLock={setLock} />
             <Nav ref={navRef} toggleSnap={toggleSnap} />
-            <Main topMargin={navHeight}/>
-            <Footer />
+            <Main topMargin={navHeight} bottomMargin={footerHeight} />
+            <Footer ref={footerRef} />
         </Router>
     );
 }

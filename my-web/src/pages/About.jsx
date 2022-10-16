@@ -9,8 +9,10 @@ const StyledAbout = styled.div`
     flex-direction: column;
     
     width: 100%;
-    min-height: 100vh;
+    margin: 2.0rem 0rem;
+    color: var(--black-ink);
 `;
+
 
 const About = () => {
     return (
