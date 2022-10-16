@@ -11,8 +11,8 @@ const StyledEach = styled.div`
 
 const Title = styled.p`
     font-weight: 500;
-    font-size: 1.6rem;
-    margin: 1.0em 0em;
+    font-size: 2.0rem;
+    margin: 0.5em 0em;
 
     @media screen and (min-width: 1024px) {
         font-size: 2.4rem;

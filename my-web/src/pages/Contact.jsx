@@ -18,7 +18,7 @@ const StyledContact = styled.div`
 
 const Chapter = styled.p`
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 2.0rem;
     margin: 0.5em 0em;
 
     @media screen and (min-width: 1024px) {

@@ -8,7 +8,23 @@ const StyledAll = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
+`;
+
+const Chapter = styled.p`
+    font-weight: 500;
+    font-size: 2.0rem;
+    margin: 0.5em 0em;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2.4rem;
+    }
+`;
+
+const CardList = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     @media screen and (min-width: 768px) {
         flex-flow: row wrap;
         justify-content: left;
@@ -71,7 +87,10 @@ const All = () => {
 
     return (
         <StyledAll>
-            {cards}
+            <Chapter> All Projects </Chapter>
+            <CardList>
+                {cards}
+            </CardList>
         </StyledAll>
     );
 }
