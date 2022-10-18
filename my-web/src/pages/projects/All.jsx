@@ -3,21 +3,13 @@ import styled, { css } from "styled-components";
 
 import Card from '../../components/Card';
 
+import { Chapter, Text, Anchor } from "../Styles";
+
 
 const StyledAll = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-`;
-
-const Chapter = styled.p`
-    font-weight: 500;
-    font-size: 2.0rem;
-    margin: 0.5em 0em;
-
-    @media screen and (min-width: 1024px) {
-        font-size: 2.4rem;
-    }
 `;
 
 const CardList = styled.div`

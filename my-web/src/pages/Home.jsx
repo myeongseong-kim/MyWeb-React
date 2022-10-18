@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
+import { Chapter, Text, Anchor } from "./Styles"
+
 
 const StyledHome = styled.div`
     display: flex;
@@ -14,30 +16,8 @@ const StyledHome = styled.div`
     color: var(--black-ink);
 `;
 
-const Chapter = styled.p`
     font-weight: 500;
-    font-size: 2.0rem;
-    margin: 0.5em 0em;
-
-    @media screen and (min-width: 1024px) {
-        font-size: 2.4rem;
-    }
-`;
-
-const Text = styled.p`
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin: 0.5em 0em;
-
-    @media screen and (min-width: 1024px) {
-        font-size: 1.6rem;
-    }
-`;
-
-const Anchor = styled.a`
-    color: var(--black-ink);
-    text-decoration-color: gray;
-    /* background: var(--yellow-daisy-trans); */
+    /* background-color: var(--yellow-daisy-trans); */
 `;
 
 

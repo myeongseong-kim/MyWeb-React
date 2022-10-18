@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
+import { Chapter, Text, Anchor } from "../Styles";
+
 
 const StyledEach = styled.div`
     display: flex;
@@ -44,16 +46,6 @@ const Members  = styled.p`
 const Me = styled.strong`
     font-weight: 500;
     background-color: var(--yellow-daisy-trans);
-`;
-
-const Text = styled.p`
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin: 0.5rem 0rem;
-
-    @media screen and (min-width: 1024px) {
-        font-size: 1.6rem;
-    }
 `;
 
 const Heroshot = styled.img`
