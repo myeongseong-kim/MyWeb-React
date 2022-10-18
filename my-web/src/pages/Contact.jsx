@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import Map from '../components/Map';
 
-import { Chapter, Text, Anchor } from "./Styles";
+import { Wrapper, Chapter, Text, Anchor, Accent } from "../components/Styles"
 
 
 const StyledContact = styled.div`
@@ -55,30 +55,34 @@ const Contact = () => {
     return (
         <StyledContact>
             <Chapter> Location </Chapter>
-            <Text>
-                I am currently studying at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST. 
-                The physical location is as below.
-            </Text>
-            <MapContainer>
-                <Map pos={POS_ID_KAIST} zoom={18} />
-            </MapContainer>
-            <AddressText>
-                Room 225, N25 Department of Industrial Design, KAIST <br/>
-                291, Daehak-ro, Yuseong-gu, Daejeon, 34141 <br/>
-                Republic of Korea
-            </AddressText>
+            <Wrapper>
+                <Text>
+                    I am currently studying at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST. 
+                    The physical location is as below.
+                </Text>
+                <MapContainer>
+                    <Map pos={POS_ID_KAIST} zoom={18} />
+                </MapContainer>
+                <AddressText>
+                    Room 225, N25 Department of Industrial Design, KAIST <br/>
+                    291, Daehak-ro, Yuseong-gu, Daejeon, 34141 <br/>
+                    Republic of Korea
+                </AddressText>
+            </Wrapper>
             <Text> &nbsp; </Text> 
 
-
             <Chapter> Get in Touch </Chapter>
-            <Text>
-                If you have any questions or want to know the details of my projects, feel free to mail me!
-            </Text>
-            <Text> 
-                e-mail : contact@myeongseong.kim | pluto6944@kaist.ac.kr 
-                {/* <br/> phone : +82 10-4083-6944 */}
-            </Text>
+            <Wrapper>
+                <Text>
+                    If you have any questions or want to know details of my projects, feel free to mail me!
+                </Text>
+                <Text> 
+                    e-mail : contact@myeongseong.kim | pluto6944@kaist.ac.kr 
+                    {/* <br/> phone : +82 10-4083-6944 */}
+                </Text>
+            </Wrapper>
             <Text> &nbsp; </Text>
+
         </StyledContact>
     );
 }

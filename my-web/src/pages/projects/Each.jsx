@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Chapter, Text, Anchor } from "../Styles";
+import { Wrapper, Chapter, Text, Anchor, Accent } from "../../components/Styles"
 
 
 const StyledEach = styled.div`
@@ -41,11 +41,6 @@ const Members  = styled.p`
     @media screen and (min-width: 1024px) {
         font-size: 1.2rem;
     }
-`;
-
-const Me = styled.strong`
-    font-weight: 500;
-    background-color: var(--yellow-daisy-trans);
 `;
 
 const Heroshot = styled.img`
@@ -129,7 +124,7 @@ const Each = () => {
 
         return (
             <Members> 
-                {others[0]}<Me>{me}</Me>{others[1]} 
+                {others[0]}<Accent>{me}</Accent>{others[1]} 
             </Members>
         );
     }
@@ -139,7 +134,9 @@ const Each = () => {
         <StyledEach>
             <Title> {title} <Date>({date})</Date> </Title>
             <Team></Team>
-            {contents}
+            <Wrapper>
+                {contents}
+            </Wrapper>
         </StyledEach>
     );
 }

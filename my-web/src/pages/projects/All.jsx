@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import Card from '../../components/Card';
 
-import { Chapter, Text, Anchor } from "../Styles";
+import { Wrapper, Chapter, Text, Anchor, Accent, CardList, CardGrid } from "../../components/Styles"
 
 
 const StyledAll = styled.div`
@@ -12,42 +12,42 @@ const StyledAll = styled.div`
     justify-content: center;
 `;
 
-const CardList = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+// const CardList = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
 
-    @media screen and (min-width: 768px) {
-        flex-flow: row wrap;
-        justify-content: left;
-    }
-`;
+//     @media screen and (min-width: 768px) {
+//         flex-flow: row wrap;
+//         justify-content: left;
+//     }
+// `;
 
-const CardGrid = styled.div`
-    width: 100%;
-    margin: 2.0rem 0px;
+// const CardGrid = styled.div`
+//     width: 100%;
+//     margin: 2.0rem 0px;
 
-    @media screen and (min-width: 768px) {
-        width: calc(100%/2 - 15px);
-        margin: 2.0rem 7.5px;
-    }  
-    @media screen and (min-width: 1024px) {
-        width: calc(100%/2 - 20px);
-        margin: 2.0rem 10px;
-    }
-    @media screen and (min-width: 1920px) {
-        width: calc(100%/3 - 20px);
-        margin: 2.0rem 10px;
-    }
-    @media screen and (min-width: 2560px) {
-        width: calc(100%/4 - 20px);
-        margin: 2.0rem 10px;
-    }
-    @media screen and (min-width: 3840px) {
-        width: calc(100%/6 - 20px);
-        margin: 2.0rem 10px;
-    }
-`;
+//     @media screen and (min-width: 768px) {
+//         width: calc(100%/2 - 15px);
+//         margin: 2.0rem 7.5px;
+//     }  
+//     @media screen and (min-width: 1024px) {
+//         width: calc(100%/2 - 20px);
+//         margin: 2.0rem 10px;
+//     }
+//     @media screen and (min-width: 1920px) {
+//         width: calc(100%/3 - 20px);
+//         margin: 2.0rem 10px;
+//     }
+//     @media screen and (min-width: 2560px) {
+//         width: calc(100%/4 - 20px);
+//         margin: 2.0rem 10px;
+//     }
+//     @media screen and (min-width: 3840px) {
+//         width: calc(100%/6 - 20px);
+//         margin: 2.0rem 10px;
+//     }
+// `;
 
 
 const All = () => {

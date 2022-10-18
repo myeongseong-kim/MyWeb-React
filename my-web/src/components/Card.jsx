@@ -79,7 +79,7 @@ const CardMembers  = styled.p`
 
 const CardMe = styled.strong`
     font-weight: 500;
-    background-color: var(--yellow-daisy-trans);
+    /* background-color: var(--yellow-daisy-trans); */
 `;
 
 const CardSummary = styled.p`

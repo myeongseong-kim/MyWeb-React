@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Chapter, Text, Anchor } from "./Styles";
+import { Wrapper, Chapter, Text, Anchor, Accent } from "../components/Styles"
 
 
 const StyledAbout = styled.div`
@@ -20,11 +20,13 @@ const About = () => {
     return (
         <StyledAbout>
             <Chapter> About Myself </Chapter>
-            <Text>
-                My name is Myeongseong Kim / 김명성 / 金明星
-            </Text>
+            <Wrapper>
+                <Text>
+                    My name is Myeongseong Kim / 김명성 / 金明星
+                </Text>
+            </Wrapper>
             <Text> &nbsp; </Text>
-            
+
         </StyledAbout>
     );
 }
