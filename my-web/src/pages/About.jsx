@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Chapter, Text, Anchor, Accent } from "../components/Styles"
+import { Wrapper, Container, Chapter, Text, Anchor, Accent } from "../components/Styles"
 
 
 const StyledAbout = styled.div`
@@ -15,15 +15,235 @@ const StyledAbout = styled.div`
     color: var(--black-ink);
 `;
 
+const OneColumn = styled.div`
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+
+    margin: 0.5em 0em;
+    font-size: 1.2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
+`;
+
+const TwoColumn = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+
+    margin: 0.5em 0em;
+    font-size: 1.2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
+`;
+
+const Small = styled.p`
+    text-align: right;
+
+    font-weight: 300;
+    font-style: oblique;
+    font-size: 1.0rem;
+    margin: 0.3rem 0rem;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.2rem;
+        margin: 0.4rem 0rem;
+    }
+`;
+
+
+const Title = styled.p`
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 0.25em 0em;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
+`;
+const Authors = styled.p`
+    font-weight: 300;
+    font-style: oblique;
+    font-size: 1.0rem;
+    margin: 0em 0em;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.2rem;
+    }
+`;
+const Proceeding = styled.p`
+    font-weight: 300;
+    font-size: 1.0rem;
+    margin: 0em 0em;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.2rem;
+    }
+`;
+const Publication = (props) => {
+    const me = 'Myeongseong Kim';
+    let others = props.authors.split(me);
+
+    return (
+        <div>
+            <Title> {props.title} </Title>
+            <Authors> {others[0]}<Accent>{me}</Accent>{others[1]} </Authors>
+            <Proceeding> {props.proceeding} </Proceeding>
+        </div>
+    );
+};
+
+
 
 const About = () => {
     return (
         <StyledAbout>
-            <Chapter> About Myself </Chapter>
+            <Chapter> Education </Chapter>
             <Wrapper>
-                <Text>
-                    My name is Myeongseong Kim / 김명성 / 金明星
-                </Text>
+                <TwoColumn>
+                    <Text>
+                        <Accent> M.S. Student at Dept. Industrial Design </Accent> <br/>
+                        Advisor: Prof. Woohun Lee
+                    </Text>
+                    <Small> Aug. 2020 ~ </Small>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> B.S. at Dept. Industrial Design </Accent> <br/>
+                        Minor: Mechanical Engineering
+                    </Text>
+                    <Small> Mar. 2014 ~<br/> Aug. 2020 </Small>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Gwangju Science High School </Accent> <br/>
+                    </Text>
+                    <Small> Mar. 2012 ~<br/> Feb. 2014 </Small>
+                </TwoColumn>
+            </Wrapper>
+            <Text> &nbsp; </Text>
+
+            <Chapter> Skills </Chapter>
+            <Wrapper>
+                <OneColumn>
+                    <Text>
+                        <Accent> Design </Accent> : Design thinking, UX analysis
+                    </Text>
+                </OneColumn>
+                <OneColumn>    
+                    <Text>
+                        <Accent> Physical Computing </Accent> : Arduino, Raspberry Pi, Eagle CAD
+                    </Text>
+                </OneColumn>
+                <OneColumn>
+                    <Text>
+                        <Accent> Programming </Accent> : Unity3D(C#), Processing(Java), ReactJS(JavaScript)
+                    </Text>
+                </OneColumn>
+                <OneColumn>
+                    <Text>
+                        <Accent> 3D Modeling </Accent> : Rhino/Grasshopper, Fusion360, Blender
+                    </Text>
+                </OneColumn>
+                <OneColumn>
+                    <Text>
+                        <Accent> Fabrication </Accent> : 3D printing, Laser cutting, Wood working
+                    </Text>
+                </OneColumn>
+            </Wrapper>
+            <Text> &nbsp; </Text>
+
+            <Chapter> Publication </Chapter>
+            <Wrapper>
+                <OneColumn>
+                    <Publication
+                        title='Isle of Reflections'
+                        authors='Chaeun Lee, Myeongseong Kim, Hyunjung Kim'
+                        proceeding='ACM SIGGRAPH 2021 Art Gallery, 1-3'
+                    > </Publication>
+                </OneColumn>
+                <OneColumn>
+                    <Publication
+                        title='Ambiguus Tiles: Origami Rhombic Pyramid Tiles for Creating Dual-View Tile Mosaics'
+                        authors='Hyunjung Kim, Myeongseong Kim, Yujin Lee'
+                        proceeding='Leonardo 54 (2), 206-207'
+                    > </Publication>
+                </OneColumn>
+                <OneColumn>
+                    <Publication
+                        title='Rolling Pixels: Robotic Steinmetz Solids for Creating Physical Animations'
+                        authors='*Yujin Lee, *Myeongseong Kim, Hyunjung Kim (* Both authors contributed equally to this work)'
+                        proceeding='Proceedings of the Fourteenth International Conference on Tangible, Embedded, and Embodied Interaction'
+                    > </Publication>
+                </OneColumn>
+                <OneColumn>
+                    <Publication
+                        title='Snow Clcok'
+                        authors='Myeongseong Kim, Donghyuk Yun, and Woohun Lee'
+                        proceeding='Proceedings of HCIK 2020'
+                    > </Publication>
+                </OneColumn>                
+            </Wrapper>
+            <Text> &nbsp; </Text>
+
+            <Chapter> Award </Chapter>
+            <Wrapper>
+                <OneColumn>    
+                    <Text>
+                        <Accent> Red Dot: Best of the Best 2021 - Isle of Reflections </Accent>
+                    </Text>               
+                </OneColumn>
+            </Wrapper>
+            <Text> &nbsp; </Text>
+
+            <Chapter> Exhibition </Chapter>
+            <Wrapper>
+                <OneColumn>    
+                    <Text>
+                        <Accent> Isle of Reflections </Accent>
+                    </Text>               
+                </OneColumn>
+            </Wrapper>
+            <Text> &nbsp; </Text>
+            
+            <Chapter> Other </Chapter>
+            <Wrapper>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Teaching Assistant : Media Interaction Design </Accent> <br/>
+                        Instructor: Prof. Woohun Lee
+                    </Text>
+                    <Small> Fall 2020,<br/> Fall 2021,<br/> Fall 2022 </Small>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Teaching Assistant : Graduation Design Studio II </Accent> <br/>
+                        Instructor: Prof. Changhee Lee
+                    </Text>
+                    <Small> Fall 2021 </Small>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Assistant at ID Fablab, KAIST </Accent> <br/>
+                    </Text>
+                    <Small> Sep. 2021 ~<br/> Feb. 2022 </Small>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Assistant at Idea Factory, KAIST </Accent> <br/>
+                    </Text>
+                    <Small> Jul. 2019 ~<br/> Dec. 2021 </Small>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Assistant at ID Fablab, KAIST </Accent> <br/>
+                    </Text>
+                    <Small> Sep. 2017 ~<br/> Aug. 2018 </Small>
+                </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
 

@@ -80,8 +80,8 @@ const SelfIntroduction = () => {
                 My research interest is designing and developing&nbsp;
                 <Accent>nature-inspired natural interaction</Accent> 
                 &nbsp;in domains of tangible user interfaces, shape-changing interfaces, robotics, and XR. 
-                I believe that just as many aesthetic and functional designs mimic nature in everyday life, 
-                interactions between human users and computers can also mimic nature.
+                I believe, like many aesthetic and functional nature-mimetic designs in everyday life, 
+                interactions between human users and computers can also mimic nature's way.
             </Text>
             <Text> 
                 Currently, I am a Master student

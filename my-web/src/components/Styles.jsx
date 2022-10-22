@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 
 const Wrapper = styled.div`
-    margin: 0rem 0rem;
+    margin: 1.0rem 0rem;
     @media screen and (min-width: 768px) {
-        margin: 0rem 1.0rem;
+        margin: 1.0rem 1.0rem;
     }
 `;
 
