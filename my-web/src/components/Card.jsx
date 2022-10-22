@@ -8,19 +8,16 @@ const StyledCard = styled(Link)`
     flex-direction: column;
     justify-content: start;
 
+    color: var(--black-ink);
     text-decoration: none;
+    
     &:link, :visited {
         color: var(--black-ink);
-    }
-    &:hover, :active {
-        color: var(--black-ink);
-    }
-
-    &:link, :visited {
         box-shadow: 0 0 0em 0em lightgray;
         /* box-shadow: 0 0 0em 0em var(--yellow-daisy); */
     }
     &:hover, :active {
+        color: var(--black-ink);
         box-shadow: 0 0 1em 0.5em lightgray;
         /* box-shadow: 0 0 0.5em 0em var(--yellow-daisy); */
     }

@@ -18,13 +18,20 @@ const StyledAbout = styled.div`
 const OneColumn = styled.div`
     display: flex;
     justify-content: start;
-    flex-direction: column;
+    flex-direction: row;
     align-items: start;
 
     margin: 0.5em 0em;
     font-size: 1.2rem;
     @media screen and (min-width: 1024px) {
         font-size: 1.6rem;
+    }
+
+    &:link, :visited {
+        background-color: var(--yellow-daisy-trans);
+    }
+    &:hover, :active {
+        background-color: var(--yellow-daisy-trans);
     }
 `;
 
@@ -39,19 +46,26 @@ const TwoColumn = styled.div`
     @media screen and (min-width: 1024px) {
         font-size: 1.6rem;
     }
+
+    &:link, :visited {
+        background-color: var(--yellow-daisy-trans);
+    }
+    &:hover, :active {
+        background-color: var(--yellow-daisy-trans);
+    }
 `;
 
-const Small = styled.p`
+const Period = styled.p`
     text-align: right;
+    white-space: nowrap;
 
     font-weight: 300;
     font-style: oblique;
     font-size: 1.0rem;
-    margin: 0.3rem 0rem;
+    margin: 0.5em 0em;
 
     @media screen and (min-width: 1024px) {
         font-size: 1.2rem;
-        margin: 0.4rem 0rem;
     }
 `;
 
@@ -69,7 +83,7 @@ const Authors = styled.p`
     font-weight: 300;
     font-style: oblique;
     font-size: 1.0rem;
-    margin: 0em 0em;
+    margin: 0.25em 0em;
 
     @media screen and (min-width: 1024px) {
         font-size: 1.2rem;
@@ -78,7 +92,7 @@ const Authors = styled.p`
 const Proceeding = styled.p`
     font-weight: 300;
     font-size: 1.0rem;
-    margin: 0em 0em;
+    margin: 0.25em 0em;
 
     @media screen and (min-width: 1024px) {
         font-size: 1.2rem;
@@ -109,20 +123,20 @@ const About = () => {
                         <Accent> M.S. Student at Dept. Industrial Design </Accent> <br/>
                         Advisor: Prof. Woohun Lee
                     </Text>
-                    <Small> Aug. 2020 ~ </Small>
+                    <Period> Aug. 2020 ~ </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> B.S. at Dept. Industrial Design </Accent> <br/>
                         Minor: Mechanical Engineering
                     </Text>
-                    <Small> Mar. 2014 ~<br/> Aug. 2020 </Small>
+                    <Period> Mar. 2014 ~<br/> Aug. 2020 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Gwangju Science High School </Accent> <br/>
                     </Text>
-                    <Small> Mar. 2012 ~<br/> Feb. 2014 </Small>
+                    <Period> Mar. 2012 ~<br/> Feb. 2014 </Period>
                 </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
@@ -202,11 +216,36 @@ const About = () => {
 
             <Chapter> Exhibition </Chapter>
             <Wrapper>
-                <OneColumn>    
+                <TwoColumn>
                     <Text>
-                        <Accent> Isle of Reflections </Accent>
-                    </Text>               
-                </OneColumn>
+                        <Accent> WOW-Flow </Accent> - ZER01NE DAY 2022 
+                    </Text>
+                    <Period> 30. Sep. ~ 3. Oct. 2022</Period>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Phantom: interact with invisible beings </Accent> - NATURE WEEK Exploration HMG Nature Observation 2.0 
+                    </Text> 
+                    <Period> 22. Nov. ~ 2. Dec. 2021</Period> 
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> TransWall - </Accent> Nexperium, Shinsegae Art & Science 
+                    </Text>
+                    <Period> 27. Aug. 2021 ~ </Period>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Isle of Reflections </Accent> - SIGGRAPH 2021 ArtGallery 
+                    </Text>
+                    <Period> 9 ~ 13. Aug. 2021</Period> 
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Snow Clock </Accent> - HCI Korea 2020 Creative Award 
+                    </Text>
+                    <Period> 19 ~ 21. Aug. 2020</Period>           
+                </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
             
@@ -217,32 +256,32 @@ const About = () => {
                         <Accent> Teaching Assistant : Media Interaction Design </Accent> <br/>
                         Instructor: Prof. Woohun Lee
                     </Text>
-                    <Small> Fall 2020,<br/> Fall 2021,<br/> Fall 2022 </Small>
+                    <Period> Fall 2022,<br/> Fall 2021,<br/> Fall 2020 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Teaching Assistant : Graduation Design Studio II </Accent> <br/>
                         Instructor: Prof. Changhee Lee
                     </Text>
-                    <Small> Fall 2021 </Small>
+                    <Period> Fall 2021 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Assistant at ID Fablab, KAIST </Accent> <br/>
                     </Text>
-                    <Small> Sep. 2021 ~<br/> Feb. 2022 </Small>
+                    <Period> Sep. 2021 ~<br/> Feb. 2022 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Assistant at Idea Factory, KAIST </Accent> <br/>
                     </Text>
-                    <Small> Jul. 2019 ~<br/> Dec. 2021 </Small>
+                    <Period> Jul. 2019 ~<br/> Dec. 2021 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Assistant at ID Fablab, KAIST </Accent> <br/>
                     </Text>
-                    <Small> Sep. 2017 ~<br/> Aug. 2018 </Small>
+                    <Period> Sep. 2017 ~<br/> Aug. 2018 </Period>
                 </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
