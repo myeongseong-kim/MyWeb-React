@@ -12,43 +12,6 @@ const StyledAll = styled.div`
     justify-content: center;
 `;
 
-// const CardList = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-
-//     @media screen and (min-width: 768px) {
-//         flex-flow: row wrap;
-//         justify-content: left;
-//     }
-// `;
-
-// const CardGrid = styled.div`
-//     width: 100%;
-//     margin: 2.0rem 0px;
-
-//     @media screen and (min-width: 768px) {
-//         width: calc(100%/2 - 15px);
-//         margin: 2.0rem 7.5px;
-//     }  
-//     @media screen and (min-width: 1024px) {
-//         width: calc(100%/2 - 20px);
-//         margin: 2.0rem 10px;
-//     }
-//     @media screen and (min-width: 1920px) {
-//         width: calc(100%/3 - 20px);
-//         margin: 2.0rem 10px;
-//     }
-//     @media screen and (min-width: 2560px) {
-//         width: calc(100%/4 - 20px);
-//         margin: 2.0rem 10px;
-//     }
-//     @media screen and (min-width: 3840px) {
-//         width: calc(100%/6 - 20px);
-//         margin: 2.0rem 10px;
-//     }
-// `;
-
 
 const All = () => {
     const data = require.context('../../assets/data', true, /\.json$/ );
@@ -61,6 +24,7 @@ const All = () => {
     objs.sort((a, b) => {
         return a.id - b.id;
     });
+    objs.reverse();
     // console.log(objs);
 
     const cards = objs.map((obj) => (

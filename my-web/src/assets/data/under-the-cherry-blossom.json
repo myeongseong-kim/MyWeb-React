@@ -1,0 +1,20 @@
+{
+    "id" : 10,
+    "address" : "/projects/under-the-cherry-blossom",
+    
+    "title" : "Under the Cherry Blossom",
+    "date" : "Jun, 2022",
+    "team" : "Myeongseong Kim",
+    "heroshot" : "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png",
+    "summary" : [
+        "A VR content interacting with cherry blossom petals by creating a flow of air through mid-air hand gestures."
+    ], 
+    
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/m0x_ti2zdF4"},
+        {"paragraph" : [
+            "A VR content interacting with cherry blossom petals by creating a flow of air through mid-air hand gestures. "
+        ]},
+        {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png"}
+    ]
+}

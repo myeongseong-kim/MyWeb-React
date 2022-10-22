@@ -1,0 +1,23 @@
+{
+    "id" : 3,
+    "address" : "/projects/snow-clock",
+    
+    "title" : "Snow Clock",
+    "date" : "Dec, 2019",
+    "team" : "Myeongseong Kim, Donghyuk Yun, and Woohun Lee",
+    "heroshot" : "snow-clock/snow-clock_heroshot.jpg",
+    "summary" : [
+        "Snow Clock is a digital clock of snow globe theme. ",
+        "By giving a feeling like accumulating and disappearing of snow, It expresses ephemerality of time flow."
+    ],
+    
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/kpi39h1DFME"},
+        {"paragraph" : [
+            "Snow Clock is a digital clock of snow globe theme. ",
+            "By giving a feeling like accumulating and disappearing of snow, It expresses ephemerality of time flow. ",
+            "It collects tiny Styrofoam balls using air suction. "
+        ]},
+        {"img" : "snow-clock/snow-clock_heroshot.jpg"}
+    ]
+}

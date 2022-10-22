@@ -91,7 +91,7 @@ const Each = () => {
 
         var content;
         switch (pair[0]) {
-            case 'text' :
+            case 'paragraph' :
                 content = <Text key={index} > {pair[1]} </Text>;
                 return content;
             case 'img' :

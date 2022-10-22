@@ -1,0 +1,22 @@
+{
+    "id" : 4,
+    "address" : "/projects/isle-of-reflections",
+    
+    "title" : "Isle of Reflections",
+    "date" : "Aug, 2020",
+    "team" : "Chaeeun Lee, Myeongseong Kim, and Hyunjung Kim",
+    "heroshot" : "isle-of-reflections/isle-of-reflections_heroshot.jpg",
+    "summary" : [
+        "An interactive lighting installation that can only be remotely explored via videotelephony. ", 
+        "Viewers visit the island filled with iridescent lights and colorful reflections through Zoom. "
+    ],
+    
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/ZNoNSAUZGPU"},
+        {"paragraph" : [
+            "An interactive lighting installation that can only be remotely explored via videotelephony. ",
+            "Viewers visit the island filled with iridescent lights and colorful reflections through Zoom, a popular web-based video communication tool. "
+        ]},
+        {"img" : "isle-of-reflections/isle-of-reflections_heroshot.jpg"}
+    ]
+}

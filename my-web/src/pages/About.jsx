@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Container, Chapter, Text, Anchor, Accent } from "../components/Styles"
+import { Wrapper, Chapter, Text, Anchor, Accent } from "../components/Styles"
 
 
 const StyledAbout = styled.div`

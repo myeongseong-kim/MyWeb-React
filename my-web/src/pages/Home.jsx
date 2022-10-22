@@ -97,8 +97,10 @@ const Home = () => {
     const images = require.context('../assets/images', true);
 
     let objs = [];
-    objs[0] = data(`./snowclock.json`);
-    objs[1] = data(`./test.json`);
+    objs[0] = data(`./dot.json`);
+    objs[1] = data(`./snow-clock.json`);
+    objs[2] = data(`./under-the-cherry-blossom.json`);
+    objs.reverse();
 
     const cards = objs.map((obj) => (
         <CardGrid key={obj.id}>

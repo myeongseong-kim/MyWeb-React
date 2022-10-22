@@ -1,0 +1,24 @@
+{
+    "id" : 1,
+    "address" : "/projects/dot",
+    
+    "title" : "DoT",
+    "date" : "Dec, 2018",
+    "team" : "Myeongseong Kim",
+    "heroshot" : "dot/dot_heroshot.jpg",
+    "summary" : [
+        "DoT is a tabletop mixed-reality game platform with kinetic interaction in the real world. ", 
+        "Users can play the game by touching and moving the marble. ", 
+        "As output, the marble moves with visual graphics of the display. "
+    ],
+
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/q1fPu-IaLVg"},
+        {"paragraph" : [
+            "DoT is a tabletop mixed-reality game platform with kinetic interaction in the real world. ", 
+            "Users can play the game by touching and moving the marble. ", 
+            "As output, the marble moves with visual graphics of the display. "
+        ]},
+        {"img" : "dot/dot_heroshot.jpg"}
+    ]
+}
