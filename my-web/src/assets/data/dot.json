@@ -21,6 +21,10 @@
             "As output, the marble moves with visual graphics of the display. "
         ]},
         {"blank" : ""},
-        {"img" : "dot/dot_heroshot.jpg"}
+        {"img" : "dot/dot_heroshot.jpg"},
+        {"img" : "dot/dot_full.jpg"},
+        {"img" : "dot/dot_inside.jpg"},
+        {"img" : "dot/dot_howitworks.png"},
+        {"img" : "dot/dot_concept.png"}
     ]
 }
