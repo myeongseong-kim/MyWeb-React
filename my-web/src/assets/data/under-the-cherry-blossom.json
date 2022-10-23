@@ -12,9 +12,11 @@
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/m0x_ti2zdF4"},
+        {"blank" : ""},
         {"paragraph" : [
             "A VR content interacting with cherry blossom petals by creating a flow of air through mid-air hand gestures. "
         ]},
+        {"blank" : ""},
         {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png"}
     ]
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Chapter, Text, Anchor, Accent } from "../../components/Styles"
+import { Wrapper, Chapter, Text, Anchor, Accent, BlankLine, Shot, Video } from "../../components/Styles"
 
 
 const StyledEach = styled.div`
@@ -43,32 +43,6 @@ const Members  = styled.p`
     }
 `;
 
-const Heroshot = styled.img`
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-
-    margin: 0.5rem 0rem;
-`;
-
-const Shot = styled.img`
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-
-    margin: 0.5rem 0rem;
-`;
-
-const YouTube = styled.iframe`
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border: none;
-
-    margin: 0.5rem 0rem;
-`;
-
-
 const Each = () => {
     const images = require.context('../../assets/images', true);
 
@@ -81,8 +55,6 @@ const Each = () => {
     let title = obj.title;
     let date = obj.date;
     let team = obj.team;
-    let heroshot = images(`./${obj.heroshot}`);
-    let summary = obj.summary;
     let fullcontent = obj.fullcontent;
 
     const contents = fullcontent.map((item, index) => {
@@ -94,6 +66,16 @@ const Each = () => {
             case 'paragraph' :
                 content = <Text key={index} > {pair[1]} </Text>;
                 return content;
+            case 'blank' :
+                content = <BlankLine> </BlankLine>;
+                return content;
+            case 'link' :
+                content = 
+                    <Text> 
+                        <Anchor key={index} href={pair[1]} target="_blank"> {pair[1]} </Anchor> 
+                    </Text>
+                ;
+                return content;
             case 'img' :
                 content = 
                     <Shot 
@@ -104,11 +86,11 @@ const Each = () => {
             case 'video' :
                 var embedCode = pair[1] + '?fs=1&rel=0';
                 content = 
-                    <YouTube 
+                    <Video 
                         key={index}
                         src={embedCode}
                         allow="fullscreen"
-                    ></YouTube>
+                    ></Video>
                 return content;
             default : 
                 console.log(`{${pair[0]} : ${pair[1]}} is not predefined.`);

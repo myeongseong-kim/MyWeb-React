@@ -18,6 +18,15 @@ const Chapter = styled.p`
     }
 `;
 
+const BlankLine = styled.div`
+    padding: 0.25em 0em;
+    margin: 0.25em 0em;
+    font-size: 1.2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
+`;
+
 const Text = styled.p`
     font-weight: 300;
     font-size: 1.2rem;
@@ -38,6 +47,31 @@ const Anchor = styled.a`
 const Accent = styled.strong`
     font-weight: 500;
     /* background-color: var(--yellow-daisy-trans); */
+`;
+
+const Shot = styled.img`
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    margin: 0.25em 0em;
+    font-size: 1.2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
+`;
+
+const Video = styled.iframe`
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border: none;
+
+    margin: 0.25em 0em;
+    font-size: 1.2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
 `;
 
 const CardList = styled.div`
@@ -80,6 +114,7 @@ const CardGrid = styled.div`
 
 
 export { 
-    Wrapper, Chapter, Text, Anchor, Accent, 
+    Wrapper, Chapter, BlankLine, Text, Anchor, Accent, 
+    Shot, Video,
     CardList, CardGrid 
 };

@@ -208,7 +208,7 @@ const About = () => {
             <Wrapper>
                 <OneColumn>    
                     <Text>
-                        <Accent> Red Dot: Best of the Best 2021 - Isle of Reflections </Accent>
+                        <Accent> Red Dot Award : Best of the Best 2021 - Isle of Reflections </Accent>
                     </Text>               
                 </OneColumn>
             </Wrapper>
