@@ -34,6 +34,7 @@ const ProfileImg = styled.img`
     height: 100%;
     
     object-fit: cover;
+    background-color: var(--white-smoky);
 
     margin: 1.0rem 0rem;
 
@@ -120,7 +121,7 @@ const Home = () => {
             <Chapter> Hi, there :D </Chapter>
             <Wrapper>
                 <IntroContainer>
-                    <ProfileImg src={profileImg} />
+                    <ProfileImg src={profileImg} loading="lazy" />
                     <Spacer></Spacer>
                     <SelfIntroduction />
                 </IntroContainer>

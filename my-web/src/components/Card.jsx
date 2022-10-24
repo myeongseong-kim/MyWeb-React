@@ -30,6 +30,7 @@ const Thumbnail = styled.img`
     width: 100%;
     aspect-ratio: 3/2;
     object-fit: cover;
+    background-color: var(--white-smoky);
 `;
 
 const CardTextBox = styled.div`
@@ -119,7 +120,7 @@ const Card = (props) => {
                 });
             }}
         >
-            <Thumbnail src={props.imgurl} />
+            <Thumbnail src={props.imgurl} loading="lazy" />
             <CardTextBox>
                 <CardTitle> {props.title} <CardDate>({props.date})</CardDate> </CardTitle>
                 <Team> </Team>

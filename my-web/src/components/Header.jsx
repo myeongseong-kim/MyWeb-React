@@ -39,6 +39,7 @@ const HeaderImg = styled.img`
     left: 50%;
     transform: translate(-50%, -50%);
     
+    background-color: black;
     object-fit: cover;
 `;
 
@@ -136,7 +137,7 @@ const Header = (props) => {
     return (
         <StyledHeader snap={snap} minHeight={props.minHeight}>
             <ImgBox> 
-                <HeaderImg src={headerImg} />
+                <HeaderImg src={headerImg} loading="lazy" />
             </ImgBox>
             <TranslucentBox snap={snap}></TranslucentBox>
             {/* <HeaderText snap={snap}>

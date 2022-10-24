@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import Map from '../components/Map';
 
-import { Wrapper, Chapter, Text, Anchor, Accent } from "../components/Styles"
+import { Wrapper, Chapter, Text, Anchor, Accent, BlankLine } from "../components/Styles"
 
 
 const StyledContact = styled.div`
@@ -60,9 +60,11 @@ const Contact = () => {
                     I am currently studying at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST. 
                     The physical location is as below.
                 </Text>
+                <BlankLine> </BlankLine>
                 <MapContainer>
                     <Map pos={POS_ID_KAIST} zoom={18} />
                 </MapContainer>
+                <BlankLine> </BlankLine>
                 <AddressText>
                     Room 225, N25 Department of Industrial Design, KAIST <br/>
                     291, Daehak-ro, Yuseong-gu, Daejeon, 34141 <br/>

@@ -81,6 +81,7 @@ const Each = () => {
                     <Shot 
                         key={index} 
                         src={images(`./${pair[1]}`)} 
+                        loading="lazy"
                     />;
                 return content;
             case 'video' :
@@ -90,6 +91,7 @@ const Each = () => {
                         key={index}
                         src={embedCode}
                         allow="fullscreen"
+                        loading="lazy"
                     ></Video>
                 return content;
             default : 
