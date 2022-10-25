@@ -196,7 +196,7 @@ const About = () => {
                 </OneColumn>
                 <OneColumn>
                     <Publication
-                        title='Snow Clcok'
+                        title='Snow Clock'
                         authors='Myeongseong Kim, Donghyuk Yun, and Woohun Lee'
                         proceeding='Proceedings of HCIK 2020'
                     > </Publication>
@@ -218,31 +218,36 @@ const About = () => {
             <Wrapper>
                 <TwoColumn>
                     <Text>
-                        <Accent> WOW-Flow </Accent> - ZER01NE DAY 2022 
+                        <Accent> WOW-Flow </Accent> <br/>
+                        - ZER01NE DAY 2022 
                     </Text>
                     <Period> 30. Sep. ~ 3. Oct. 2022</Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
-                        <Accent> Phantom: interact with invisible beings </Accent> - NATURE WEEK Exploration HMG Nature Observation 2.0 
+                        <Accent> Phantom: interact with invisible beings </Accent> <br/> 
+                        - NATURE WEEK Exploration HMG Nature Observation 2.0 
                     </Text> 
                     <Period> 22. Nov. ~ 2. Dec. 2021</Period> 
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
-                        <Accent> TransWall - </Accent> Nexperium, Shinsegae Art & Science 
+                        <Accent> TransWall </Accent> <br/> 
+                        - Nexperium, Shinsegae Art & Science 
                     </Text>
                     <Period> 27. Aug. 2021 ~ </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
-                        <Accent> Isle of Reflections </Accent> - SIGGRAPH 2021 ArtGallery 
+                        <Accent> Isle of Reflections </Accent> <br/> 
+                        - SIGGRAPH 2021 ArtGallery 
                     </Text>
                     <Period> 9 ~ 13. Aug. 2021</Period> 
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
-                        <Accent> Snow Clock </Accent> - HCI Korea 2020 Creative Award 
+                        <Accent> Snow Clock </Accent> <br/> 
+                        - HCI Korea 2020 Creative Award 
                     </Text>
                     <Period> 19 ~ 21. Aug. 2020</Period>           
                 </TwoColumn>

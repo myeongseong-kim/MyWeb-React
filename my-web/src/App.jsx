@@ -54,7 +54,7 @@ function App() {
             if(timer != null) {
                 clearTimeout(timer);        
             }
-            timer = setTimeout(handleSnap, 250);
+            timer = setTimeout(handleSnap, 125);
         };
         window.addEventListener('scroll', handleScroll, false);
 

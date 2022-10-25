@@ -30,17 +30,16 @@ const IntroContainer = styled.div`
 `;
 
 const ProfileImg = styled.img`
-    width: 100%;
-    height: 100%;
-    
+    aspect-ratio: 1/1;
     object-fit: cover;
     background-color: var(--white-smoky);
+    
+    width: 100%;
 
     margin: 1.0rem 0rem;
 
     @media screen and (min-width: 768px) {
         width: 25.6rem;
-        height: 25.6rem;
     }
 `;
 
