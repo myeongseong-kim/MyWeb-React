@@ -21,6 +21,10 @@
             "As output, the marble moves with visual graphics of the display. "
         ]},
         {"blank" : ""},
+        {"paragraph" : [
+            "The course project from [Interactive Product Design - Spring 2018, instructor: Prof. Woohun Lee] & [Graduation Design Studio II - Fall 2018, advisor: Prof. Andrea Bianchi]"
+        ]},
+        {"blank" : ""},
         {"img" : "dot/dot_heroshot.jpg"},
         {"img" : "dot/dot_full.jpg"},
         {"img" : "dot/dot_inside.jpg"},

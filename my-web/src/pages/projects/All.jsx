@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import Card from '../../components/Card';
 
-import { Wrapper, Chapter, Text, Anchor, Accent, CardList, CardGrid } from "../../components/Styles"
+import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent, CardList, CardGrid } from "../../components/Styles"
 
 
 const StyledAll = styled.div`

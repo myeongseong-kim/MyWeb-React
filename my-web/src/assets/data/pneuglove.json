@@ -19,6 +19,10 @@
             "By inflating airbags, it creates constraints on the movement of finger joints. " 
         ]},
         {"blank" : ""},
+        {"paragraph" : [
+            "The course project from [Physical User Interface - Spring 2021, instructor: Prof. Geehyuk Lee] "
+        ]},
+        {"blank" : ""},
         {"img" : "pneuglove/pneuglove_heroshot.jpg"}
     ]
 }

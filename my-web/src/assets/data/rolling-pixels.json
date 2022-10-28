@@ -4,7 +4,7 @@
     
     "title" : "Rolling Pixels",
     "date" : "Oct, 2019",
-    "team" : "*Yujin Lee, *Myeongseong Kim, and Hyunjung Kim (* both authors contributed equally to this work)",
+    "team" : "*Yujin Lee, *Myeongseong Kim, Hyunjung Kim (* both authors contributed equally to this work)",
     "heroshot" : "rolling-pixels/rolling-pixels_heroshot.png",
     "summary" : [
         "Rolling Pixels are robotic Steinmetz solids, for constructing frame-by-frame physical animations. ", 

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import Map from '../components/Map';
 
-import { Wrapper, Chapter, Text, Anchor, Accent, BlankLine } from "../components/Styles"
+import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent } from "../components/Styles"
 
 
 const StyledContact = styled.div`

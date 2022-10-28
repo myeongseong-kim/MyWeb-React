@@ -4,7 +4,7 @@
     
     "title" : "Snow Clock",
     "date" : "Dec, 2019",
-    "team" : "Myeongseong Kim, Donghyuk Yun, and Woohun Lee",
+    "team" : "Myeongseong Kim, Donghyuk Yun, Woohun Lee",
     "heroshot" : "snow-clock/snow-clock_heroshot.jpg",
     "summary" : [
         "Snow Clock is a digital clock with a snow globe theme, has dynamics and narratives of snowing scene. ",
@@ -18,6 +18,10 @@
             "Snow Clock is a digital clock with a snow globe theme, has dynamics and narratives of snowing scene. ",
             "It displays time by collecting tiny Styrofoam balls into 7-segment number shapes using air suction. ", 
             "By giving a feeling like accumulating and disappearing snow, It expresses the ephemerality of time flow. "
+        ]},
+        {"blank" : ""},
+        {"paragraph" : [
+            "The course project from [Media Interaction Design - Fall 2019, instructor: Prof. Woohun Lee] "
         ]},
         {"blank" : ""},
         {"img" : "snow-clock/snow-clock_heroshot.jpg"}, 

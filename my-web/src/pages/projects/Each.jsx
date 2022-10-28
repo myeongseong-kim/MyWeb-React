@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Chapter, Text, Anchor, Accent, BlankLine, Shot, Video } from "../../components/Styles"
+import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent, Shot, Video } from "../../components/Styles"
 
 
 const StyledEach = styled.div`

@@ -17,6 +17,10 @@
             "A VR content interacting with cherry blossom petals by creating a flow of air through mid-air hand gestures. "
         ]},
         {"blank" : ""},
+        {"paragraph" : [
+            "The course project from [Interactive Universe Design - Spring 2022, instructor: Prof. Seokhyung Bae] "
+        ]},
+        {"blank" : ""},
         {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png"}
     ]
 }

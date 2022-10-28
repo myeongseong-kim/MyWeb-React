@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
 import Card from '../components/Card';
-import { Wrapper, Chapter, Text, Anchor, Accent, CardList, CardGrid } from "../components/Styles"
+import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent, CardList, CardGrid } from "../components/Styles"
 
 import profileImg from '../assets/images/myeongseongkim_2020-12-31.png';
 
@@ -59,6 +60,25 @@ const Spacer = styled.div`
     }
 `;
 
+const TwoColumn = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+`;
+
+
+const AllProjects = styled(Link)`
+    color: var(--black-ink);
+    text-decoration-color: var(--black-ink);
+    text-decoration-thickness: 0.5px;
+
+    font-size: 1.2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
+`;
+
 
 const SelfIntroduction = () => {
     return (
@@ -99,7 +119,8 @@ const Home = () => {
     let objs = [];
     objs[0] = data(`./dot.json`);
     objs[1] = data(`./snow-clock.json`);
-    objs[2] = data(`./under-the-cherry-blossom.json`);
+    objs[2] = data(`./fishtank-jelly.json`);
+    objs[3] = data(`./under-the-cherry-blossom.json`);
     objs.reverse();
 
     const cards = objs.map((obj) => (
@@ -127,7 +148,14 @@ const Home = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
 
-            <Chapter> Selected Projects </Chapter>
+            <TwoColumn>
+                <Chapter> 
+                    Selected Projects 
+                </Chapter>
+                <AllProjects to='/projects' onClick={() => {window.scrollTo({top:0})}} > 
+                    See all projects &gt;&gt; 
+                </AllProjects>
+            </TwoColumn>
             {/* <Text> Here are the projects I chose. </Text> */}
             <CardList>
                 {cards}
