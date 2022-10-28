@@ -107,10 +107,10 @@ const Footer = forwardRef((props, ref) => {
                     <Brands name='linkedin' type='color' icon={faLinkedin} />
                     <Brands name='linkedin' type='bw' icon={faLinkedin} />
                 </Icon>
-                <Icon onClick={() => window.open("https://www.instagram.com/", "_blank")}>
+                {/* <Icon onClick={() => window.open("https://www.instagram.com/", "_blank")}>
                     <Brands name='instagram' type='color' icon={faInstagram} mask={faSquareFull} inverse />
                     <Brands name='instagram' type='bw' icon={faInstagram} />
-                </Icon>
+                </Icon> */}
             </Socials>
 
             {/* a copyright */}
