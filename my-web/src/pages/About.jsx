@@ -107,6 +107,7 @@ const Publication = (props) => {
             <Title> {props.title} </Title>
             <Authors> {others[0]}<Accent>{me}</Accent>{others[1]} </Authors>
             <Proceeding> {props.proceeding} </Proceeding>
+            <Proceeding> <Anchor href={props.doi} target="_blank" > {props.doi} </Anchor> </Proceeding>
         </div>
     );
 };
@@ -178,6 +179,7 @@ const About = () => {
                         title='Isle of Reflections'
                         authors='Chaeun Lee, Myeongseong Kim, Hyunjung Kim'
                         proceeding='ACM SIGGRAPH 2021 Art Gallery, 1-3'
+                        doi='https://doi.org/10.1145/3450507.3457434'
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
@@ -185,6 +187,7 @@ const About = () => {
                         title='Ambiguus Tiles: Origami Rhombic Pyramid Tiles for Creating Dual-View Tile Mosaics'
                         authors='Hyunjung Kim, Myeongseong Kim, Yujin Lee'
                         proceeding='Leonardo 54 (2), 206-207'
+                        doi='https://doi.org/10.1162/leon_a_01977'
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
@@ -192,6 +195,7 @@ const About = () => {
                         title='Rolling Pixels: Robotic Steinmetz Solids for Creating Physical Animations'
                         authors='*Yujin Lee, *Myeongseong Kim, Hyunjung Kim (* Both authors contributed equally to this work)'
                         proceeding='Proceedings of the Fourteenth International Conference on Tangible, Embedded, and Embodied Interaction'
+                        doi='https://doi.org/10.1145/3374920.3374987'
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
