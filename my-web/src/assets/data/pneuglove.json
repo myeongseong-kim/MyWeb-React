@@ -1,0 +1,24 @@
+{
+    "id" : 5,
+    "address" : "/projects/pneuglove",
+    
+    "title" : "PneuGlove",
+    "date" : "Jun, 2021",
+    "team" : "Myeongseong Kim",
+    "heroshot" : "pneuglove/pneuglove_heroshot.jpg",
+    "summary" : [
+        "PneuGlove is a pneumatically actuated haptic glove for simulating power grip in VR Environment. ", 
+        "By inflating airbags, it creates constraints on the movement of finger joints. " 
+    ],
+
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/q1fPu-IaLVg"},
+        {"blank" : ""},
+        {"paragraph" : [
+            "PneuGlove is a pneumatically actuated haptic glove for simulating power grip in VR Environment. ", 
+            "By inflating airbags, it creates constraints on the movement of finger joints. " 
+        ]},
+        {"blank" : ""},
+        {"img" : "pneuglove/pneuglove_heroshot.jpg"}
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "id" : 6,
+    "address" : "/projects/fishtank-jelly",
+    
+    "title" : "Fishtank: jelly",
+    "date" : "Aug, 2021",
+    "team" : "Myeongseong Kim, Woohun Lee",
+    "heroshot" : "fishtank-jelly/fishtank-jelly_heroshot.png",
+    "summary" : [
+        "A virtual fish tank filled with artificial jellyfish for a both-side multitouch transparent display. ", 
+        "Jellyfishes are reactive on touch and float following the flow users create. "
+    ],
+
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/q1fPu-IaLVg"},
+        {"blank" : ""},
+        {"paragraph" : [
+            "A virtual fish tank filled with artificial jellyfish for a both-side multitouch transparent display. ", 
+            "Taking the reverse view that transparent displays cannot render opaque objects, ",
+            "we designed the interactive content filled with transparent jellyfish. ",
+            "Jellyfishes are reactive on touch and float following the flow users create. "
+        ]},
+        {"blank" : ""},
+        {"paragraph" : [
+            "If you want to know details of TransWall, refer belows."
+        ]},
+        {"link": "https://doi.org/10.1145/2503368.2503382"},
+        {"link": "https://doi.org/10.1145/2559206.2574828"},
+        {"blank" : ""},
+        {"img" : "fishtank-jelly/fishtank-jelly_heroshot.png"}
+    ]
+}
