@@ -1,8 +1,6 @@
 import React from 'react';
 import styled, { css } from "styled-components";
 
-import Map from '../components/Map';
-
 import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent } from "../components/Styles"
 
 
@@ -20,7 +18,7 @@ const StyledContact = styled.div`
 
 const MapContainer = styled.div`
     width: 100%;
-    height: 37.5vh;
+    height: 50vh;
 
     font-size: 1.2rem;
     margin: 0.5em 0em;
@@ -42,14 +40,6 @@ const AddressText = styled.div`
     }
 `;
 
-// Dept.Industrial Design, KAIST
-// Plus code : 99F6+FR Daejeon
-// lat : 36.373688, lng : 127.362063
-const POS_ID_KAIST = {
-    lat: 36.373688,
-    lng: 127.362063
-};
-
 
 const Contact = () => {
     return (
@@ -62,7 +52,9 @@ const Contact = () => {
                 </Text>
                 <BlankLine> </BlankLine>
                 <MapContainer>
-                    <Map pos={POS_ID_KAIST} zoom={18} />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.4656616580955!2d127.35993611527195!3d36.37371969928934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654bca6d0c010f%3A0x16ce22b81107060f!2zS0FJU1Qg7IKw7JeF65SU7J6Q7J247ZWZ6rO864-ZKE4yNSk!5e0!3m2!1sko!2sus!4v1667056305807!5m2!1sko!2sus" 
+                        width="100%" height="100%" frameborder="0" loading="lazy" >
+                    </iframe>
                 </MapContainer>
                 <BlankLine> </BlankLine>
                 <AddressText>
