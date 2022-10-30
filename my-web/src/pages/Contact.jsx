@@ -70,6 +70,7 @@ const Contact = () => {
                 <Text>
                     If you have any questions or want to know details of my projects, feel free to mail me!
                 </Text>
+                <BlankLine> </BlankLine>
                 <Text> 
                     e-mail : contact@myeongseong.kim | pluto6944@kaist.ac.kr 
                     {/* <br/> phone : +82 10-4083-6944 */}

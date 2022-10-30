@@ -8,7 +8,7 @@
     "heroshot" : "dot/dot_heroshot.jpg",
     "summary" : [
         "DoT is a tabletop mixed-reality game platform with kinetic interaction in the real world. ", 
-        "Users can play the game by touching and moving the marble. ", 
+        "Users can play the game by touching and moving the marble as input. ", 
         "As output, the marble moves with visual graphics of the display. "
     ],
 
@@ -17,8 +17,14 @@
         {"blank" : ""},
         {"paragraph" : [
             "DoT is a tabletop mixed-reality game platform with kinetic interaction in the real world. ", 
-            "Users can play the game by touching and moving the marble. ", 
+            "Users can play the game by touching and moving the marble as input. ", 
             "As output, the marble moves with visual graphics of the display. "
+        ]},
+        {"blank" : ""},
+        {"paragraph" : [
+                "Under the display panel, there is a 2D floater(like a CNC machine) with a magnet on its head. ", 
+                "Therefore, the steel-made marble on the display panel is dragged to the head. ",
+                "Also, the capacitive touch panel and the conductive marble make it possible to detect whether players touch the marble and its position. "
         ]},
         {"blank" : ""},
         {"paragraph" : [

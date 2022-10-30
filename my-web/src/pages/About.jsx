@@ -201,7 +201,7 @@ const About = () => {
                 <OneColumn>
                     <Publication
                         title='Snow Clock'
-                        authors='Myeongseong Kim, Donghyuk Yun, and Woohun Lee'
+                        authors='Myeongseong Kim, Donghyuk Yun, Woohun Lee'
                         proceeding='Proceedings of HCIK 2020'
                     > </Publication>
                 </OneColumn>                

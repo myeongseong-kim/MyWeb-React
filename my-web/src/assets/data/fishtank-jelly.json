@@ -5,7 +5,7 @@
     "title" : "Fishtank: jelly",
     "date" : "Aug, 2021",
     "team" : "Myeongseong Kim, Woohun Lee",
-    "heroshot" : "fishtank-jelly/fishtank-jelly_heroshot.png",
+    "heroshot" : "fishtank-jelly/fishtank-jelly_heroshot.jpg",
     "summary" : [
         "A virtual fish tank filled with artificial jellyfish for a both-side multitouch transparent display. ", 
         "The jellyfishes are reactive on touch and float following the flow users create. "
@@ -22,12 +22,15 @@
         ]},
         {"blank" : ""},
         {"paragraph" : [
-            "TransWall, a transparent display with both-side multitouch including the content, has been installed at Nexperium, Shinsegae Art & Science, Daejeon, Republic of Korea, since August 2021.",
+            "TransWall, a transparent display with both-side multitouch including the content, has been installed at Nexperium, Shinsegae Art & Science, Daejeon, Republic of Korea, since August 2021. ",
             "If you want to know details of TransWall, refer belows."
         ]},
         {"link": "https://doi.org/10.1145/2503368.2503382"},
         {"link": "https://doi.org/10.1145/2559206.2574828"},
         {"blank" : ""},
-        {"img" : "fishtank-jelly/fishtank-jelly_heroshot.png"}
+        {"img" : "fishtank-jelly/fishtank-jelly_closedshot.jpg"},
+        {"img" : "fishtank-jelly/fishtank-jelly_fullshot.jpg"},
+        {"img" : "fishtank-jelly/fishtank-jelly_interaction.jpg"},
+        {"img" : "fishtank-jelly/fishtank-jelly_users.jpg"}
     ]
 }
