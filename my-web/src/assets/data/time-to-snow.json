@@ -1,0 +1,28 @@
+{
+    "id" : 99,
+    "address" : "/projects/time-to-snow",
+    
+    "title" : "Time to Snow",
+    "date" : "Jan, 2023",
+    "team" : "Myeongseong Kim, Sunwoo Baek, Woohun Lee",
+    "heroshot" : "time-to-snow/time-to-snow_heroshot.jpg",
+    "summary" : [
+        "An interactive installation that displays the current time with snow-like tiny Styrofoam grains and provides viewers experience of being in snowy weather. ",
+        "By using tangible material like snow, it shows well the aesthetic beauty and ephemerality of snow. "
+    ],
+    
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/aqvGe0Z1oBk"},
+        {"blank" : ""},
+        {"paragraph" : [
+            "An interactive installation that displays the current time with snow-like tiny Styrofoam grains and provides viewers experience of being in snowy weather. ",
+            "By using tangible material like snow, it shows well the aesthetic beauty and ephemerality of snow. ", 
+            "The viewers can interact with Styrofoam grains, like playing with snow in nature. "
+        ]},
+        {"blank" : ""},
+        {"img" : "time-to-snow/time-to-snow_heroshot.jpg"}, 
+        {"img" : "time-to-snow/time-to-snow_additional1.jpg"}, 
+        {"img" : "time-to-snow/time-to-snow_additional2.jpg"}, 
+        {"img" : "time-to-snow/time-to-snow_additional3.jpg"}
+    ]
+}
