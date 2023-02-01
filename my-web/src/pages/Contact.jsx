@@ -68,7 +68,7 @@ const Contact = () => {
             <Chapter> Get in Touch </Chapter>
             <Wrapper>
                 <Text>
-                    If you have any questions or want to know details of my projects, feel free to mail me!
+                    If you have any questions or want to know details of my works, feel free to mail me!
                 </Text>
                 <BlankLine> </BlankLine>
                 <Text> 
