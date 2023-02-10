@@ -176,9 +176,17 @@ const About = () => {
             <Wrapper>
                 <OneColumn>
                     <Publication
+                        title='Thermoformable Shell for Repeatable Thermoforming'
+                        authors='Donghyeon Ko, Myeongseong Kim, Woohun Lee'
+                        proceeding='Adjunct Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology'
+                        doi='https://doi.org/10.1145/3526114.3558632'
+                    > </Publication>
+                </OneColumn>
+                <OneColumn>
+                    <Publication
                         title='Isle of Reflections'
                         authors='Chaeun Lee, Myeongseong Kim, Hyunjung Kim'
-                        proceeding='ACM SIGGRAPH 2021 Art Gallery, 1-3'
+                        proceeding='ACM SIGGRAPH 2021 Art Gallery'
                         doi='https://doi.org/10.1145/3450507.3457434'
                     > </Publication>
                 </OneColumn>
@@ -212,7 +220,12 @@ const About = () => {
             <Wrapper>
                 <OneColumn>    
                     <Text>
-                        <Accent> Red Dot Award : Best of the Best 2021 - Isle of Reflections </Accent>
+                        <Accent> 2020 International Busan Design Award : Special Prize - Moleculight  </Accent>
+                    </Text>               
+                </OneColumn>
+                <OneColumn>    
+                    <Text>
+                        <Accent> Red Dot Award 2021 : Design Concept "Best of the Best" - Isle of Reflections </Accent>
                     </Text>               
                 </OneColumn>
             </Wrapper>
@@ -220,6 +233,13 @@ const About = () => {
 
             <Chapter> Exhibition </Chapter>
             <Wrapper>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Snow Clock </Accent> <br/>
+                        - DDP, Inventive Minds and Ideas
+                    </Text>
+                    <Period> 17. Dec. ~ 26. Dec. 2022</Period>
+                </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> WOW-Flow </Accent> <br/>
@@ -279,6 +299,13 @@ const About = () => {
                         <Accent> Assistant at ID Fablab, KAIST </Accent> <br/>
                     </Text>
                     <Period> Sep. 2021 ~<br/> Feb. 2022 </Period>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Teaching Assistant : Introduction to Hands-on Prototyping </Accent> <br/>
+                        Instructor: Prof. Minjun Park and Prof. Jeamin Koo
+                    </Text>
+                    <Period> Fall 2020 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>

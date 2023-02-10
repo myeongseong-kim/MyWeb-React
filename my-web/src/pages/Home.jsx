@@ -120,7 +120,8 @@ const Home = () => {
     objs[0] = data(`./dot.json`);
     objs[1] = data(`./snow-clock.json`);
     objs[2] = data(`./fishtank-jelly.json`);
-    objs[3] = data(`./under-the-cherry-blossom.json`);
+    objs[3] = data(`./phantom.json`);
+    objs[4] = data(`./under-the-cherry-blossom.json`);
     objs.reverse();
 
     const cards = objs.map((obj) => (
