@@ -1,5 +1,5 @@
 {
-    "id" : 4,
+    "id" : 6,
     "address" : "/projects/isle-of-reflections",
     
     "title" : "Isle of Reflections",
@@ -25,7 +25,7 @@
         {"blank" : ""},
         {"paragraph" : [
             "This work was accepted at SIGGRAPH 2021 ArtGallery ",
-            "and won Red Dot Award 2021: Best of the Best in Design Concept. "
+            "and won Red Dot Award 2021: Design Concept - Best of the Best. "
         ]},
         {"link": "https://doi.org/10.1145/3450507.3457434"},
         {"link": "https://www.red-dot.org/project/isle-of-reflections-54298"},

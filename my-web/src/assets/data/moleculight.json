@@ -1,0 +1,25 @@
+{
+    "id" : 5,
+    "address" : "/projects/moleculight",
+    
+    "title" : "Moleculight",
+    "date" : "Aug, 2020",
+    "team" : "Hyunjung Kim, Myeongseong Kim, Yujin Lee",
+    "heroshot" : "moleculight/moleculight_heroshot.jpg",
+    "summary" : [
+        "An interactive modular lighting system composed of Steinmetz solid lighting modules. " 
+    ],
+    
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/kme__UvSsYQ"},
+        {"blank" : ""},
+        {"paragraph" : [
+            "An interactive modular lighting system composed of Steinmetz solid lighting modules. " 
+        ]},
+        {"blank" : ""},
+        {"paragraph" : [
+            "This work won 2020 International Busan Design Award : Special Prize. "
+        ]},
+        {"img" : "moleculight/moleculight_heroshot.jpg"}
+    ]
+}

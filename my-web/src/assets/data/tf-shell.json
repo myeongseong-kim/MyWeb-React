@@ -1,0 +1,22 @@
+{
+    "id" : 13,
+    "address" : "/projects/tf-shell",
+    
+    "title" : "Thermoformable Shell",
+    "date" : "Jan, 2023",
+    "team" : "Donghyeon Ko, Myeongseong Kim, Woohun Lee",
+    "heroshot" : "tf-shell/tf-shell_heroshot.jpg",
+    "summary" : [
+        "A thermoformable shell called TF-Shell that allows repeatable thermoforming. "
+    ],
+    
+    "fullcontent" : [
+        {"video": "https://www.youtube.com/embed/XEHINfA8jDc"},
+        {"blank" : ""},
+        {"paragraph" : [
+            "A thermoformable shell called TF-Shell that allows repeatable thermoforming. "
+        ]},
+        {"blank" : ""},
+        {"img" : "tf-shell/tf-shell_heroshot.jpg"}
+    ]
+}

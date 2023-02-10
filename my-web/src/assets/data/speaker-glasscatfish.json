@@ -1,0 +1,22 @@
+{
+    "id" : 14,
+    "address" : "/projects/speaker-glasscatfish",
+    
+    "title" : "Speaker: glass-catfish",
+    "date" : "Oct, 2022",
+    "team" : "Myeongseong Kim, Wonwoo Lee(WONWOORI)",
+    "heroshot" : "speaker-glasscatfish/speaker-glasscatfish_heroshot.jpg",
+    "summary" : [
+        "An interactive lighting speaeker. "
+    ],
+    
+    "fullcontent" : [
+        {"img" : "speaker-glasscatfish/speaker-glasscatfish_heroshot.jpg"},
+        {"blank" : ""},
+        {"paragraph" : [
+            "An interactive lighting speaeker. "
+        ]},
+
+        {"img" : "speaker-glasscatfish/speaker-glasscatfish_heroshot.jpg"}
+    ]
+}

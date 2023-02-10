@@ -1,0 +1,23 @@
+{
+    "id" : 11,
+    "address" : "/projects/palette",
+    
+    "title" : "Pa!ette: just mix it",
+    "date" : "Dec, 2021",
+    "team" : "Myeongseong Kim, Suhyeon Ryu",
+    "heroshot" : "palette/palette_heroshot.jpg",
+    "summary" : [
+        "A color explorer plug-in based on real paint mixing experience. " 
+    ],
+    
+    "fullcontent" : [
+        {"img" : "palette/palette_heroshot.jpg"},
+        {"blank" : ""},
+        {"paragraph" : [
+            "A color explorer plug-in based on real paint mixing experience. " 
+        ]},
+
+        {"img" : "palette/palette_heroshot.jpg"}, 
+        {"img" : "palette/palette_additional1.jpg"}
+    ]
+}
