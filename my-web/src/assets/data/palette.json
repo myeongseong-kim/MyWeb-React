@@ -4,18 +4,28 @@
     
     "title" : "Pa!ette: just mix it",
     "date" : "Dec, 2021",
-    "team" : "Myeongseong Kim, Suhyeon Ryu",
+    "team" : "Myeongseong Kim, Suhyeon Ryu, Seokhyung Bae",
     "heroshot" : "palette/palette_heroshot.jpg",
     "summary" : [
-        "A color explorer plug-in based on real paint mixing experience. " 
+        "A color explorer plug-in based on real paint mixing experience. ", 
+        "It was developed inspired by memories of childhood painting class. "
     ],
     
     "fullcontent" : [
-        {"img" : "palette/palette_heroshot.jpg"},
+        {"video": "https://www.youtube.com/embed/g41SIvPKm0M"},
         {"blank" : ""},
+
         {"paragraph" : [
-            "A color explorer plug-in based on real paint mixing experience. " 
+            "A color has four dimensions, including RGB and alpha(transparency). ", 
+            "Since it has a high degree of freedom, it is not easy for non-experts to choose the desired color without trial and error. ", 
+            "It was developed inspired by memories of childhood painting class. "
         ]},
+        {"blank" : ""},
+        
+        {"paragraph" : [
+            "The course project from [Interactive Software Design - Fall 2021, instructor: Prof. Seokhyung Bae] "
+        ]},
+        {"blank" : ""},
 
         {"img" : "palette/palette_additional1.jpg"}
     ]

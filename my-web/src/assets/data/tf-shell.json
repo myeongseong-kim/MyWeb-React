@@ -7,16 +7,22 @@
     "team" : "Donghyeon Ko, Myeongseong Kim, Woohun Lee",
     "heroshot" : "tf-shell/tf-shell_heroshot.jpg",
     "summary" : [
-        "A thermoformable shell called TF-Shell that allows repeatable thermoforming. "
+        "A thermoformable shell called TF-Shell that allows repeatable thermoforming of 3D printed objects. ", 
+        "Through embedding TF-Shell, users can thermoform target parts in diverse ways. "
     ],
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/XEHINfA8jDc"},
         {"blank" : ""},
+
         {"paragraph" : [
-            "A thermoformable shell called TF-Shell that allows repeatable thermoforming. "
+            "A thermoformable shell called TF-Shell that allows repeatable thermoforming of 3D printed objects. ", 
+            "Due to the low thermal conductivity of typical printing materials like polylactic acid (PLA), thermoforming 3D printed objects is largely limited. ", 
+            "Through embedding TF-Shell, users can thermoform target parts in diverse ways. ", 
+            "Moreover, the deformed structures can be restored by reheating. "
         ]},
         {"blank" : ""},
+        
         {"img" : "tf-shell/tf-shell_heroshot.jpg"}
     ]
 }

@@ -4,7 +4,7 @@
     
     "title" : "DoT",
     "date" : "Dec, 2018",
-    "team" : "Myeongseong Kim",
+    "team" : "Myeongseong Kim, Woohun Lee, Andrea Bianchi",
     "heroshot" : "dot/dot_heroshot.jpg",
     "summary" : [
         "DoT is a tabletop mixed-reality game platform with kinetic interaction in the real world. ", 
@@ -15,22 +15,26 @@
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/q1fPu-IaLVg"},
         {"blank" : ""},
+
         {"paragraph" : [
             "DoT is a tabletop mixed-reality game platform with kinetic interaction in the real world. ", 
             "Users can play the game by touching and moving the marble as input. ", 
             "As output, the marble moves with visual graphics of the display. "
         ]},
         {"blank" : ""},
+
         {"paragraph" : [
             "Under the display panel, there is a 2D floater(like a CNC machine) with a magnet on its head. ", 
             "Therefore, the steel-made marble on the display panel is dragged to the head. ",
             "Also, the capacitive touch panel and the conductive marble make it possible to detect whether players touch the marble and its position. "
         ]},
         {"blank" : ""},
+
         {"paragraph" : [
             "The course project from [Interactive Product Design - Spring 2018, instructor: Prof. Woohun Lee] & [Graduation Design Studio II - Fall 2018, advisor: Prof. Andrea Bianchi]"
         ]},
         {"blank" : ""},
+        
         {"img" : "dot/dot_heroshot.jpg"},
         {"img" : "dot/dot_full.jpg"},
         {"img" : "dot/dot_inside.jpg"},

@@ -15,17 +15,20 @@
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/3QyZOZPoh-c"},
         {"blank" : ""},
+
         {"paragraph" : [
             "Rolling Pixels are robotic Steinmetz solids, for constructing frame-by-frame physical animations. ",
             "As a bicylinder-shaped Rolling Pixel rolls back and forth or left and right, ", 
             "the shape and color of the top view of the pixel changes repeatedly without using any additional shape- or color-changing techniques. "
         ]},
         {"blank" : ""},
+        
         {"paragraph" : [
             "It was presented at WIP Poster, TEI 2020. "
         ]},
         {"link": "https://doi.org/10.1145/3374920.3374987"},
         {"blank" : ""},
+        
         {"img" : "rolling-pixels/rolling-pixels_smile.png"},
         {"img" : "rolling-pixels/rolling-pixels_diagram.png"}
     ]

@@ -4,7 +4,7 @@
     
     "title" : "PneuGlove",
     "date" : "Jun, 2021",
-    "team" : "Myeongseong Kim",
+    "team" : "Myeongseong Kim, Geehyuk Lee",
     "heroshot" : "pneuglove/pneuglove_heroshot.jpg",
     "summary" : [
         "PneuGlove is a pneumatically actuated haptic glove for simulating power grip in VR Environment. ", 
@@ -14,15 +14,18 @@
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/8v0BWbpw5yw"},
         {"blank" : ""},
+
         {"paragraph" : [
             "PneuGlove is a pneumatically actuated haptic glove for simulating power grip in VR Environment. ", 
             "By inflating airbags, it creates constraints on the movement of finger joints. " 
         ]},
         {"blank" : ""},
+
         {"paragraph" : [
             "The course project from [Physical User Interface - Spring 2021, instructor: Prof. Geehyuk Lee] "
         ]},
         {"blank" : ""},
+        
         {"img" : "pneuglove/pneuglove_heroshot.jpg"}, 
         {"img" : "pneuglove/pneuglove_additional.jpg"}, 
         {"img" : "pneuglove/pneuglove_schematic.jpg"}

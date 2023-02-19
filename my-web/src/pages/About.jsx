@@ -220,12 +220,12 @@ const About = () => {
             <Wrapper>
                 <OneColumn>    
                     <Text>
-                        <Accent> 2020 International Busan Design Award : Special Prize - Moleculight  </Accent>
+                        <Accent> Red Dot Award 2021: Best of the Best (Design Concept) - Isle of Reflections </Accent>
                     </Text>               
                 </OneColumn>
                 <OneColumn>    
                     <Text>
-                        <Accent> Red Dot Award 2021 : Design Concept "Best of the Best" - Isle of Reflections </Accent>
+                        <Accent> 2020 International Busan Design Award: Special Prize - Moleculight  </Accent>
                     </Text>               
                 </OneColumn>
             </Wrapper>

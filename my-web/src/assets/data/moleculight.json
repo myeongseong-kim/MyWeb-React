@@ -4,22 +4,29 @@
     
     "title" : "Moleculight",
     "date" : "Aug, 2020",
-    "team" : "Hyunjung Kim, Myeongseong Kim, Yujin Lee",
+    "team" : "Hyunjung Kim, Chaeeun Lee, Myeongseong Kim",
     "heroshot" : "moleculight/moleculight_heroshot.jpg",
     "summary" : [
-        "An interactive modular lighting system composed of Steinmetz solid lighting modules. " 
+        "An interactive modular lighting system composed of Steinmetz solid lighting modules. ", 
+        "Users can construct long or short, linear or crosslinked light structures. " 
     ],
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/kme__UvSsYQ"},
         {"blank" : ""},
+
         {"paragraph" : [
-            "An interactive modular lighting system composed of Steinmetz solid lighting modules. " 
+            "Moleculight is an interactive modular lighting system composed of Steinmetz solid lighting modules. ", 
+            "As bicylinder-shaped Moleculight lighting modules are assembled in a line as a typical fluorescent lamp using ring-shaped links, a cylinder with decorative patterns of light on the lateral surface of the system is created. ", 
+            "Users can construct long or short, linear or crosslinked light structures. " 
         ]},
         {"blank" : ""},
+
         {"paragraph" : [
-            "This work won 2020 International Busan Design Award : Special Prize. "
+            "This work won 2020 International Busan Design Award: Special Prize. "
         ]},
+        {"blank" : ""},
+
         {"img" : "moleculight/moleculight_heroshot.jpg"}, 
         {"img" : "moleculight/moleculight_additional0.jpg"}, 
         {"img" : "moleculight/moleculight_additional1.jpg"}, 

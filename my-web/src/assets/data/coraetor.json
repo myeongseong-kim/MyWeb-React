@@ -7,14 +7,24 @@
     "team" : "Jaehong Kim, Junbeom Shin, Myeongseong Kim, Takyeon Lee",
     "heroshot" : "coraetor/coraetor_heroshot.jpg",
     "summary" : [
-        "An aquarium product to provide air, lighting and shelter for aqua pets. " 
+        "An aquarium product to provide air, lighting and shelter for aqua pets. ", 
+        "The name Coraetor is a combination of 'coral' and 'aerator', ", 
+            "symbolizing the shape inspired by coral that acts as an oxygen supply in the sea. " 
     ],
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/WI1Ji-fPHKE"},
         {"blank" : ""},
+
         {"paragraph" : [
-            "An aquarium product to provide air, lighting and shelter for aqua pets. "
+            "An aquarium product to provide air, lighting and shelter for aqua pets. ", 
+            "The name Coraetor is a combination of 'coral' and 'aerator', ", 
+            "symbolizing the shape inspired by coral that acts as an oxygen supply in the sea. " 
+        ]},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "The course project from [Design Project - Spring 2021, instructor: Prof. Takyeon Lee] "
         ]},
         {"blank" : ""},
 

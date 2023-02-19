@@ -14,6 +14,7 @@
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/ZNoNSAUZGPU"},
         {"blank" : ""},
+
         {"paragraph" : [
             "An interactive lighting installation that can only be remotely explored via videotelephony. ",
             "Viewers visit the island filled with iridescent lights and colorful reflections through Zoom, a popular web-based video communication tool. ",
@@ -23,6 +24,7 @@
             "Each room provides live scenes of the island from different viewing angles."
         ]},
         {"blank" : ""},
+
         {"paragraph" : [
             "This work was accepted at SIGGRAPH 2021 ArtGallery ",
             "and won Red Dot Award 2021: Design Concept - Best of the Best. "
@@ -30,6 +32,7 @@
         {"link": "https://doi.org/10.1145/3450507.3457434"},
         {"link": "https://www.red-dot.org/project/isle-of-reflections-54298"},
         {"blank" : ""},
+        
         {"img" : "isle-of-reflections/isle-of-reflections_heroshot.jpg"},
         {"img" : "isle-of-reflections/isle-of-reflections_additional1.jpg"},
         {"img" : "isle-of-reflections/isle-of-reflections_additional2.jpg"},

@@ -4,19 +4,39 @@
     
     "title" : "Speaker: glass-catfish",
     "date" : "Oct, 2022",
-    "team" : "Myeongseong Kim, Wonwoo Lee(WONWOORI)",
+    "team" : "Myeongseong Kim, WONWOORI(Wonwoo Lee)",
     "heroshot" : "speaker-glasscatfish/speaker-glasscatfish_heroshot.jpg",
     "summary" : [
-        "An interactive lighting speaeker. "
+        "A speaker type of circuit sculpture with audio visualizing using light. "
     ],
     
     "fullcontent" : [
-        {"img" : "speaker-glasscatfish/speaker-glasscatfish_heroshot.jpg"},
+        {"video": "https://www.youtube.com/embed/slrDJW540sU"},
         {"blank" : ""},
-        {"paragraph" : [
-            "An interactive lighting speaeker. "
-        ]},
 
-        {"img" : "speaker-glasscatfish/speaker-glasscatfish_heroshot.jpg"}
+        {"paragraph" : [
+            "A speaker type of circuit sculpture with audio visualizing using light. ", 
+            "Technically, the circuit sculpture inside works as an audio amp, ", 
+            "and the bottom part read the audio signals and visualize it using light panels. ", 
+            "A metal mirror on top is able to customize its height and tilt, and it leads to create acoustic distortion."
+        ]},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "Like a glass catfish that shows all organs through transparent skin, ", 
+            "the exterior of this speaker is made of an transparent acrylic cylinder. ", 
+            "Also, the circuit is not a 2D layer PCB, but a three-dimensional circuit structure, ", 
+            "so each elctronic component looks like a life organ. "
+        ]},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "The three speakers were displayed at the exhibition, WOW-FLOW, ZER01NE DAY 2022. "
+        ]},
+        {"blank" : ""},
+
+        {"img" : "speaker-glasscatfish/speaker-glasscatfish_sketch.jpg"}, 
+        {"img" : "speaker-glasscatfish/speaker-glasscatfish_heroshot.jpg"}, 
+        {"img" : "speaker-glasscatfish/speaker-glasscatfish_additional1.jpg"}
     ]
 }

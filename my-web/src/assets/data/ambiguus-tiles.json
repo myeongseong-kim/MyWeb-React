@@ -14,6 +14,7 @@
     "fullcontent" : [
         {"img" : "ambiguus-tiles/ambiguus-tiles_heroshot.jpg"},
         {"blank" : ""},
+        
         {"paragraph" : [
             "A novel expressive medium that the authors call Ambiguus tiles, which construct dual-view tile mosaics. ",
             "While similar to wall and surface mosaics made with conventional tiles, Ambiguus tiles can be assembled and rearranged to create dual-view tile mosaics in any size and form. ",
@@ -23,6 +24,7 @@
 
         {"link": "https://doi.org/10.1162/leon_a_01977"},
         {"blank" : ""},
+        
         {"img" : "ambiguus-tiles/ambiguus-tiles_additional0.jpg"},
         {"img" : "ambiguus-tiles/ambiguus-tiles_additional1.jpg"},
         {"img" : "ambiguus-tiles/ambiguus-tiles_additional2.jpg"}
