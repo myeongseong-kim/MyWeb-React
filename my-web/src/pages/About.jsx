@@ -121,14 +121,14 @@ const About = () => {
             <Wrapper>
                 <TwoColumn>
                     <Text>
-                        <Accent> M.S. Student at Dept. Industrial Design </Accent> <br/>
+                        <Accent> M.S. Student at Dept. Industrial Design, KAIST </Accent> <br/>
                         Advisor: Prof. Woohun Lee
                     </Text>
                     <Period> Aug. 2020 ~ </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
-                        <Accent> B.S. at Dept. Industrial Design </Accent> <br/>
+                        <Accent> B.S. at Dept. Industrial Design, KAIST </Accent> <br/>
                         Minor: Mechanical Engineering
                     </Text>
                     <Period> Mar. 2014 ~<br/> Aug. 2020 </Period>
@@ -236,7 +236,7 @@ const About = () => {
                 <TwoColumn>
                     <Text>
                         <Accent> Snow Clock </Accent> <br/>
-                        - DDP, Inventive Minds and Ideas
+                        - Inventive Minds and Ideas, Seoul DDP
                     </Text>
                     <Period> 17. Dec. ~ 26. Dec. 2022</Period>
                 </TwoColumn>

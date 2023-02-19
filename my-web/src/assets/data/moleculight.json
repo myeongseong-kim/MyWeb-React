@@ -20,6 +20,12 @@
         {"paragraph" : [
             "This work won 2020 International Busan Design Award : Special Prize. "
         ]},
-        {"img" : "moleculight/moleculight_heroshot.jpg"}
+        {"img" : "moleculight/moleculight_heroshot.jpg"}, 
+        {"img" : "moleculight/moleculight_additional0.jpg"}, 
+        {"img" : "moleculight/moleculight_additional1.jpg"}, 
+        {"img" : "moleculight/moleculight_additional2.jpg"}, 
+        {"img" : "moleculight/moleculight_additional3.jpg"}, 
+        {"img" : "moleculight/moleculight_additional4.jpg"}, 
+        {"img" : "moleculight/moleculight_additional5.jpg"}
     ]
 }

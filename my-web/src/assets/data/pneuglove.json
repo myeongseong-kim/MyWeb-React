@@ -23,6 +23,8 @@
             "The course project from [Physical User Interface - Spring 2021, instructor: Prof. Geehyuk Lee] "
         ]},
         {"blank" : ""},
-        {"img" : "pneuglove/pneuglove_heroshot.jpg"}
+        {"img" : "pneuglove/pneuglove_heroshot.jpg"}, 
+        {"img" : "pneuglove/pneuglove_additional.jpg"}, 
+        {"img" : "pneuglove/pneuglove_schematic.jpg"}
     ]
 }

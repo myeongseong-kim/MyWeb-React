@@ -5,19 +5,21 @@
     "title" : "Coraetor",
     "date" : "Jun, 2021",
     "team" : "Jaehong Kim, Junbeom Shin, Myeongseong Kim, Takyeon Lee",
-    "heroshot" : "coraetor/coraetor_heroshot.png",
+    "heroshot" : "coraetor/coraetor_heroshot.jpg",
     "summary" : [
-        "A leading aquarium product designed to provide air & lighting & shelter for aqua pets.  " 
+        "An aquarium product to provide air, lighting and shelter for aqua pets. " 
     ],
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/WI1Ji-fPHKE"},
         {"blank" : ""},
         {"paragraph" : [
-            "A leading aquarium product designed to provide air & lighting & shelter for aqua pets. " 
+            "An aquarium product to provide air, lighting and shelter for aqua pets. "
         ]},
         {"blank" : ""},
 
-        {"img" : "coraetor/coraetor_heroshot.png"}
+        {"img" : "coraetor/coraetor_heroshot.jpg"},
+        {"img" : "coraetor/coraetor_bright.jpg"},
+        {"img" : "coraetor/coraetor_dark.jpg"}
     ]
 }
