@@ -7,7 +7,7 @@
     "team" : "Myeongseong Kim, Woohun Lee",
     "heroshot" : "fishtank-jelly/fishtank-jelly_heroshot.jpg",
     "summary" : [
-        "A virtual fish tank filled with artificial jellyfish for a both-side multitouch transparent display. ", 
+        "A virtual fish tank filled with artificial jellyfishes for a both-side multitouch transparent display. ", 
         "The jellyfishes are reactive on touch and float following the flow users create. "
     ],
     "fullcontent" : [
@@ -15,7 +15,7 @@
         {"blank" : ""},
 
         {"paragraph" : [
-            "A virtual fish tank filled with artificial jellyfish for a both-side multitouch transparent display. ", 
+            "A virtual fish tank filled with artificial jellyfishes for a both-side multitouch transparent display. ", 
             "Taking the reverse view that transparent displays cannot render opaque objects, ",
             "we designed the interactive content filled with transparent jellyfish. ",
             "The artificial jellyfishes are reactive to touch, glowing and making a sound. ", 
