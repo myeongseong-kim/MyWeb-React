@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
@@ -44,7 +44,9 @@ const Members  = styled.p`
 `;
 
 const Shot = styled.img`
-    width: calc((100% - ${props => props.num}*1em) * ${props => props.coef});
+    max-width: 100%;
+    width: calc((100% - ${props => props.num} * 0.5em) * ${props => props.coef});
+    height: auto;
 
     font-size: 1.2rem;
     @media screen and (min-width: 1024px) {
@@ -67,60 +69,78 @@ const Each = () => {
     let fullcontent = obj.fullcontent;
 
     const contents = fullcontent.map((item, index) => {
+        var uid = title + ' ' + index;
+        // console.log(uid);
         var pair = Object.entries(item)[0];
         // console.log(pair[0]);
 
         var content;
         switch (pair[0]) {
             case 'paragraph' :
-                content = <Text key={index} > {pair[1]} </Text>;
+                content = <Text key={uid} > {pair[1]} </Text>;
                 return content;
             case 'blank' :
-                content = <BlankLine> </BlankLine>;
+                content = <BlankLine key={uid}> </BlankLine>;
                 return content;
             case 'link' :
                 content = 
-                    <Text> 
-                        <Anchor key={index} href={pair[1]} target="_blank"> {pair[1]} </Anchor> 
+                    <Text key={uid}> 
+                        <Anchor href={pair[1]} target="_blank"> {pair[1]} </Anchor> 
                     </Text>
                 ;
                 return content;
             case 'img' :
                 content = 
                     <OneShot 
-                        key={index} 
+                        key={uid} 
                         src={images(`./${pair[1]}`)} 
                         loading="lazy"
-                    />;
+                    />
+                ;
                 return content;
             case 'imgs' :
                 var srcs = pair[1];
                 // console.log(srcs.length);
-                                
+                
                 var imgRatios = [];
-                let sum = 0;
-                srcs.forEach(adr => {
-                    var pic = new Image();
-                    pic.src = images(`./${adr}`);
-                    pic.onload = () => {
-                        // console.log(pic);
-                    }
-                    var ratio = pic.width/pic.height;
-                    imgRatios.push(ratio);
-                    sum += ratio;
-                });
-                // console.log(imgRatios);
-                // console.log(sum);
-                 
-                const imgs = srcs.map((adr, order) => {
-                    var image = 
-                        <Shot key={order} src={images(`./${adr}`)} coef={imgRatios[order]/sum} num={imgRatios.length-1}/>
-                    return image;
-                });
+
+                const SingleLineImages = () => {
+                    const [total, setTotal] = useState(0);
+                    var sum = 0;
+
+                    const imgs = srcs.map((adr, order) => {
+                        const handleImageLoad = (e) => {
+                            var ratio = e.target.naturalWidth / e.target.naturalHeight;
+                            // console.log(ratio);
+                            imgRatios.push(ratio);
+                            sum += ratio;
+                            
+                            if (imgRatios.length === srcs.length) {
+                                console.log(imgRatios);
+                                // console.log(sum);
+                                setTotal(sum);
+                            }
+                        }
+    
+                        var image = 
+                            <Shot 
+                                key={uid + '-' + order} 
+                                src={images(`./${adr}`)} 
+                                loading="lazy"
+                                onLoad={handleImageLoad}
+                                coef={imgRatios[order]/total} 
+                                num={imgRatios.length-1} 
+                            />
+                        ;
+                        return image;
+                    });
+
+                    return imgs;
+                }
 
                 content = 
-                    <MultiShots>
-                        {imgs}
+                    <MultiShots key={uid}>
+                        <SingleLineImages />
                     </MultiShots>
                 ;
                 return content;
@@ -128,15 +148,16 @@ const Each = () => {
                 var embedCode = pair[1] + '?fs=1&rel=0';
                 content = 
                     <Video 
-                        key={index}
+                        key={uid}
                         src={embedCode}
                         allow="fullscreen"
                         loading="lazy"
                     ></Video>
+                ;
                 return content;
             default : 
                 console.log(`{${pair[0]} : ${pair[1]}} is not predefined.`);
-                content = <p key={index} > error </p>
+                content = <p key={uid} > error </p>
                 return content;
         }          
     });
