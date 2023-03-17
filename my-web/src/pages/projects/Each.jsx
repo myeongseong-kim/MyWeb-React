@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent, Shot, Video } from "../../components/Styles"
+import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent, OneShot, MultiShots, Video } from "../../components/Styles"
 
 
 const StyledEach = styled.div`
@@ -43,6 +43,16 @@ const Members  = styled.p`
     }
 `;
 
+const Shot = styled.img`
+    width: calc(100% * ${props => props.coef} - 1em);
+    margin: 0em 0.5em;
+
+    font-size: 1.2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
+`;
+
 const Each = () => {
     const images = require.context('../../assets/images', true);
 
@@ -78,11 +88,44 @@ const Each = () => {
                 return content;
             case 'img' :
                 content = 
-                    <Shot 
+                    <OneShot 
                         key={index} 
                         src={images(`./${pair[1]}`)} 
                         loading="lazy"
                     />;
+                return content;
+            case 'imgs' :
+                var srcs = pair[1];
+                // console.log(srcs.length);
+                
+                var imgRatios = [];
+                let sum = 0;
+
+                srcs.forEach(adr => {
+                    var pic = new Image();
+                    pic.src = images(`./${adr}`);
+                    pic.onload = () => {
+                        // console.log(pic);
+                    }
+                    var ratio = pic.width/pic.height;
+                    imgRatios.push(ratio);
+                    sum += ratio;
+                });
+
+                console.log(imgRatios);
+                console.log(sum);
+                 
+                const imgs = srcs.map((adr, order) => {
+                    var image = 
+                        <Shot key={order} src={images(`./${adr}`)} coef={imgRatios[order]/sum} />
+                    return image;
+                });
+
+                content = 
+                    <MultiShots>
+                        {imgs}
+                    </MultiShots>
+                ;
                 return content;
             case 'video' :
                 var embedCode = pair[1] + '?fs=1&rel=0';

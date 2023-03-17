@@ -24,7 +24,7 @@
 
         {"paragraph" : [
             "The 3D fluid dynamics simulation was implemented by extending Jos Stam's paper, 'Real-Time Fluid Dynamics for Games'. ",
-            "Next, designed the algorithm for how petal-mimic particles move in a fluid field, and how the users create fluid flows using their hand gestures. "
+            "Next, designed the algorithm  for how petal-mimic particles move in a fluid field, and how the users create fluid flows using their hand gestures. "
         ]},
         {"blank" : ""},
 
@@ -34,6 +34,11 @@
         {"blank" : ""},
         
         {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png"}, 
-        {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif"}
+        {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif"}, 
+    
+        {"imgs" : [
+            "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif", 
+            "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif"
+        ]}
     ]
 }

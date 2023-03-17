@@ -49,10 +49,26 @@ const Accent = styled.strong`
     /* background-color: var(--yellow-daisy-trans); */
 `;
 
-const Shot = styled.img`
+const OneShot = styled.img`
     width: 100%;
     height: auto;
     object-fit: cover;
+
+    margin: 0.25em 0em;
+    font-size: 1.2rem;
+    @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+    }
+`;
+
+const MultiShots = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
 
     margin: 0.25em 0em;
     font-size: 1.2rem;
@@ -115,6 +131,6 @@ const CardGrid = styled.div`
 
 export { 
     Wrapper, Chapter, BlankLine, Text, Anchor, Accent, 
-    Shot, Video,
+    OneShot, MultiShots, Video,
     CardList, CardGrid 
 };
