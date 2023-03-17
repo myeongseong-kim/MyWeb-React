@@ -22,23 +22,77 @@
         ]},
         {"blank" : ""},
 
+        {"img" : [
+            "under-the-cherry-blossom/Kung Fu Panda (2008).png" 
+        ]},
+        {"blank" : ""},
+        
+        {"imgs" : [
+            "under-the-cherry-blossom/Snow (Tokujin Yoshioka, 2010).png", 
+            "under-the-cherry-blossom/Epilogue (Cj Hendry, 2022).png"
+        ]},
+        {"blank" : ""},
+        
+        {"img" : [
+            "under-the-cherry-blossom/formative-study-setting.gif" 
+        ]},
+        {"blank" : ""},
+
+        {"imgs" : [
+            "under-the-cherry-blossom/formative-study-standing.gif", 
+            "under-the-cherry-blossom/formative-study-sitting.gif", 
+            "under-the-cherry-blossom/formative-study-lying.gif"
+        ]},
+        {"blank" : ""},
+
+        {"imgs" : [
+            "under-the-cherry-blossom/formative-study-shaking.gif", 
+            "under-the-cherry-blossom/formative-study-catching.gif"
+        ]},
+        {"blank" : ""},
+
+        {"imgs" : [
+            "under-the-cherry-blossom/formative-study-drawing.gif", 
+            "under-the-cherry-blossom/formative-study-erasing.gif"
+        ]},
+        {"blank" : ""},
+
+        {"imgs" : [
+            "under-the-cherry-blossom/formative-study-throwing.gif", 
+            "under-the-cherry-blossom/formative-study-snowfight.gif"
+        ]},
+        {"blank" : ""},
+
         {"paragraph" : [
             "The 3D fluid dynamics simulation was implemented by extending Jos Stam's paper, 'Real-Time Fluid Dynamics for Games'. ",
             "Next, designed the algorithm  for how petal-mimic particles move in a fluid field, and how the users create fluid flows using their hand gestures. "
         ]},
         {"blank" : ""},
 
-        {"paragraph" : [
-            "The course project from [Interactive Universe Design - Spring 2022, instructor: Prof. Seokhyung Bae] "
+        {"imgs" : [
+            "under-the-cherry-blossom/fluid2D.gif", 
+            "under-the-cherry-blossom/fluid2D-a-particle.gif", 
+            "under-the-cherry-blossom/fluid2D-500-particles.gif"
+        ]},
+        {"blank" : ""},
+
+        {"imgs" : [
+            "under-the-cherry-blossom/fluid3D.gif", 
+            "under-the-cherry-blossom/fluid3D-a-particle.gif", 
+            "under-the-cherry-blossom/fluid3D-1000-particles.gif"
         ]},
         {"blank" : ""},
         
-        {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png"}, 
         {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif"}, 
-    
-        {"imgs" : [
-            "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif", 
-            "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif"
-        ]}
+        {"blank" : ""},
+            
+        {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png"}, 
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "The course project from [Interactive Universe Design - Spring 2022, instructor: Prof. Seokhyung Bae] "
+        ]},
+        {"blank" : ""}
+
     ]
 }
