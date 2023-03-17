@@ -54,7 +54,6 @@ const OneShot = styled.img`
     height: auto;
     object-fit: cover;
 
-    margin: 0.25em 0em;
     font-size: 1.2rem;
     @media screen and (min-width: 1024px) {
         font-size: 1.6rem;
@@ -64,13 +63,12 @@ const OneShot = styled.img`
 const MultiShots = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     width: 100%;
     height: auto;
 
-    margin: 0.25em 0em;
     font-size: 1.2rem;
     @media screen and (min-width: 1024px) {
         font-size: 1.6rem;

@@ -44,8 +44,7 @@ const Members  = styled.p`
 `;
 
 const Shot = styled.img`
-    width: calc(100% * ${props => props.coef} - 1em);
-    margin: 0em 0.5em;
+    width: calc((100% - ${props => props.num}*1em) * ${props => props.coef});
 
     font-size: 1.2rem;
     @media screen and (min-width: 1024px) {
@@ -97,10 +96,9 @@ const Each = () => {
             case 'imgs' :
                 var srcs = pair[1];
                 // console.log(srcs.length);
-                
+                                
                 var imgRatios = [];
                 let sum = 0;
-
                 srcs.forEach(adr => {
                     var pic = new Image();
                     pic.src = images(`./${adr}`);
@@ -111,13 +109,12 @@ const Each = () => {
                     imgRatios.push(ratio);
                     sum += ratio;
                 });
-
-                console.log(imgRatios);
-                console.log(sum);
+                // console.log(imgRatios);
+                // console.log(sum);
                  
                 const imgs = srcs.map((adr, order) => {
                     var image = 
-                        <Shot key={order} src={images(`./${adr}`)} coef={imgRatios[order]/sum} />
+                        <Shot key={order} src={images(`./${adr}`)} coef={imgRatios[order]/sum} num={imgRatios.length-1}/>
                     return image;
                 });
 
