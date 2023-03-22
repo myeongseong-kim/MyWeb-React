@@ -22,7 +22,11 @@
         ]},
         {"blank" : ""},
 
-        {"img" : [
+        {"blank" : ""},
+        {"chapter": "Background"},
+        {"blank" : ""},
+
+        {"imgs" : [
             "under-the-cherry-blossom/Kung Fu Panda (2008).png" 
         ]},
         {"blank" : ""},
@@ -32,8 +36,12 @@
             "under-the-cherry-blossom/Epilogue (Cj Hendry, 2022).png"
         ]},
         {"blank" : ""},
+
+        {"blank" : ""},
+        {"chapter": "Formative Study"},
+        {"blank" : ""},
         
-        {"img" : [
+        {"imgs" : [
             "under-the-cherry-blossom/formative-study-setting.gif" 
         ]},
         {"blank" : ""},
@@ -63,6 +71,10 @@
         ]},
         {"blank" : ""},
 
+        {"blank" : ""},
+        {"chapter": "Implementation"},
+        {"blank" : ""},
+
         {"paragraph" : [
             "The 3D fluid dynamics simulation was implemented by extending Jos Stam's paper, 'Real-Time Fluid Dynamics for Games'. ",
             "Next, designed the algorithm  for how petal-mimic particles move in a fluid field, and how the users create fluid flows using their hand gestures. "
@@ -83,12 +95,21 @@
         ]},
         {"blank" : ""},
         
-        {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif"}, 
-        {"blank" : ""},
-            
-        {"img" : "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png"}, 
+        {"imgs" : [
+            "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif" 
+        ]},
         {"blank" : ""},
 
+        {"blank" : ""},
+        {"chapter": "Demonstration"},
+        {"blank" : ""},
+            
+        {"imgs" : [
+            "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png" 
+        ]},
+        {"blank" : ""},
+        
+        {"blank" : ""},
         {"paragraph" : [
             "The course project from [Interactive Universe Design - Spring 2022, instructor: Prof. Seokhyung Bae] "
         ]},
