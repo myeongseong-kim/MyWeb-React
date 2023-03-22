@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import Card from '../../components/Card';
 
-import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent, CardList, CardGrid } from "../../components/Styles"
+import { Wrapper, Header, BlankLine, Text, Anchor, Accent, CardList, CardGrid } from "../../components/Styles"
 
 
 const StyledAll = styled.div`
@@ -43,7 +43,7 @@ const All = () => {
 
     return (
         <StyledAll>
-            <Chapter> All Projects </Chapter>
+            <Header> All Projects </Header>
             <CardList>
                 {cards}
             </CardList>

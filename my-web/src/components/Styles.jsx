@@ -8,13 +8,23 @@ const Wrapper = styled.div`
     }
 `;
 
-const Chapter = styled.p`
+const Header = styled.p`
     font-weight: 500;
     font-size: 2.0rem;
     margin: 0.5em 0em;
 
     @media screen and (min-width: 1024px) {
         font-size: 2.4rem;
+    }
+`;
+
+const SubHeader = styled.p`
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin: 0.5em 0em;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2.0rem;
     }
 `;
 
@@ -128,7 +138,7 @@ const CardGrid = styled.div`
 
 
 export { 
-    Wrapper, Chapter, BlankLine, Text, Anchor, Accent, 
+    Wrapper, Header, SubHeader, BlankLine, Text, Anchor, Accent, 
     OneShot, MultiShots, Video,
     CardList, CardGrid 
 };

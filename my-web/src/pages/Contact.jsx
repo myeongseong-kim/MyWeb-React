@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent } from "../components/Styles"
+import { Wrapper, Header, BlankLine, Text, Anchor, Accent } from "../components/Styles"
 
 
 const StyledContact = styled.div`
@@ -44,7 +44,7 @@ const AddressText = styled.div`
 const Contact = () => {
     return (
         <StyledContact>
-            <Chapter> Location </Chapter>
+            <Header> Location </Header>
             <Wrapper>
                 <Text>
                     I am currently studying at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST. 
@@ -65,7 +65,7 @@ const Contact = () => {
             </Wrapper>
             <Text> &nbsp; </Text> 
 
-            <Chapter> Get in Touch </Chapter>
+            <Header> Get in Touch </Header>
             <Wrapper>
                 <Text>
                     If you want to reach out, feel free to mail me!

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
 import Card from '../components/Card';
-import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent, CardList, CardGrid } from "../components/Styles"
+import { Wrapper, Header, BlankLine, Text, Anchor, Accent, CardList, CardGrid } from "../components/Styles"
 
 import profileImg from '../assets/images/myeongseongkim_2020-12-31.png';
 
@@ -139,7 +139,7 @@ const Home = () => {
 
     return (
         <StyledHome>
-            <Chapter> Hi, there :D </Chapter>
+            <Header> Hi, there :D </Header>
             <Wrapper>
                 <IntroContainer>
                     <ProfileImg src={profileImg} loading="lazy" />
@@ -150,9 +150,9 @@ const Home = () => {
             <Text> &nbsp; </Text>
 
             <TwoColumn>
-                <Chapter> 
+                <Header> 
                     Selected Projects 
-                </Chapter>
+                </Header>
                 <AllProjects to='/projects' onClick={() => {window.scrollTo({top:0})}} > 
                     See all projects &gt;&gt; 
                 </AllProjects>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent, OneShot, MultiShots, Video } from "../../components/Styles"
+import { Wrapper, Header, SubHeader, BlankLine, Text, Anchor, Accent, OneShot, MultiShots, Video } from "../../components/Styles"
 
 
 const StyledEach = styled.div`
@@ -76,6 +76,9 @@ const Each = () => {
 
         var content;
         switch (pair[0]) {
+            case 'chapter' :
+                content = <SubHeader key={uid} > {pair[1]} </SubHeader>;
+                return content;
             case 'paragraph' :
                 content = <Text key={uid} > {pair[1]} </Text>;
                 return content;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Chapter, BlankLine, Text, Anchor, Accent } from "../components/Styles"
+import { Wrapper, Header, BlankLine, Text, Anchor, Accent } from "../components/Styles"
 
 
 const StyledAbout = styled.div`
@@ -117,7 +117,7 @@ const Publication = (props) => {
 const About = () => {
     return (
         <StyledAbout>
-            <Chapter> Education </Chapter>
+            <Header> Education </Header>
             <Wrapper>
                 <TwoColumn>
                     <Text>
@@ -142,7 +142,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
 
-            <Chapter> Skills </Chapter>
+            <Header> Skills </Header>
             <Wrapper>
                 <OneColumn>
                     <Text>
@@ -172,7 +172,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
 
-            <Chapter> Publication </Chapter>
+            <Header> Publication </Header>
             <Wrapper>
                 <OneColumn>
                     <Publication
@@ -216,7 +216,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
 
-            <Chapter> Award </Chapter>
+            <Header> Award </Header>
             <Wrapper>
                 <OneColumn>    
                     <Text>
@@ -231,7 +231,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
 
-            <Chapter> Exhibition </Chapter>
+            <Header> Exhibition </Header>
             <Wrapper>
                 <TwoColumn>
                     <Text>
@@ -278,7 +278,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
             
-            <Chapter> Other </Chapter>
+            <Header> Other </Header>
             <Wrapper>
                 <TwoColumn>
                     <Text>
