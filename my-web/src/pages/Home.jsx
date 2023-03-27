@@ -94,10 +94,10 @@ const SelfIntroduction = () => {
                     software developer, 
                     media artist, 
                     and HCI researcher.
-                As a maker, I used to build novel interfaces and interactive installations based on physical computing.
+                As a maker, I used to build novel interfaces, products, and interactive installations based on physical computing.
             </Text>
             <Text> 
-                My research interest is designing and developing&nbsp;
+                My research interest is designing &nbsp;
                 <Accent>nature-inspired natural interaction</Accent> 
                 &nbsp;in domains of tangible media, shape-changing, robotics, digital fabrication, and XR. 
                 I believe, like many aesthetic and functional nature-mimetic designs in everyday life, 
