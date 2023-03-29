@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
@@ -54,6 +54,53 @@ const Shot = styled.img`
     }
 `;
 
+
+const SingleLineImages = ({srcs, uid}) => {
+    const images = require.context('../../assets/images', true);
+
+    const [imgRatios, setImgRatios] = useState([]);
+    const sum = imgRatios.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+    );
+
+    useEffect(() => {
+        if (imgRatios.length !== 0) {
+            setImgRatios([]);
+        }
+        srcs.forEach((adr, index) => {
+            var pic = new Image();
+            pic.src = images(`./${adr}`);
+            const poll = setInterval(() => {
+                if (pic.naturalWidth) {
+                    var ratio = pic.naturalWidth/pic.naturalHeight;
+                    setImgRatios(imgRatios => [...imgRatios, ratio]);
+                    // console.log(imgRatios);
+
+                    clearInterval(poll);
+                }
+            }, 10);
+        });
+    }, []);
+
+    const imgs = srcs.map((adr, order) => {
+        var image = 
+            <Shot 
+                key={uid + '-' + order} 
+                src={images(`./${adr}`)} 
+                loading="lazy"
+                coef={imgRatios[order]/sum} 
+                num={imgRatios.length-1} 
+            />
+        ;
+        // console.log(image.props);
+        return image;
+    });
+
+    return imgs;
+}
+
+
 const Each = () => {
     const images = require.context('../../assets/images', true);
 
@@ -104,46 +151,10 @@ const Each = () => {
             case 'imgs' :
                 var srcs = pair[1];
                 // console.log(srcs.length);
-                
-                var imgRatios = [];
-
-                const SingleLineImages = () => {
-                    const [total, setTotal] = useState(0);
-                    var sum = 0;
-
-                    const imgs = srcs.map((adr, order) => {
-                        const handleImageLoad = (e) => {
-                            var ratio = e.target.naturalWidth / e.target.naturalHeight;
-                            // console.log(ratio);
-                            imgRatios.push(ratio);
-                            sum += ratio;
-                            
-                            if (imgRatios.length === srcs.length) {
-                                console.log(imgRatios);
-                                // console.log(sum);
-                                setTotal(sum);
-                            }
-                        }
-    
-                        var image = 
-                            <Shot 
-                                key={uid + '-' + order} 
-                                src={images(`./${adr}`)} 
-                                loading="lazy"
-                                onLoad={handleImageLoad}
-                                coef={imgRatios[order]/total} 
-                                num={imgRatios.length-1} 
-                            />
-                        ;
-                        return image;
-                    });
-
-                    return imgs;
-                }
-
+                  
                 content = 
                     <MultiShots key={uid}>
-                        <SingleLineImages />
+                        <SingleLineImages srcs={srcs} uid={uid} />
                     </MultiShots>
                 ;
                 return content;
@@ -164,6 +175,7 @@ const Each = () => {
                 return content;
         }          
     });
+
 
     const Team = () => {
         const me = 'Myeongseong Kim';
