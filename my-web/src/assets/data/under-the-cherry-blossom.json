@@ -82,21 +82,21 @@
         {"blank" : ""},
 
         {"imgs" : [
-            "under-the-cherry-blossom/fluid2D.gif", 
-            "under-the-cherry-blossom/fluid2D-a-particle.gif", 
-            "under-the-cherry-blossom/fluid2D-500-particles.gif"
+            "under-the-cherry-blossom/fluid2D.webp", 
+            "under-the-cherry-blossom/fluid2D-a-particle.webp", 
+            "under-the-cherry-blossom/fluid2D-500-particles.webp"
         ]},
         {"blank" : ""},
 
         {"imgs" : [
-            "under-the-cherry-blossom/fluid3D.gif", 
-            "under-the-cherry-blossom/fluid3D-a-particle.gif", 
-            "under-the-cherry-blossom/fluid3D-1000-particles.gif"
+            "under-the-cherry-blossom/fluid3D.webp", 
+            "under-the-cherry-blossom/fluid3D-a-particle.webp", 
+            "under-the-cherry-blossom/fluid3D-1000-particles.webp"
         ]},
         {"blank" : ""},
-        
+
         {"imgs" : [
-            "under-the-cherry-blossom/under-the-cherry-blossom_petal-particles-with-a-3d-fluid-field.gif" 
+            "under-the-cherry-blossom/fluid3D-with-gravity-1000-particles.webp" 
         ]},
         {"blank" : ""},
 
@@ -105,7 +105,7 @@
         {"blank" : ""},
             
         {"imgs" : [
-            "under-the-cherry-blossom/under-the-cherry-blossom_heroshot.png" 
+            "under-the-cherry-blossom/demo.webp"
         ]},
         {"blank" : ""},
         
