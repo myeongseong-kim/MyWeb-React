@@ -26,6 +26,15 @@
         {"chapter": "Background"},
         {"blank" : ""},
 
+        {"paragraph" : [
+            "Every spring, the cherry blossoms are in full bloom. ",
+            "The trees full with cherry blossoms themselves are beautiful, but falling petals and flutting in wind are also spectacular. ", 
+            "However, it's not always easy to witness this spectacle moment in person. ", 
+            "Cherry blossoms only bloom for a short time of year, about a week or two, and they used to fade quickly depending on weather. ", 
+            "Because of their ephemeral uniqueness, cherry blossoms have been the subject of many art pieces."
+        ]},
+        {"blank" : ""},
+
         {"imgs" : [
             "under-the-cherry-blossom/Kung Fu Panda (2008).png" 
         ]},
@@ -39,6 +48,13 @@
 
         {"blank" : ""},
         {"chapter": "Formative Study"},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "It would be best if I could observe how people behave in a falling cherry blossom environment. ",
+            "However, it was not easy to conduct the study during that specific season when cherry blossom falling, so I recreated the situation as closely as possible. ", 
+            "Then, I observed the behavior of the subjects in the recreated environment and conducted interviews. "
+        ]},
         {"blank" : ""},
         
         {"imgs" : [
@@ -75,9 +91,10 @@
         {"chapter": "Implementation"},
         {"blank" : ""},
 
+        {"link" : "https://www.josstam.com/_files/ugd/cf1fd6_9989229efbd34a26ba5ccd913721a2ac.pdf"},
         {"paragraph" : [
-            "The 3D fluid dynamics simulation was implemented by extending Jos Stam's paper, 'Real-Time Fluid Dynamics for Games'. ",
-            "Next, designed the algorithm  for how petal-mimic particles move in a fluid field, and how the users create fluid flows using their hand gestures. "
+            "The 3D fluid dynamics simulation was implemented by extending Jos Stam's paper, 'Real-Time Fluid Dynamics for Games'(the link above). ",
+            "Then, I designed the algorithms for how petal-mimic particles move in a fluid field, and how the users create fluid flows using their hand gestures. "
         ]},
         {"blank" : ""},
 
