@@ -1,5 +1,5 @@
 {
-    "id" : 99,
+    "id" : 15,
     "address" : "/projects/time-to-snow",
     
     "title" : "Time to Snow",
@@ -7,8 +7,8 @@
     "team" : "Myeongseong Kim, Sunwoo Baek, Woohun Lee",
     "heroshot" : "time-to-snow/time-to-snow_heroshot.jpg",
     "summary" : [
-        "An interactive installation that displays the current time with snow-like tiny Styrofoam grains and provides viewers experience of being in snowy weather. ",
-        "By using tangible material like snow, it shows well the aesthetic beauty and ephemerality of snow. "
+        "An interactive installation that showcases the current time using tiny Styrofoam grains resembling snow. ",
+        "The installation effectively highlights the aesthetic allure and fleeting nature of snow. "
     ],
     
     "fullcontent" : [
@@ -16,13 +16,21 @@
         {"blank" : ""},
 
         {"paragraph" : [
-            "An interactive installation that displays the current time with snow-like tiny Styrofoam grains and provides viewers experience of being in snowy weather. ",
-            "By using tangible material like snow, it shows well the aesthetic beauty and ephemerality of snow. ", 
-            "The viewers can interact with Styrofoam grains, like playing with snow in nature. "
+            "An interactive installation that showcases the current time using tiny Styrofoam grains resembling snow. ",
+            "The installation effectively highlights the aesthetic allure and fleeting nature of snow. ", 
+            "The title not only evokes “displaying time with snow”, but it also bears a double entendre, the enchanting moment of “when snowing”. ", 
+            "Viewers can playfully interact with the Styrofoam grains, using hand gestures to immerse themselves in the installation. ", 
+            "It presents the sensation of engaging with snow in natural environment. "
         ]},
         {"blank" : ""},
         
+        {"paragraph" : [
+            "This work will be exhibited at SIGGRAPH 2023 ArtGallery. "
+        ]},
+        {"blank" : ""},
+
         {"img" : "time-to-snow/time-to-snow_heroshot.jpg"}, 
+        {"img" : "time-to-snow/time-to-snow_heroshot_old.jpg"}, 
         {"img" : "time-to-snow/time-to-snow_additional1.jpg"}, 
         {"img" : "time-to-snow/time-to-snow_additional2.jpg"}, 
         {"img" : "time-to-snow/time-to-snow_additional3.jpg"}
