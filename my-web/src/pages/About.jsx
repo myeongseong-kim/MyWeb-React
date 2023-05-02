@@ -124,7 +124,7 @@ const About = () => {
                         <Accent> M.S. Student at Dept. Industrial Design, KAIST </Accent> <br/>
                         Advisor: Prof. Woohun Lee
                     </Text>
-                    <Period> Aug. 2020 ~ </Period>
+                    <Period> Sep. 2020 ~ </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
@@ -178,7 +178,7 @@ const About = () => {
                     <Publication
                         title='Thermoformable Shell for Repeatable Thermoforming'
                         authors='Donghyeon Ko, Myeongseong Kim, Woohun Lee'
-                        proceeding='Adjunct Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology'
+                        proceeding='Adjunct Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology, Article 61, 1-3'
                         doi='https://doi.org/10.1145/3526114.3558632'
                     > </Publication>
                 </OneColumn>
@@ -186,7 +186,7 @@ const About = () => {
                     <Publication
                         title='Isle of Reflections'
                         authors='Chaeun Lee, Myeongseong Kim, Hyunjung Kim'
-                        proceeding='ACM SIGGRAPH 2021 Art Gallery'
+                        proceeding='ACM SIGGRAPH 2021 Art Gallery, Article 7, 1-3'
                         doi='https://doi.org/10.1145/3450507.3457434'
                     > </Publication>
                 </OneColumn>
@@ -202,7 +202,7 @@ const About = () => {
                     <Publication
                         title='Rolling Pixels: Robotic Steinmetz Solids for Creating Physical Animations'
                         authors='*Yujin Lee, *Myeongseong Kim, Hyunjung Kim (* Both authors contributed equally to this work)'
-                        proceeding='Proceedings of the Fourteenth International Conference on Tangible, Embedded, and Embodied Interaction'
+                        proceeding='Proceedings of the Fourteenth International Conference on Tangible, Embedded, and Embodied Interaction, 557-564'
                         doi='https://doi.org/10.1145/3374920.3374987'
                     > </Publication>
                 </OneColumn>
@@ -210,7 +210,7 @@ const About = () => {
                     <Publication
                         title='Snow Clock'
                         authors='Myeongseong Kim, Donghyuk Yun, Woohun Lee'
-                        proceeding='Proceedings of HCIK 2020'
+                        proceeding='Proceedings of HCIK 2020, 1323-1324'
                     > </Publication>
                 </OneColumn>                
             </Wrapper>
@@ -218,10 +218,14 @@ const About = () => {
 
             <Header> Award </Header>
             <Wrapper>
-                <OneColumn>    
+                <OneColumn>
                     <Text>
-                        <Accent> Red Dot Award 2021: Best of the Best (Design Concept) - Isle of Reflections </Accent>
-                    </Text>               
+                        <Accent> Red Dot Award 2021: Best of the Best (Design Concept) - Isle of Reflections </Accent> <br/>
+                        -&nbsp;
+                        <Anchor href="https://www.red-dot.org/project/isle-of-reflections-54298" target="blank"> 
+                            https://www.red-dot.org/project/isle-of-reflections-54298 
+                        </Anchor>
+                    </Text>
                 </OneColumn>
                 <OneColumn>    
                     <Text>
