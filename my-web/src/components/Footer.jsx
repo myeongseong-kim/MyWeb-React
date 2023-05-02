@@ -22,11 +22,21 @@ const Socials = styled.div`
 
 const Copyright = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     font-size: 1.2rem;
     padding: 2em;
     color: gray;
     white-space: nowrap;
+`;
+
+const InfoText = styled.p`
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0em;
+    margin: 0.5em;
+    color: gray;
 `;
 
 const Icon = styled.div`
@@ -115,7 +125,8 @@ const Footer = forwardRef((props, ref) => {
 
             {/* a copyright */}
             <Copyright>
-                © {year} Myeongseong Kim
+                <InfoText> © {year} Myeongseong  </InfoText>
+                <InfoText> Built with ReactJS </InfoText>
             </Copyright>
         </StyledFooter>
     );
