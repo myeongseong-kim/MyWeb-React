@@ -97,11 +97,11 @@ const SelfIntroduction = () => {
                 As a maker, I used to build novel interfaces, products, and interactive installations based on physical computing.
             </Text>
             <Text> 
-                My research interest is designing &nbsp;
+                My interest is designing &nbsp;
                 <Accent>nature-inspired natural interaction</Accent> 
                 &nbsp;in domains of tangible media, shape-changing, robotics, digital fabrication, and XR. 
                 I believe, like many aesthetic and functional nature-mimetic designs in everyday life, 
-                interactions between human users and computers can also create new values by mimicking nature's way.
+                interactions between human and computer can also create new values by mimicking nature's way.
             </Text>
             <Text> 
                 Currently, I am a Master student
@@ -118,10 +118,11 @@ const Home = () => {
 
     let objs = [];
     objs[0] = data(`./dot.json`);
-    objs[1] = data(`./snow-clock.json`);
+    objs[1] = data(`./isle-of-reflections.json`);
     objs[2] = data(`./fishtank-jelly.json`);
     objs[3] = data(`./phantom.json`);
     objs[4] = data(`./under-the-cherry-blossom.json`);
+    objs[5] = data(`./time-to-snow.json`);
     objs.reverse();
 
     const cards = objs.map((obj) => (
@@ -154,10 +155,10 @@ const Home = () => {
                     Selected Projects 
                 </Header>
                 <AllProjects to='/projects' onClick={() => {window.scrollTo({top:0})}} > 
-                    See all projects &gt;&gt; 
+                    All projects &gt;&gt; 
                 </AllProjects>
             </TwoColumn>
-            {/* <Text> Here are the projects I chose. </Text> */}
+
             <CardList>
                 {cards}
             </CardList>
