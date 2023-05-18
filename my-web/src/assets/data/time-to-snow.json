@@ -16,23 +16,79 @@
         {"blank" : ""},
 
         {"paragraph" : [
-            "An interactive installation that showcases the current time using tiny Styrofoam grains resembling snow. ",
-            "The installation effectively highlights the aesthetic allure and fleeting nature of snow. ", 
+            "“Time to Snow” is an interactive installation that showcases the current time using tiny Styrofoam grains resembling snow. ",
+            "The installation highlights the aesthetic allure and ephemeral nature of snow. ", 
             "The title not only evokes “displaying time with snow”, but it also bears a double entendre, the enchanting moment of “when snowing”. ", 
             "Viewers can playfully interact with the Styrofoam grains, using hand gestures to immerse themselves in the installation. ", 
             "It presents the sensation of engaging with snow in natural environment. "
         ]},
         {"blank" : ""},
         
+        {"img" : "time-to-snow/time-to-snow_heroshot.jpg"}, 
+        {"blank" : ""},
+
         {"paragraph" : [
-            "This work will be exhibited at SIGGRAPH 2023 ArtGallery. "
+            "The installation hardware mainly consists of four parts: 1) masking units, 2) vacuuming units, 3) a screening mesh unit, 4) a blowing unit. ",
+            "The masking units are mechanical structures(four 7-segments and one colon) driven by servos that open or close their segment-shaped holes where air flows.  ", 
+            "The vacuuming units have fans on the back generate negative pneumatic pressure that suck air and grains in the chamber. ", 
+            "The screening unit is a mesh fabric where the grains are collected. Only air can pass through it, but Styrofoam grains can not. ", 
+            "The blowing unit has 9 pairs of fans at the bottom and top to below up Styrofoam grains in a vertical direction, and 3 pairs at the left and right side to blow away grains in a horizontal direction. "
         ]},
         {"blank" : ""},
 
-        {"img" : "time-to-snow/time-to-snow_heroshot.jpg"}, 
-        {"img" : "time-to-snow/time-to-snow_heroshot_old.jpg"}, 
+        {"paragraph" : [
+            "When displaying new numbers, the fans on the floor and ceiling of the blowing unit run for a few seconds to blow up Styrofoam grains into the air. ",
+            "At the same time, the masking units behind the screening unit open or close the segment-shaped holes according to the number to display, while the fans on the back of vacuuming units suck the air in the chamber. ", 
+            "As a result, air flows only through the open segment holes, and numbers are created by catching Styrofoam grains on the mesh fabric of the screening unit at that location. ", 
+            "The hardware is driven by a motion tracking system which consists of a PC and a depth camera. " 
+        ]},
+        {"blank" : ""},
+
         {"img" : "time-to-snow/time-to-snow_additional1.jpg"}, 
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "If no one is nearby, the hardware creates a snowstorm to attract viewers from afar until someone approaches. ",
+            "Viewers are lured to the installation by its effect, but the snowstorm gradually fades as they approach it, ironically. ", 
+            "Around the snowstorm stops completely, a short but powerful blizzard suddenly reappears, and the current time is displayed. ", 
+            "While displaying time, the viewers can interact, creating wind and snowstorm with mid-air hand gestures. ", 
+            "The wind and snowstorm correspond to the direction and size of gesture motion. ", 
+            "The more interactions, the more parts of the numbers are erased by the wind, but new numbers are displayed again every minute. ", 
+            "When the viewers leave, the numbers fall like melting snow, and the snowstorm appears again as the initial state. "
+        ]},
+        {"blank" : ""},
+
         {"img" : "time-to-snow/time-to-snow_additional2.jpg"}, 
-        {"img" : "time-to-snow/time-to-snow_additional3.jpg"}
+        {"blank" : ""},
+
+        {"img" : "time-to-snow/time-to-snow_additional3.jpg"},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "“Time to Snow” showcases the aesthetic beauty of snow. ",
+            "The delicate Styrofoam grains swaying in the wind evoke the mesmerizing chaos of a snowstorm, while the gentle descent of grains falling from the ceiling mimics the tranquil fall of snowflakes. ", 
+            "The numbers displayed from Styrofoam grains accumulated in layers, creating a three-dimensional effect that mimics the clumping of real snow. ", 
+            "Styrofoam grains piled on the floor further create a snowy terrain, adding to the immersive experience. "
+        ]},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "The installation also effectively captures the ephemeral nature of snow. ",
+            "As viewers interact, the displayed numbers gradually disappear, only to reappear later as time passes. ", 
+            "Similar to how time moves on and can never be retrieved, the shape of the accumulated Styrofoam grains varies slightly every time, even if the numbers remain the same, and the terrain on the floor is ever-changing. "
+        ]},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "Viewers are treated to a magical experience through the installation. ",
+            "The wind-blown grains gathering and forming a particular shape seem to defy the laws of physics, reminiscent of the mystical elements found in fiction. ", 
+            "Additionally, the simple hand gestures used to create wind and blizzards during interaction add to the magical atmosphere. "
+        ]},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "This work will be exhibited at SIGGRAPH 2023 ArtGallery. "
+        ]},
+        {"blank" : ""}
     ]
 }
