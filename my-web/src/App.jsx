@@ -76,11 +76,11 @@ function App() {
         return () => {
             window.removeEventListener('load ', handleRefresh, false);
         }
-    });
+    }, []);
  
 
-    const [navHeight, setNavHeight] = useState(remToPixels(7.5));
-    const [footerHeight, setFooterHeight] = useState(remToPixels(23.2));
+    const [navHeight, setNavHeight] = useState(remToPixels(8.0));
+    const [footerHeight, setFooterHeight] = useState(remToPixels(27.2));
 
     const [snap, setSnap] = useState(false);
     const toggleSnap = (state) => {

@@ -1,6 +1,10 @@
 import React, { useEffect, useState, forwardRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styled, { css } from "styled-components";
+
+import { ReactComponent as Logo} from '../assets/images/logo.svg';
+import { ReactComponent as LogoThin} from '../assets/images/logo_thin.svg';
+import { ReactComponent as LogoBold} from '../assets/images/logo_bold.svg';
 
 
 const StyledNav = styled.nav`
@@ -16,21 +20,53 @@ const StyledNav = styled.nav`
     z-index: 1;
 
     font-size: 1.6rem;
-    padding: 1rem;
+    padding: 0.5em 0.5em;
 
     background-color: rgba(0, 0, 0, 0);
 `;
 
-const NavLogo = styled(Link)`
+// const NavLogo = styled(Link)`
+//     z-index: 2;
+
+//     font-family: 'Zen Kaku Gothic New';
+//     font-size: 2.4rem;
+//     font-weight: 300;
+    
+//     padding: 1rem;
+//     margin-left: 0.5rem;
+//     margin-right: 0.5rem;
+
+//     transition: 
+//         color 0.5s ease-in-out,
+//         text-shadow 0.5s ease-in-out;
+
+//     text-decoration: none;
+//     &:link, :visited {
+//         color: white;
+//         ${(props) => props.to === props.chapter &&
+//         css`
+//             color: var(--yellow-daisy);
+//             text-shadow: 
+//                 /* 0em 0em 0.25em currentColor, */
+//                 0em 0em 0.125em currentColor;
+//         `}
+//     }
+//     &:hover, :active {
+//         color: var(--yellow-daisy);
+//     }
+
+//     @media screen and (min-width: 1024px) {
+//         padding: 0.5em;
+//         margin-left: 0.5em;
+//         margin-right: 0.5em;
+//     }
+// `;
+
+const NavLogo = styled.div`
     z-index: 2;
 
-    font-family: 'Zen Kaku Gothic New';
-    font-size: 2.4rem;
-    font-weight: 300;
-    
-    padding: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    height: 4em;
+    margin: 0em 0.5em;
 
     transition: 
         color 0.5s ease-in-out,
@@ -38,23 +74,14 @@ const NavLogo = styled(Link)`
 
     text-decoration: none;
     &:link, :visited {
-        color: white;
-        ${(props) => props.to === props.chapter &&
-        css`
-            color: var(--yellow-daisy);
-            text-shadow: 
-                /* 0em 0em 0.25em currentColor, */
-                0em 0em 0.125em currentColor;
-        `}
+        
     }
     &:hover, :active {
-        color: var(--yellow-daisy);
+        cursor: pointer;
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 0.5em;
-        margin-left: 0.5em;
-        margin-right: 0.5em;
+        margin: 0em 0.5em;
     }
 `;
 
@@ -250,17 +277,28 @@ const Nav = forwardRef((props, ref) => {
         setToggle(false);
     }
 
+    const navigate = useNavigate();
     const location = useLocation();
     const chapter = '/' + location.pathname.split('/')[1];
 
     return (
         <StyledNav ref={ref}>
-            <NavLogo to='/' chapter={chapter} 
+            {/* <NavLogo to='/' chapter={chapter} 
                 onClick={(event) => {
                     closeMenu();
                     props.toggleSnap(false);
                 }}
-            > 明星 </NavLogo>
+            > 明星 </NavLogo> */}
+
+            <NavLogo>
+                <Logo height='4em'
+                    onClick={(event) => {
+                        navigate('/')
+                        closeMenu();
+                        props.toggleSnap(false);
+                    }}
+                />
+            </NavLogo>
 
             <NavToggle stateToggle={toggle}
                 onClick={handleToggle}
