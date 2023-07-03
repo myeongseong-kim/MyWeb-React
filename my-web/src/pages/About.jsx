@@ -121,10 +121,10 @@ const About = () => {
             <Wrapper>
                 <TwoColumn>
                     <Text>
-                        <Accent> M.S. Student at Dept. Industrial Design, KAIST </Accent> <br/>
+                        <Accent> M.S. at Dept. Industrial Design, KAIST </Accent> <br/>
                         Advisor: Prof. Woohun Lee
                     </Text>
-                    <Period> Sep. 2020 ~ </Period>
+                    <Period> Sep. 2020 ~<br/> Aug. 2023 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
@@ -176,6 +176,14 @@ const About = () => {
             <Wrapper>
                 <OneColumn>
                     <Publication
+                        title='Time to Snow'
+                        authors='Myeongseong Kim, Sunwoo Baek, Woohun Lee'
+                        proceeding='ACM SIGGRAPH 2023 Art Gallery, ...'
+                        doi='https://doi.org/...'
+                    > </Publication>
+                </OneColumn>
+                <OneColumn>
+                    <Publication
                         title='Thermoformable Shell for Repeatable Thermoforming'
                         authors='Donghyeon Ko, Myeongseong Kim, Woohun Lee'
                         proceeding='Adjunct Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology, Article 61, 1-3'
@@ -220,7 +228,16 @@ const About = () => {
             <Wrapper>
                 <OneColumn>
                     <Text>
-                        <Accent> Red Dot Award 2021: Best of the Best (Design Concept) - Isle of Reflections </Accent> <br/>
+                        <Accent> "Red Dot: Best of the Best" - Red Dot Award 2023 Design Concept : Time to Snow </Accent> <br/>
+                        {/* -&nbsp;
+                        <Anchor href="https://www.red-dot.org/project/isle-of-reflections-54298" target="blank"> 
+                            https://www.red-dot.org/project/isle-of-reflections-54298 
+                        </Anchor> */}
+                    </Text>
+                </OneColumn>
+                <OneColumn>
+                    <Text>
+                        <Accent> "Red Dot: Best of the Best" - Red Dot Award 2021 Design Concept : Isle of Reflections </Accent> <br/>
                         -&nbsp;
                         <Anchor href="https://www.red-dot.org/project/isle-of-reflections-54298" target="blank"> 
                             https://www.red-dot.org/project/isle-of-reflections-54298 
@@ -229,7 +246,7 @@ const About = () => {
                 </OneColumn>
                 <OneColumn>    
                     <Text>
-                        <Accent> 2020 International Busan Design Award: Special Prize - Moleculight  </Accent>
+                        <Accent> "Special Prize" - International Busan Design Award 2020 : Moleculight  </Accent>
                     </Text>               
                 </OneColumn>
             </Wrapper>
