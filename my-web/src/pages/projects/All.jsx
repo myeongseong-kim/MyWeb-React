@@ -15,7 +15,7 @@ const StyledAll = styled.div`
 
 const All = () => {
     const data = require.context('../../assets/data', true, /\.json$/ );
-    const images = require.context('../../assets/images', true);
+    // const images = require.context('../../assets/images', true);
 
     let objs = [];
     data.keys().map((item, index) => {
@@ -30,12 +30,13 @@ const All = () => {
     const cards = objs.map((obj) => (
         <CardGrid key={obj.id}>
             <Card
-                imgurl={images(`./${obj.heroshot}`)}
+                imgurl={obj.heroshot}
                 address={obj.address}
                 title={obj.title}
                 date={obj.date}
                 team={obj.team}
                 summary={obj.summary}
+                award={obj.award}
             ></Card>
         </CardGrid>
     ));

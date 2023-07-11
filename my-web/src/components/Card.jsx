@@ -95,9 +95,18 @@ const CardSummary = styled.p`
     -webkit-box-orient: vertical;
 `;
 
+const AwardSticker = styled.img`
+    position: absolute;
+
+    width: auto;
+    height: 6rem;
+
+    padding: 1.0em;
+`;
 
 
 const Card = (props) => {
+    const images = require.context('../assets/images', true);
     
     const Team = () => {
         const me = 'Myeongseong Kim';
@@ -120,7 +129,12 @@ const Card = (props) => {
                 });
             }}
         >
-            <Thumbnail src={props.imgurl} loading="lazy" />
+            <Thumbnail src={images(`./${props.imgurl}`)} loading="lazy" />
+            {
+                props.award !== undefined
+                ?   <AwardSticker src={images(`./${props.award}`)} loading="lazy" />
+                :   null
+            }
             <CardTextBox>
                 <CardTitle> {props.title} <CardDate>({props.date})</CardDate> </CardTitle>
                 <Team> </Team>

@@ -10,6 +10,7 @@
         "An interactive installation that showcases the current time using tiny Styrofoam grains resembling snow. ",
         "The installation effectively highlights the aesthetic allure and fleeting nature of snow. "
     ],
+    "award" : "time-to-snow/reddot-2023-bob.png",
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/aqvGe0Z1oBk"},
@@ -87,7 +88,7 @@
         {"blank" : ""},
 
         {"paragraph" : [
-            "This work will be exhibited at SIGGRAPH 2023 ArtGallery, ",
+            "This work will be exhibited at SIGGRAPH 2023 Art Gallery, ",
             "and won “Red Dot: Best of the Best” in Red Dot Award 2023 - Design Concept. "
         ]},
         {"blank" : ""}
