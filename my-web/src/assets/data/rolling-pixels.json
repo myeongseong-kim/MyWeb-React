@@ -11,6 +11,7 @@
         "As a bicylinder-shaped Rolling Pixel rolls back and forth or left and right, ", 
         "the shape and color of the top view of the pixel changes repeatedly."
     ],
+    "publication" : "rolling-pixels/tei2020.png",
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/3QyZOZPoh-c"},

@@ -8,6 +8,8 @@ const StyledCard = styled(Link)`
     flex-direction: column;
     justify-content: start;
 
+    position: relative;
+
     color: var(--black-ink);
     text-decoration: none;
     
@@ -95,14 +97,64 @@ const CardSummary = styled.p`
     -webkit-box-orient: vertical;
 `;
 
-const AwardSticker = styled.img`
+const CardStickerZone = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+
     position: absolute;
 
+    width: 100%;
+    height: auto;
+    
+`;
+
+// const AwardSticker = styled.img`
+//     width: auto;
+//     height: 6rem;
+
+//     margin: 1.6em 0.0em;
+// `;
+
+// const PubSticker = styled.img`
+//     width: auto;
+//     height: 6rem;
+    
+//     margin: 1.6em 0.0em;
+//     `;
+    
+const Sticker = styled.img`
     width: auto;
     height: 6rem;
 
-    padding: 1.0em;
+    margin: 1.5em 0.0em;
 `;
+
+// const PubSticker = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     align-items: right;
+
+//     width: auto;
+//     height: 6rem;
+
+//     margin: 1.0rem;
+
+//     background-color: rgba(255, 255, 255, 0.75);
+// `;
+
+// const CardPub = styled.p`
+//     display: flex;
+//     justify-content: end;
+//     flex-direction: row;
+//     align-items: right;
+
+//     font-weight: 500;
+//     font-size: 1.6rem;
+//     margin: 0.125em 0.5em;
+// `;
 
 
 const Card = (props) => {
@@ -130,11 +182,18 @@ const Card = (props) => {
             }}
         >
             <Thumbnail src={images(`./${props.imgurl}`)} loading="lazy" />
-            {
-                props.award !== undefined
-                ?   <AwardSticker src={images(`./${props.award}`)} loading="lazy" />
-                :   null
-            }
+            <CardStickerZone>
+                {
+                    props.award !== undefined
+                    ?   <Sticker src={images(`./${props.award}`)} loading="lazy" />
+                    :   <div></div>
+                }
+                {
+                    props.publication !== undefined
+                    ?   <Sticker src={images(`./${props.publication}`)} loading="lazy" />
+                    :   <div></div>
+                }
+            </CardStickerZone>
             <CardTextBox>
                 <CardTitle> {props.title} <CardDate>({props.date})</CardDate> </CardTitle>
                 <Team> </Team>

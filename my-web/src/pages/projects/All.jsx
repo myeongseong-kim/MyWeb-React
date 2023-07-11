@@ -37,6 +37,7 @@ const All = () => {
                 team={obj.team}
                 summary={obj.summary}
                 award={obj.award}
+                publication={obj.publication}
             ></Card>
         </CardGrid>
     ));

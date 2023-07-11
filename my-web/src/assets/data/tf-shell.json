@@ -10,6 +10,7 @@
         "A thermoformable shell called TF-Shell that allows repeatable thermoforming of 3D printed objects. ", 
         "Through embedding TF-Shell, users can thermoform target parts in diverse ways. "
     ],
+    "publication" : "tf-shell/uist2022.png",
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/XEHINfA8jDc"},
