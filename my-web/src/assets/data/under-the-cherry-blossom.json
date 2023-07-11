@@ -10,6 +10,7 @@
         "A VR content interacting with cherry blossom petals by creating a flow of air through mid-air hand gestures. ",
         "With HMD, people can play with virtual cherry blossom petals waving their bare hands in the air. "
     ], 
+    "preview" : "under-the-cherry-blossom/demo.webp",
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/m0x_ti2zdF4"},

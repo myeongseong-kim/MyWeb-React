@@ -38,6 +38,7 @@ const All = () => {
                 summary={obj.summary}
                 award={obj.award}
                 publication={obj.publication}
+                preview={obj.preview}
             ></Card>
         </CardGrid>
     ));

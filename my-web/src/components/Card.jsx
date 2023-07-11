@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
@@ -33,6 +33,27 @@ const Thumbnail = styled.img`
     aspect-ratio: 3/2;
     object-fit: cover;
     background-color: var(--white-smoky);
+`;
+
+const Preview = styled.img`
+    z-index: 2;
+
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    background-color: transparent;
+    
+    position: absolute;
+
+    display: none;
+    visibility: hidden;
+
+    ${(props) => props.play === true &&
+        css`
+            display: block;
+            visibility: visible;
+        `
+    }
 `;
 
 const CardTextBox = styled.div`
@@ -110,26 +131,19 @@ const CardStickerZone = styled.div`
     
 `;
 
-// const AwardSticker = styled.img`
-//     width: auto;
-//     height: 6rem;
-
-//     margin: 1.6em 0.0em;
-// `;
-
-// const PubSticker = styled.img`
-//     width: auto;
-//     height: 6rem;
-    
-//     margin: 1.6em 0.0em;
-//     `;
-    
 const Sticker = styled.img`
     width: auto;
     height: 6rem;
 
     margin: 1.5em 0.0em;
 `;
+
+// const AwardSticker = styled.img`
+//     width: auto;
+//     height: 6rem;
+
+//     margin: 1.6em 0.0em;
+// `;  
 
 // const PubSticker = styled.div`
 //     display: flex;
@@ -159,6 +173,7 @@ const Sticker = styled.img`
 
 const Card = (props) => {
     const images = require.context('../assets/images', true);
+    const [hover, setHover] = useState(false);
     
     const Team = () => {
         const me = 'Myeongseong Kim';
@@ -180,6 +195,8 @@ const Card = (props) => {
                     behavior: 'auto'
                 });
             }}
+            onMouseEnter={() => {setHover(true)}}
+            onMouseLeave={() => {setHover(false)}}
         >
             <Thumbnail src={images(`./${props.imgurl}`)} loading="lazy" />
             <CardStickerZone>
@@ -194,6 +211,11 @@ const Card = (props) => {
                     :   <div></div>
                 }
             </CardStickerZone>
+            {
+                props.preview !== undefined
+                ?   <Preview play={hover} src={images(`./${props.preview}`)} loading="lazy"/>
+                :   <div></div>
+            }
             <CardTextBox>
                 <CardTitle> {props.title} <CardDate>({props.date})</CardDate> </CardTitle>
                 <Team> </Team>
