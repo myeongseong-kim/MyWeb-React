@@ -133,9 +133,14 @@ const CardStickerZone = styled.div`
 
 const Sticker = styled.img`
     width: auto;
-    height: 6rem;
 
-    margin: 1.5em 0.0em;
+    height: 4rem;
+    margin: 1.0em 0.0em;
+
+    @media screen and (min-width: 1024px) {
+        height: 6rem;
+        margin: 1.5em 0.0em;
+    }
 `;
 
 // const AwardSticker = styled.img`
