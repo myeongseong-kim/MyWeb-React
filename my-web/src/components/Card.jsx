@@ -36,8 +36,6 @@ const Thumbnail = styled.img`
 `;
 
 const Preview = styled.img`
-    z-index: 2;
-
     width: 100%;
     aspect-ratio: 3/2;
     object-fit: cover;
