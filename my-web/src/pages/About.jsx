@@ -178,8 +178,8 @@ const About = () => {
                     <Publication
                         title='Time to Snow'
                         authors='Myeongseong Kim, Sunwoo Baek, Woohun Lee'
-                        proceeding='ACM SIGGRAPH 2023 Art Gallery, ...'
-                        doi='https://doi.org/...'
+                        proceeding='ACM SIGGRAPH 2023 Art Gallery, Article 14, 1-2'
+                        doi='https://doi.org/10.1145/3588428.3593822'
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
@@ -254,6 +254,13 @@ const About = () => {
 
             <Header> Exhibition </Header>
             <Wrapper>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Time to Snow </Accent> <br/> 
+                        - SIGGRAPH 2023 ArtGallery 
+                    </Text>
+                    <Period> 6 ~ 10. Aug. 2023</Period> 
+                </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Snow Clock </Accent> <br/>

@@ -14,7 +14,7 @@
     "publication" : "time-to-snow/siggraph2023.png",
     
     "fullcontent" : [
-        {"video": "https://www.youtube.com/embed/aqvGe0Z1oBk"},
+        {"video": "https://www.youtube.com/embed/Jr2OHKu4eGA"},
         {"blank" : ""},
 
         {"paragraph" : [
@@ -36,6 +36,9 @@
             "The screening unit is a mesh fabric where the grains are collected. Only air can pass through it, but Styrofoam grains can not. ", 
             "The blowing unit has 9 pairs of fans at the bottom and top to below up Styrofoam grains in a vertical direction, and 3 pairs at the left and right side to blow away grains in a horizontal direction. "
         ]},
+        {"blank" : ""},
+
+        {"img" : "time-to-snow/time-to-snow-design.jpg"}, 
         {"blank" : ""},
 
         {"paragraph" : [
