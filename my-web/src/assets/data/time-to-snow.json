@@ -92,9 +92,10 @@
         {"blank" : ""},
 
         {"paragraph" : [
-            "This work will be exhibited at SIGGRAPH 2023 Art Gallery, ",
+            "This work was exhibited at SIGGRAPH 2023 Art Gallery, ",
             "and won “Red Dot: Best of the Best” in Red Dot Award 2023 - Design Concept. "
         ]},
+        {"link": "https://doi.org/10.1145/3588428.3593822"},
         {"blank" : ""}
     ]
 }
