@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useLocation  } from 'react-router-dom';
 
 import styled, { css } from "styled-components";
 
@@ -7,6 +8,9 @@ import Home from '../pages/Home'
 import About from '../pages/About'
 import Projects from '../pages/Projects'
 import Contact from '../pages/Contact'
+
+import ReactGA from 'react-ga4';
+ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
 
 
 const StyledMain = styled.main`   
@@ -53,6 +57,14 @@ const StyledMain = styled.main`
 
 
 const Main = (props) => {
+
+    const location = useLocation();
+    useEffect(() => {
+        ReactGA.set({ page: location.pathname });
+        ReactGA.send("pageview");
+        // console.log(location.pathname);
+    }, [location]);
+
     return (
         <StyledMain topMargin={props.topMargin} bottomMargin={props.bottomMargin}>
             <Routes>
