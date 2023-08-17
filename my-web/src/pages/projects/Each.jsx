@@ -192,6 +192,7 @@ const Each = () => {
     
     return (
         <StyledEach>
+            <title> {title} </title>
             <Title> {title} <Date>({date})</Date> </Title>
             <Team></Team>
             <Wrapper>

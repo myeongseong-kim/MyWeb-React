@@ -46,6 +46,7 @@ const All = () => {
 
     return (
         <StyledAll>
+            <title> Projects </title>
             <Header> All Projects </Header>
             <CardList>
                 {cards}

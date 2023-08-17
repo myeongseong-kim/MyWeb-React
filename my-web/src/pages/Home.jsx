@@ -143,6 +143,7 @@ const Home = () => {
 
     return (
         <StyledHome>
+            <title> Myeongseong Kim </title>
             <Header> Hi, there :D </Header>
             <Wrapper>
                 <IntroContainer>

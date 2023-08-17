@@ -44,6 +44,7 @@ const AddressText = styled.div`
 const Contact = () => {
     return (
         <StyledContact>
+            <title> Contact </title>
             <Header> Location </Header>
             <Wrapper>
                 <Text>

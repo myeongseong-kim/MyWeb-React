@@ -117,6 +117,7 @@ const Publication = (props) => {
 const About = () => {
     return (
         <StyledAbout>
+            <title> About </title>
             <Header> Education </Header>
             <Wrapper>
                 <TwoColumn>
