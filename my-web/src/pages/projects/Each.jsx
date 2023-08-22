@@ -55,7 +55,7 @@ const Shot = styled.img`
 `;
 
 
-const SingleLineImages = ({srcs, uid}) => {
+const SingleLineImages = ({directory, srcs, uid}) => {
     const assets = require.context('../../assets', true);
 
     const [imgRatios, setImgRatios] = useState([]);
@@ -70,7 +70,7 @@ const SingleLineImages = ({srcs, uid}) => {
         }
         srcs.forEach((adr, index) => {
             var pic = new Image();
-            pic.src = assets(`./${adr}`);
+            pic.src = assets(`./${directory}/${adr}`);
             const poll = setInterval(() => {
                 if (pic.naturalWidth) {
                     var ratio = pic.naturalWidth/pic.naturalHeight;
@@ -83,11 +83,11 @@ const SingleLineImages = ({srcs, uid}) => {
         });
     }, []);
 
-    const imgs = srcs.map((adr, order) => {
+    const imgs = srcs.map((src, order) => {
         var image = 
             <Shot 
                 key={uid + '-' + order} 
-                src={assets(`./${adr}`)} 
+                src={assets(`./${directory}/${src}`)} 
                 loading="lazy"
                 coef={imgRatios[order]/sum} 
                 num={imgRatios.length-1} 
@@ -108,6 +108,7 @@ const Each = () => {
     const assets = require.context('../../assets/', true);
     const obj = assets(`./${params.id}/${params.id}.json`);
 
+    let directory = obj.directory;
     let title = obj.title;
     let date = obj.date;
     let team = obj.team;
@@ -141,7 +142,7 @@ const Each = () => {
                 content = 
                     <OneShot 
                         key={uid} 
-                        src={assets(`./${pair[1]}`)} 
+                        src={assets(`./${directory}/${pair[1]}`)} 
                         loading="lazy"
                     />
                 ;
@@ -152,7 +153,7 @@ const Each = () => {
                   
                 content = 
                     <MultiShots key={uid}>
-                        <SingleLineImages srcs={srcs} uid={uid} />
+                        <SingleLineImages directory={directory} srcs={srcs} uid={uid} />
                     </MultiShots>
                 ;
                 return content;

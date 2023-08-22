@@ -1,11 +1,11 @@
 {
     "id" : 9,
-    "address" : "/projects/fishtank-jelly",
+    "directory" : "fishtank-jelly",
     
     "title" : "Fishtank: jelly",
     "date" : "Aug, 2021",
     "team" : "Myeongseong Kim, Woohun Lee",
-    "heroshot" : "fishtank-jelly/fishtank-jelly_heroshot.jpg",
+    "thumbnail" : "fishtank-jelly_heroshot.jpg",
     "summary" : [
         "A virtual fish tank filled with artificial jellyfishes for a both-side multitouch transparent display. ", 
         "The jellyfishes are reactive on touch and float following the flow users create. "
@@ -31,9 +31,9 @@
         {"link": "https://doi.org/10.1145/2559206.2574828"},
         {"blank" : ""},
         
-        {"img" : "fishtank-jelly/fishtank-jelly_closedshot.jpg"},
-        {"img" : "fishtank-jelly/fishtank-jelly_fullshot.jpg"},
-        {"img" : "fishtank-jelly/fishtank-jelly_interaction.jpg"},
-        {"img" : "fishtank-jelly/fishtank-jelly_users.jpg"}
+        {"img" : "fishtank-jelly_closedshot.jpg"},
+        {"img" : "fishtank-jelly_fullshot.jpg"},
+        {"img" : "fishtank-jelly_interaction.jpg"},
+        {"img" : "fishtank-jelly_users.jpg"}
     ]
 }

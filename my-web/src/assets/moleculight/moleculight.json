@@ -1,11 +1,11 @@
 {
     "id" : 5,
-    "address" : "/projects/moleculight",
+    "directory" : "moleculight",
     
     "title" : "Moleculight",
     "date" : "Aug, 2020",
     "team" : "Hyunjung Kim, Chaeeun Lee, Myeongseong Kim",
-    "heroshot" : "moleculight/moleculight_heroshot.jpg",
+    "thumbnail" : "moleculight_heroshot.jpg",
     "summary" : [
         "An interactive modular lighting system composed of Steinmetz solid lighting modules. ", 
         "Users can construct long or short, linear or crosslinked light structures. " 
@@ -27,12 +27,12 @@
         ]},
         {"blank" : ""},
 
-        {"img" : "moleculight/moleculight_heroshot.jpg"}, 
-        {"img" : "moleculight/moleculight_additional0.jpg"}, 
-        {"img" : "moleculight/moleculight_additional1.jpg"}, 
-        {"img" : "moleculight/moleculight_additional2.jpg"}, 
-        {"img" : "moleculight/moleculight_additional3.jpg"}, 
-        {"img" : "moleculight/moleculight_additional4.jpg"}, 
-        {"img" : "moleculight/moleculight_additional5.jpg"}
+        {"img" : "moleculight_heroshot.jpg"}, 
+        {"img" : "moleculight_additional0.jpg"}, 
+        {"img" : "moleculight_additional1.jpg"}, 
+        {"img" : "moleculight_additional2.jpg"}, 
+        {"img" : "moleculight_additional3.jpg"}, 
+        {"img" : "moleculight_additional4.jpg"}, 
+        {"img" : "moleculight_additional5.jpg"}
     ]
 }

@@ -1,17 +1,17 @@
 {
     "id" : 15,
-    "address" : "/projects/time-to-snow",
+    "directory" : "time-to-snow",
     
     "title" : "Time to Snow",
     "date" : "Jan, 2023",
     "team" : "Myeongseong Kim, Sunwoo Baek, Woohun Lee",
-    "heroshot" : "time-to-snow/time-to-snow_heroshot.jpg",
+    "thumbnail" : "time-to-snow_heroshot.jpg",
     "summary" : [
         "An interactive installation that showcases the current time using tiny Styrofoam grains resembling snow. ",
         "The installation effectively highlights the aesthetic allure and fleeting nature of snow. "
     ],
-    "award" : "time-to-snow/reddot-2023-bob.png",
-    "publication" : "time-to-snow/siggraph2023.png",
+    "award" : "reddot-2023-bob.png",
+    "publication" : "siggraph2023.png",
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/Jr2OHKu4eGA"},
@@ -26,7 +26,7 @@
         ]},
         {"blank" : ""},
         
-        {"img" : "time-to-snow/time-to-snow_heroshot.jpg"}, 
+        {"img" : "time-to-snow_heroshot.jpg"}, 
         {"blank" : ""},
 
         {"paragraph" : [
@@ -38,7 +38,7 @@
         ]},
         {"blank" : ""},
 
-        {"img" : "time-to-snow/time-to-snow-design.jpg"}, 
+        {"img" : "time-to-snow-design.jpg"}, 
         {"blank" : ""},
 
         {"paragraph" : [
@@ -49,7 +49,7 @@
         ]},
         {"blank" : ""},
 
-        {"img" : "time-to-snow/time-to-snow_additional1.jpg"}, 
+        {"img" : "time-to-snow_additional1.jpg"}, 
         {"blank" : ""},
 
         {"paragraph" : [
@@ -63,10 +63,10 @@
         ]},
         {"blank" : ""},
 
-        {"img" : "time-to-snow/time-to-snow_additional2.jpg"}, 
+        {"img" : "time-to-snow_additional2.jpg"}, 
         {"blank" : ""},
 
-        {"img" : "time-to-snow/time-to-snow_additional3.jpg"},
+        {"img" : "time-to-snow_additional3.jpg"},
         {"blank" : ""},
 
         {"paragraph" : [

@@ -127,8 +127,8 @@ const Home = () => {
     const cards = objs.map((obj) => (
         <CardGrid key={obj.id}>
             <Card
-                imgurl={obj.heroshot}
-                address={obj.address}
+                thumbnail={obj.thumbnail}
+                directory={obj.directory}
                 title={obj.title}
                 date={obj.date}
                 team={obj.team}

@@ -1,16 +1,16 @@
 {
     "id" : 13,
-    "address" : "/projects/tf-shell",
+    "directory" : "tf-shell",
     
     "title" : "Thermoformable Shell",
     "date" : "Jul, 2022",
     "team" : "Donghyeon Ko, Myeongseong Kim, Woohun Lee",
-    "heroshot" : "tf-shell/tf-shell_heroshot.jpg",
+    "thumbnail" : "tf-shell_heroshot.jpg",
     "summary" : [
         "A thermoformable shell called TF-Shell that allows repeatable thermoforming of 3D printed objects. ", 
         "Through embedding TF-Shell, users can thermoform target parts in diverse ways. "
     ],
-    "publication" : "tf-shell/uist2022.png",
+    "publication" : "uist2022.png",
     
     "fullcontent" : [
         {"video": "https://www.youtube.com/embed/XEHINfA8jDc"},
@@ -24,6 +24,6 @@
         ]},
         {"blank" : ""},
         
-        {"img" : "tf-shell/tf-shell_heroshot.jpg"}
+        {"img" : "tf-shell_heroshot.jpg"}
     ]
 }

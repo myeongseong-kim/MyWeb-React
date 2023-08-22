@@ -1,11 +1,11 @@
 {
     "id" : 7,
-    "address" : "/projects/coraetor",
+    "directory" : "coraetor",
     
     "title" : "Coraetor",
     "date" : "Jun, 2021",
     "team" : "Jaehong Kim, Junbeom Shin, Myeongseong Kim, Takyeon Lee",
-    "heroshot" : "coraetor/coraetor_heroshot.jpg",
+    "thumbnail" : "coraetor_heroshot.jpg",
     "summary" : [
         "An aquarium product to provide air, lighting and shelter for aqua pets. ", 
         "The name Coraetor is a combination of 'coral' and 'aerator', ", 
@@ -28,9 +28,9 @@
         ]},
         {"blank" : ""},
 
-        {"img" : "coraetor/coraetor_heroshot.jpg"},
-        {"img" : "coraetor/coraetor_bright.jpg"},
-        {"img" : "coraetor/coraetor_dark.jpg"},
-        {"img" : "coraetor/coraetor_howitworks.jpg"}
+        {"img" : "coraetor_heroshot.jpg"},
+        {"img" : "coraetor_bright.jpg"},
+        {"img" : "coraetor_dark.jpg"},
+        {"img" : "coraetor_howitworks.jpg"}
     ]
 }

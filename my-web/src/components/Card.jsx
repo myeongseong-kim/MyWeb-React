@@ -159,7 +159,7 @@ const Card = (props) => {
     }
 
     return (
-        <StyledCard to={props.address}
+        <StyledCard to={`/projects/${props.directory}`}
             onClick={() => {
                 window.scrollTo({
                     top: 1,
@@ -169,22 +169,22 @@ const Card = (props) => {
             onMouseEnter={() => {setHover(true)}}
             onMouseLeave={() => {setHover(false)}}
         >
-            <Thumbnail src={assets(`./${props.imgurl}`)} loading="lazy" />
+            <Thumbnail src={assets(`./${props.directory}/${props.thumbnail}`)} loading="lazy" />
             <CardStickerZone>
                 {
                     props.award !== undefined
-                    ?   <Sticker src={assets(`./${props.award}`)} loading="lazy" />
+                    ?   <Sticker src={assets(`./${props.directory}/${props.award}`)} loading="lazy" />
                     :   <div></div>
                 }
                 {
                     props.publication !== undefined
-                    ?   <Sticker src={assets(`./${props.publication}`)} loading="lazy" />
+                    ?   <Sticker src={assets(`./${props.directory}/${props.publication}`)} loading="lazy" />
                     :   <div></div>
                 }
             </CardStickerZone>
             {
                 props.preview !== undefined
-                ?   <Preview play={hover} src={assets(`./${props.preview}`)} loading="lazy"/>
+                ?   <Preview play={hover} src={assets(`./${props.directory}/${props.preview}`)} loading="lazy"/>
                 :   <div></div>
             }
             <CardTextBox>

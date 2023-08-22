@@ -1,11 +1,11 @@
 {
     "id" : 1,
-    "address" : "/projects/dot",
+    "directory" : "dot",
     
     "title" : "DoT",
     "date" : "Dec, 2018",
     "team" : "Myeongseong Kim, Woohun Lee, Andrea Bianchi",
-    "heroshot" : "dot/dot_heroshot.jpg",
+    "thumbnail" : "dot_heroshot.jpg",
     "summary" : [
         "DoT is a tabletop mixed-reality game platform with kinetic interaction in the real world. ", 
         "Users can play the game by touching and moving the marble as input. ", 
@@ -35,10 +35,10 @@
         ]},
         {"blank" : ""},
         
-        {"img" : "dot/dot_heroshot.jpg"},
-        {"img" : "dot/dot_full.jpg"},
-        {"img" : "dot/dot_inside.jpg"},
-        {"img" : "dot/dot_howitworks.png"},
-        {"img" : "dot/dot_concept.png"}
+        {"img" : "dot_heroshot.jpg"},
+        {"img" : "dot_full.jpg"},
+        {"img" : "dot_inside.jpg"},
+        {"img" : "dot_howitworks.png"},
+        {"img" : "dot_concept.png"}
     ]
 }

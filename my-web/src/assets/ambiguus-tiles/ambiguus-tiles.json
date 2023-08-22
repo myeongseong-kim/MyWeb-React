@@ -1,19 +1,19 @@
 {
     "id" : 4,
-    "address" : "/projects/ambiguus-tiles",
+    "directory" : "ambiguus-tiles",
     
     "title" : "Ambiguus Tiles",
     "date" : "Feb, 2020",
     "team" : "Hyunjung Kim, Myeongseong Kim, Yujin Lee",
-    "heroshot" : "ambiguus-tiles/ambiguus-tiles_heroshot.jpg",
+    "thumbnail" : "ambiguus-tiles_heroshot.jpg",
     "summary" : [
         "A novel expressive medium that the authors call Ambiguus tiles, which construct dual-view tile mosaics. ",
         "Fact vs. Fiction, a letter sculpture composed of 115 Ambiguus tiles, is presented here as an example of the creative possibilities for using Ambiguus tiles as a ready-to-use design material. " 
     ],
-    "publication" : "ambiguus-tiles/leonardo.png",
+    "publication" : "leonardo.png",
     
     "fullcontent" : [
-        {"img" : "ambiguus-tiles/ambiguus-tiles_heroshot.jpg"},
+        {"img" : "ambiguus-tiles_heroshot.jpg"},
         {"blank" : ""},
         
         {"paragraph" : [
@@ -26,8 +26,8 @@
         {"link": "https://doi.org/10.1162/leon_a_01977"},
         {"blank" : ""},
         
-        {"img" : "ambiguus-tiles/ambiguus-tiles_additional0.jpg"},
-        {"img" : "ambiguus-tiles/ambiguus-tiles_additional1.jpg"},
-        {"img" : "ambiguus-tiles/ambiguus-tiles_additional2.jpg"}
+        {"img" : "ambiguus-tiles_additional0.jpg"},
+        {"img" : "ambiguus-tiles_additional1.jpg"},
+        {"img" : "ambiguus-tiles_additional2.jpg"}
     ]
 }
