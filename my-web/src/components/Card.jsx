@@ -141,38 +141,6 @@ const Sticker = styled.img`
     }
 `;
 
-// const AwardSticker = styled.img`
-//     width: auto;
-//     height: 6rem;
-
-//     margin: 1.6em 0.0em;
-// `;  
-
-// const PubSticker = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-//     align-items: right;
-
-//     width: auto;
-//     height: 6rem;
-
-//     margin: 1.0rem;
-
-//     background-color: rgba(255, 255, 255, 0.75);
-// `;
-
-// const CardPub = styled.p`
-//     display: flex;
-//     justify-content: end;
-//     flex-direction: row;
-//     align-items: right;
-
-//     font-weight: 500;
-//     font-size: 1.6rem;
-//     margin: 0.125em 0.5em;
-// `;
-
 
 const Card = (props) => {
     const images = require.context('../assets/images', true);

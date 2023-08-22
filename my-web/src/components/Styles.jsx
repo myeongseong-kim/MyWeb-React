@@ -110,29 +110,29 @@ const CardList = styled.div`
 `;
 
 const CardGrid = styled.div`
-    width: 100%;
+    width: 100%/var(--num-col);
     margin: 2.0rem 0px;
 
     @media screen and (min-width: 768px) {
-        width: calc(100%/2 - 15px);
+        width: calc(100%/var(--num-col) - 15px);
         margin: 2.0rem 7.5px;
     }  
     @media screen and (min-width: 1024px) {
-        width: calc(100%/2 - 20px);
+        width: calc(100%/var(--num-col) - 20px);
         margin: 2.0rem 10px;
     }
-    @media screen and (min-width: 1920px) {
-        width: calc(100%/3 - 20px);
+    /* @media screen and (min-width: 1920px) {
+        width: calc(100%/var(--num-col) - 20px);
         margin: 2.0rem 10px;
     }
     @media screen and (min-width: 2560px) {
-        width: calc(100%/4 - 20px);
+        width: calc(100%/var(--num-col) - 20px);
         margin: 2.0rem 10px;
     }
     @media screen and (min-width: 3840px) {
-        width: calc(100%/6 - 20px);
+        width: calc(100%/var(--num-col) - 20px);
         margin: 2.0rem 10px;
-    }
+    } */
 `;
 
 

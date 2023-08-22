@@ -7,7 +7,9 @@
     --white-smoky: #f2f2f2;
     --yellow-daisy: #ffc500;
     --yellow-daisy-trans: #ffc50080;
-    --black-ink: #161616
+    --black-ink: #161616;
+
+    --num-col: 1;
 }
 
 body {

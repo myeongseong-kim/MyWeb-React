@@ -23,32 +23,38 @@ const StyledMain = styled.main`
             - ${(props) => props.topMargin}px
             - ${(props) => props.bottomMargin}px
         );
-        
     padding-top: ${(props) => props.topMargin}px;
+    
+    --num-col : 1;
     margin-left: 20px;
     margin-right: 20px;
 
     @media screen and (min-width: 768px) {
+        --num-col : 2;
         width: 750px;
         margin-left: auto;
         margin-right: auto;
     }
     @media screen and (min-width: 1024px) {
+        --num-col : 2;
         width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
     @media screen and (min-width: 1920px) {
+        --num-col : 3;
         width: 1500px;
         margin-left: auto;
         margin-right: auto;
     }
     @media screen and (min-width: 2560px) {
+        --num-col : 4;
         width: 2000px;
         margin-left: auto;
         margin-right: auto;
     }
     @media screen and (min-width: 3840px) {
+        --num-col : 6;
         width: 3000px;
         margin-left: auto;
         margin-right: auto;
