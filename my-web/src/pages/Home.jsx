@@ -5,7 +5,7 @@ import styled, { css } from "styled-components";
 import Card from '../components/Card';
 import { Wrapper, Header, BlankLine, Text, Anchor, Accent, CardList, CardGrid } from "../components/Styles"
 
-import profileImg from '../assets/images/myeongseongkim_2020-12-31.png';
+import profileImg from '../assets/myeongseongkim_2020-12-31.png';
 
 
 const StyledHome = styled.div`
@@ -113,16 +113,15 @@ const SelfIntroduction = () => {
 
 
 const Home = () => {
-    const data = require.context('../assets/data', true, /\.json$/ );
-    // const images = require.context('../assets/images', true);
+    const data = require.context('../assets', true, /\.json$/ );
 
     let objs = [];
-    objs[0] = data(`./dot.json`);
-    objs[1] = data(`./isle-of-reflections.json`);
-    objs[2] = data(`./fishtank-jelly.json`);
-    objs[3] = data(`./phantom.json`);
-    objs[4] = data(`./under-the-cherry-blossom.json`);
-    objs[5] = data(`./time-to-snow.json`);
+    objs[0] = data(`./dot/dot.json`);
+    objs[1] = data(`./isle-of-reflections/isle-of-reflections.json`);
+    objs[2] = data(`./fishtank-jelly/fishtank-jelly.json`);
+    objs[3] = data(`./phantom/phantom.json`);
+    objs[4] = data(`./under-the-cherry-blossom/under-the-cherry-blossom.json`);
+    objs[5] = data(`./time-to-snow/time-to-snow.json`);
     objs.reverse();
 
     const cards = objs.map((obj) => (

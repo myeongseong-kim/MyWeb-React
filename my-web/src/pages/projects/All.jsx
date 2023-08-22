@@ -14,8 +14,7 @@ const StyledAll = styled.div`
 
 
 const All = () => {
-    const data = require.context('../../assets/data', true, /\.json$/ );
-    // const images = require.context('../../assets/images', true);
+    const data = require.context('../../assets', true, /\.json$/ );
 
     let objs = [];
     data.keys().map((item, index) => {

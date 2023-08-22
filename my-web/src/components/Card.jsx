@@ -143,7 +143,7 @@ const Sticker = styled.img`
 
 
 const Card = (props) => {
-    const images = require.context('../assets/images', true);
+    const assets = require.context('../assets/', true);
     const [hover, setHover] = useState(false);
     
     const Team = () => {
@@ -169,22 +169,22 @@ const Card = (props) => {
             onMouseEnter={() => {setHover(true)}}
             onMouseLeave={() => {setHover(false)}}
         >
-            <Thumbnail src={images(`./${props.imgurl}`)} loading="lazy" />
+            <Thumbnail src={assets(`./${props.imgurl}`)} loading="lazy" />
             <CardStickerZone>
                 {
                     props.award !== undefined
-                    ?   <Sticker src={images(`./${props.award}`)} loading="lazy" />
+                    ?   <Sticker src={assets(`./${props.award}`)} loading="lazy" />
                     :   <div></div>
                 }
                 {
                     props.publication !== undefined
-                    ?   <Sticker src={images(`./${props.publication}`)} loading="lazy" />
+                    ?   <Sticker src={assets(`./${props.publication}`)} loading="lazy" />
                     :   <div></div>
                 }
             </CardStickerZone>
             {
                 props.preview !== undefined
-                ?   <Preview play={hover} src={images(`./${props.preview}`)} loading="lazy"/>
+                ?   <Preview play={hover} src={assets(`./${props.preview}`)} loading="lazy"/>
                 :   <div></div>
             }
             <CardTextBox>

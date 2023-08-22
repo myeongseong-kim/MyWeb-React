@@ -2,9 +2,9 @@ import React, { useEffect, useState, forwardRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { ReactComponent as Logo} from '../assets/images/logo.svg';
-import { ReactComponent as LogoThin} from '../assets/images/logo_thin.svg';
-import { ReactComponent as LogoBold} from '../assets/images/logo_bold.svg';
+import { ReactComponent as Logo} from '../assets/logo.svg';
+import { ReactComponent as LogoThin} from '../assets/logo_thin.svg';
+import { ReactComponent as LogoBold} from '../assets/logo_bold.svg';
 
 
 const StyledNav = styled.nav`

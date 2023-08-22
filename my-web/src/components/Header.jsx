@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import headerImg from '../assets/images/temporary_header.jpg';
-import { ReactComponent as Phrase } from '../assets/images/phrase.svg';
+import headerImg from '../assets/temporary_header.jpg';
+import { ReactComponent as Phrase } from '../assets/phrase.svg';
 
 
 const StyledHeader = styled.header`

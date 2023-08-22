@@ -56,7 +56,7 @@ const Shot = styled.img`
 
 
 const SingleLineImages = ({srcs, uid}) => {
-    const images = require.context('../../assets/images', true);
+    const assets = require.context('../../assets', true);
 
     const [imgRatios, setImgRatios] = useState([]);
     const sum = imgRatios.reduce(
@@ -70,7 +70,7 @@ const SingleLineImages = ({srcs, uid}) => {
         }
         srcs.forEach((adr, index) => {
             var pic = new Image();
-            pic.src = images(`./${adr}`);
+            pic.src = assets(`./${adr}`);
             const poll = setInterval(() => {
                 if (pic.naturalWidth) {
                     var ratio = pic.naturalWidth/pic.naturalHeight;
@@ -87,7 +87,7 @@ const SingleLineImages = ({srcs, uid}) => {
         var image = 
             <Shot 
                 key={uid + '-' + order} 
-                src={images(`./${adr}`)} 
+                src={assets(`./${adr}`)} 
                 loading="lazy"
                 coef={imgRatios[order]/sum} 
                 num={imgRatios.length-1} 
@@ -102,13 +102,11 @@ const SingleLineImages = ({srcs, uid}) => {
 
 
 const Each = () => {
-    const images = require.context('../../assets/images', true);
-
     const params = useParams();
     // console.log(params);
-    
-    let obj = require(`../../assets/data/${params.id}.json`);
-    // console.log(data);
+
+    const assets = require.context('../../assets/', true);
+    const obj = assets(`./${params.id}/${params.id}.json`);
 
     let title = obj.title;
     let date = obj.date;
@@ -143,7 +141,7 @@ const Each = () => {
                 content = 
                     <OneShot 
                         key={uid} 
-                        src={images(`./${pair[1]}`)} 
+                        src={assets(`./${pair[1]}`)} 
                         loading="lazy"
                     />
                 ;
