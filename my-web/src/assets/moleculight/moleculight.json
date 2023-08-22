@@ -5,7 +5,7 @@
     "title" : "Moleculight",
     "date" : "Aug, 2020",
     "team" : "Hyunjung Kim, Chaeeun Lee, Myeongseong Kim",
-    "thumbnail" : "moleculight_heroshot.jpg",
+    "thumbnail" : "moleculight_thumbnail.jpg",
     "summary" : [
         "An interactive modular lighting system composed of Steinmetz solid lighting modules. ", 
         "Users can construct long or short, linear or crosslinked light structures. " 

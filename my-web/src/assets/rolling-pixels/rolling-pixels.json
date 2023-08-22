@@ -5,7 +5,7 @@
     "title" : "Rolling Pixels",
     "date" : "Oct, 2019",
     "team" : "*Yujin Lee, *Myeongseong Kim, Hyunjung Kim (* both authors contributed equally to this work)",
-    "thumbnail" : "rolling-pixels_heroshot.png",
+    "thumbnail" : "rolling-pixels_thumbnail.jpg",
     "summary" : [
         "Rolling Pixels are robotic Steinmetz solids, for constructing frame-by-frame physical animations. ", 
         "As a bicylinder-shaped Rolling Pixel rolls back and forth or left and right, ", 
