@@ -46,12 +46,13 @@ const Preview = styled.img`
     display: none;
     visibility: hidden;
 
-    ${(props) => props.play === true &&
-        css`
-            display: block;
-            visibility: visible;
-        `
+    ${StyledCard}:hover & {
+        display: block;
+        visibility: visible;
     }
+
+    transition: 
+        visibility 0.25s;
 `;
 
 const CardTextBox = styled.div`
@@ -125,8 +126,7 @@ const CardStickerZone = styled.div`
     position: absolute;
 
     width: 100%;
-    height: auto;
-    
+    height: auto;   
 `;
 
 const Sticker = styled.img`
@@ -144,7 +144,6 @@ const Sticker = styled.img`
 
 const Card = (props) => {
     const assets = require.context('../assets/', true);
-    const [hover, setHover] = useState(false);
     
     const Team = () => {
         const me = 'Myeongseong Kim';
@@ -166,8 +165,6 @@ const Card = (props) => {
                     behavior: 'auto'
                 });
             }}
-            onMouseEnter={() => {setHover(true)}}
-            onMouseLeave={() => {setHover(false)}}
         >
             <Thumbnail src={assets(`./${props.directory}/${props.thumbnail}`)} loading="lazy" />
             <CardStickerZone>
@@ -184,7 +181,7 @@ const Card = (props) => {
             </CardStickerZone>
             {
                 props.preview !== undefined
-                ?   <Preview play={hover} src={assets(`./${props.directory}/${props.preview}`)} loading="lazy"/>
+                ?   <Preview src={assets(`./${props.directory}/${props.preview}`)} loading="lazy"/>
                 :   <div></div>
             }
             <CardTextBox>
