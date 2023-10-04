@@ -113,7 +113,7 @@ const Footer = forwardRef((props, ref) => {
                     <Brands name='youtube' type='color' icon={faYoutube} />
                     <Brands name='youtube' type='bw' icon={faYoutube} />
                 </Icon>
-                <Icon onClick={() => window.open("https://www.linkedin.com/in/myeongseong-kim-27a30015b", "_blank")}>
+                <Icon onClick={() => window.open("https://www.linkedin.com/in/myeongseong", "_blank")}>
                     <Brands name='linkedin' type='color' icon={faLinkedin} />
                     <Brands name='linkedin' type='bw' icon={faLinkedin} />
                 </Icon>
