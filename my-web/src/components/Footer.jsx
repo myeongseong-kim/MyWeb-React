@@ -109,7 +109,7 @@ const Footer = forwardRef((props, ref) => {
                     <Brands name='github' type='color' icon={faGithub} />
                     <Brands name='github' type='bw' icon={faGithub} />
                 </Icon>
-                <Icon onClick={() => window.open("https://www.youtube.com/channel/UCNO9pBEjRyb-8NW2R75SeUQ", "_blank")}>
+                <Icon onClick={() => window.open("https://www.youtube.com/@myeongseongkim", "_blank")}>
                     <Brands name='youtube' type='color' icon={faYoutube} />
                     <Brands name='youtube' type='bw' icon={faYoutube} />
                 </Icon>
