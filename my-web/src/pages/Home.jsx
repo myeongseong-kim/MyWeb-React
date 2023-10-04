@@ -86,7 +86,6 @@ const SelfIntroduction = () => {
             <Text> 
                 My name is <Accent>Myeongseong Kim / 김명성 / 金明星</Accent>.
             </Text>
-            {/* <Text>&nbsp;</Text> */}
             <Text> 
                 I am <Accent>a maker</Accent>, which includes 
                     an interaction designer, 
@@ -94,18 +93,22 @@ const SelfIntroduction = () => {
                     software developer, 
                     media artist, 
                     and HCI researcher.
-                As a maker, I used to build novel interfaces, products, and interactive installations based on physical computing.
+                As a maker, I used to build novel interfaces, products, and installations based on physical computing.
             </Text>
             <Text> 
-                My interest is designing &nbsp;
-                <Accent>nature-inspired natural interaction</Accent> 
+                My interest is designing
+                &nbsp;<Accent>nature-inspired natural interaction</Accent> 
                 &nbsp;in domains of tangible media, shape-changing, robotics, digital fabrication, and XR. 
                 I believe, like many aesthetic and functional nature-mimetic designs in everyday life, 
                 interactions between human and computer can also create new values by mimicking nature's way.
             </Text>
             <Text> 
-                Currently, I am a Master student
-                at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST.
+                {/* Currently, I am a Master student
+                at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST. */}
+                After receiving
+                &nbsp;B.Sc.(Industrial Design, minor: Mechanical Engineering) and
+                &nbsp;M.Sc.(Industrial Design, from <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">Wonder Lab</Anchor>), 
+                I am working as a Mechatronics Engineer at <Anchor href="https://www.bearrobotics.ai/" target="_blank">Bear Robotics</Anchor>.
             </Text>
         </SelfIntro>
     );

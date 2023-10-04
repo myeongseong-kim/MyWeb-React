@@ -118,6 +118,18 @@ const About = () => {
     return (
         <StyledAbout>
             <title> About </title>
+
+            <Header> Career </Header>
+            <Wrapper>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Mechatronics Engineer at Bear Robotics </Accent> <br/>
+                    </Text>
+                    <Period> Sep. 2023 ~<br/> </Period>
+                </TwoColumn>
+            </Wrapper>
+            <Text> &nbsp; </Text>
+
             <Header> Education </Header>
             <Wrapper>
                 <TwoColumn>
