@@ -243,8 +243,8 @@ const About = () => {
                     <Text>
                         <Accent> "Red Dot: Best of the Best" - Red Dot Award 2023 Design Concept : Time to Snow </Accent> <br/>
                         -&nbsp;
-                        <Anchor href="https://www.red-dot.org/ko/project/time-to-snow-65892" target="blank"> 
-                            https://www.red-dot.org/ko/project/time-to-snow-65892 
+                        <Anchor href="https://www.red-dot.org/project/time-to-snow-65892" target="blank"> 
+                            https://www.red-dot.org/project/time-to-snow-65892 
                         </Anchor>
                     </Text>
                 </OneColumn>
@@ -267,6 +267,13 @@ const About = () => {
 
             <Header> Exhibition </Header>
             <Wrapper>
+                {/* <TwoColumn>
+                    <Text>
+                        <Accent> Time to Snow </Accent> <br/> 
+                        - Blueprint: Feasible Blue 
+                    </Text>
+                    <Period> 17 ~ 22. Dec. 2023</Period> 
+                </TwoColumn> */}
                 <TwoColumn>
                     <Text>
                         <Accent> Time to Snow </Accent> <br/> 
@@ -274,13 +281,13 @@ const About = () => {
                     </Text>
                     <Period> 6 ~ 10. Aug. 2023</Period> 
                 </TwoColumn>
-                <TwoColumn>
+                {/* <TwoColumn>
                     <Text>
                         <Accent> Snow Clock </Accent> <br/>
                         - Inventive Minds and Ideas, Seoul DDP
                     </Text>
                     <Period> 17. Dec. ~ 26. Dec. 2022</Period>
-                </TwoColumn>
+                </TwoColumn> */}
                 <TwoColumn>
                     <Text>
                         <Accent> WOW-Flow </Accent> <br/>
