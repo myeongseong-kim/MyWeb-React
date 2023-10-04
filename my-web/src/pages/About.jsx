@@ -230,10 +230,10 @@ const About = () => {
                 <OneColumn>
                     <Text>
                         <Accent> "Red Dot: Best of the Best" - Red Dot Award 2023 Design Concept : Time to Snow </Accent> <br/>
-                        {/* -&nbsp;
-                        <Anchor href="https://www.red-dot.org/project/isle-of-reflections-54298" target="blank"> 
-                            https://www.red-dot.org/project/isle-of-reflections-54298 
-                        </Anchor> */}
+                        -&nbsp;
+                        <Anchor href="https://www.red-dot.org/ko/project/time-to-snow-65892" target="blank"> 
+                            https://www.red-dot.org/ko/project/time-to-snow-65892 
+                        </Anchor>
                     </Text>
                 </OneColumn>
                 <OneColumn>
