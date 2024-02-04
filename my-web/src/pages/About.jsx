@@ -123,9 +123,15 @@ const About = () => {
             <Wrapper>
                 <TwoColumn>
                     <Text>
+                        <Accent> Software Engineer at MAXST </Accent> <br/>
+                    </Text>
+                    <Period> Jan. 2024 ~<br/> </Period>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
                         <Accent> Mechatronics Engineer at Bear Robotics </Accent> <br/>
                     </Text>
-                    <Period> Sep. 2023 ~<br/> </Period>
+                    <Period> Sep. 2023 ~<br/> Jan. 2024 </Period>
                 </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
