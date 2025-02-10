@@ -119,19 +119,25 @@ const About = () => {
         <StyledAbout>
             <title> About </title>
 
-            <Header> Career </Header>
+            <Header> Experience </Header>
             <Wrapper>
                 <TwoColumn>
                     <Text>
                         <Accent> Software Engineer at MAXST </Accent> <br/>
                     </Text>
-                    <Period> Jan. 2024 ~<br/> </Period>
+                    <Period> Jan. 2024 –<br/> Present </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Mechatronics Engineer at Bear Robotics </Accent> <br/>
                     </Text>
-                    <Period> Sep. 2023 ~<br/> Jan. 2024 </Period>
+                    <Period> Sep. 2023 –<br/> Jan. 2024 </Period>
+                </TwoColumn>
+                <TwoColumn>
+                    <Text>
+                        <Accent> Research Assistant at Wonder Lab, KAIST </Accent> <br/>
+                    </Text>
+                    <Period> Aug. 2020 –<br/> Sep. 2023 </Period>
                 </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
@@ -143,20 +149,20 @@ const About = () => {
                         <Accent> M.S. at Dept. Industrial Design, KAIST </Accent> <br/>
                         Advisor: Prof. Woohun Lee
                     </Text>
-                    <Period> Sep. 2020 ~<br/> Aug. 2023 </Period>
+                    <Period> Sep. 2020 –<br/> Aug. 2023 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> B.S. at Dept. Industrial Design, KAIST </Accent> <br/>
                         Minor: Mechanical Engineering
                     </Text>
-                    <Period> Mar. 2014 ~<br/> Aug. 2020 </Period>
+                    <Period> Mar. 2014 –<br/> Aug. 2020 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Gwangju Science High School </Accent> <br/>
                     </Text>
-                    <Period> Mar. 2012 ~<br/> Feb. 2014 </Period>
+                    <Period> Mar. 2012 –<br/> Feb. 2014 </Period>
                 </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
@@ -191,7 +197,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
 
-            <Header> Publication </Header>
+            <Header> Publications </Header>
             <Wrapper>
                 <OneColumn>
                     <Publication
@@ -243,7 +249,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
 
-            <Header> Award </Header>
+            <Header> Awards </Header>
             <Wrapper>
                 <OneColumn>
                     <Text>
@@ -271,7 +277,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
 
-            <Header> Exhibition </Header>
+            <Header> Exhibitions </Header>
             <Wrapper>
                 {/* <TwoColumn>
                     <Text>
@@ -332,7 +338,7 @@ const About = () => {
             </Wrapper>
             <Text> &nbsp; </Text>
             
-            <Header> Other </Header>
+            <Header> Additionals </Header>
             <Wrapper>
                 <TwoColumn>
                     <Text>
@@ -352,7 +358,7 @@ const About = () => {
                     <Text>
                         <Accent> Assistant at ID Fablab, KAIST </Accent> <br/>
                     </Text>
-                    <Period> Sep. 2021 ~<br/> Feb. 2022 </Period>
+                    <Period> Sep. 2021 –<br/> Feb. 2022 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
@@ -365,13 +371,13 @@ const About = () => {
                     <Text>
                         <Accent> Assistant at Idea Factory, KAIST </Accent> <br/>
                     </Text>
-                    <Period> Jul. 2019 ~<br/> Dec. 2021 </Period>
+                    <Period> Jul. 2019 –<br/> Dec. 2021 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Assistant at ID Fablab, KAIST </Accent> <br/>
                     </Text>
-                    <Period> Sep. 2017 ~<br/> Aug. 2018 </Period>
+                    <Period> Sep. 2017 –<br/> Aug. 2018 </Period>
                 </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
