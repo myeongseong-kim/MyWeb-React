@@ -169,29 +169,39 @@ const About = () => {
 
             <Header> Skills </Header>
             <Wrapper>
+                {/* <OneColumn>
+                    <Text>
+                        <Accent> Design </Accent> : Design Thinking, Prototyping, UX Analysis
+                    </Text>
+                </OneColumn> */}
+                {/* <OneColumn>
+                    <Text>
+                        <Accent> Engineering </Accent> : Software Programming, Electrical Circuit Design, Mechanical Design
+                    </Text>
+                </OneColumn> */}
                 <OneColumn>
                     <Text>
-                        <Accent> Design </Accent> : Design thinking, UX analysis
+                        <Accent> Software Development </Accent> : Unity (C#, HLSL), React (JavaScript, CSS, HTML), Processing (Java)
                     </Text>
                 </OneColumn>
                 <OneColumn>    
                     <Text>
-                        <Accent> Physical Computing </Accent> : Arduino, Raspberry Pi, Eagle CAD
+                        <Accent> Embedded & Physical Computing </Accent> : Arduino (C/C++), Raspberry Pi (Python), Eagle CAD
                     </Text>
                 </OneColumn>
                 <OneColumn>
                     <Text>
-                        <Accent> Programming </Accent> : Unity3D(C#), Processing(Java), ReactJS(JavaScript)
+                        <Accent> 2D Graphics & Media </Accent> : Figma, Photoshop, Illustrator, After Effects
                     </Text>
                 </OneColumn>
                 <OneColumn>
                     <Text>
-                        <Accent> 3D Modeling </Accent> : Rhino/Grasshopper, Fusion360, Blender
+                        <Accent> 3D Modeling & CAD </Accent> : Blender, Rhino/Grasshopper, Fusion 360, SolidWorks
                     </Text>
                 </OneColumn>
                 <OneColumn>
                     <Text>
-                        <Accent> Fabrication </Accent> : 3D printing, Laser cutting, Wood working
+                        <Accent> Digital & Physical Fabrication </Accent> : 3D Printing, Laser Cutting, Woodworking
                     </Text>
                 </OneColumn>
             </Wrapper>
@@ -284,56 +294,56 @@ const About = () => {
                         <Accent> Time to Snow </Accent> <br/> 
                         - Blueprint: Feasible Blue 
                     </Text>
-                    <Period> 17 ~ 22. Dec. 2023</Period> 
+                    <Period> 17 – 22. Dec. 2023</Period> 
                 </TwoColumn> */}
                 <TwoColumn>
                     <Text>
                         <Accent> Time to Snow </Accent> <br/> 
                         - SIGGRAPH 2023 ArtGallery 
                     </Text>
-                    <Period> 6 ~ 10. Aug. 2023</Period> 
+                    <Period> 6 – 10. Aug. 2023</Period> 
                 </TwoColumn>
                 {/* <TwoColumn>
                     <Text>
                         <Accent> Snow Clock </Accent> <br/>
                         - Inventive Minds and Ideas, Seoul DDP
                     </Text>
-                    <Period> 17. Dec. ~ 26. Dec. 2022</Period>
+                    <Period> 17. Dec. – 26. Dec. 2022</Period>
                 </TwoColumn> */}
                 <TwoColumn>
                     <Text>
                         <Accent> WOW-Flow </Accent> <br/>
                         - ZER01NE DAY 2022 
                     </Text>
-                    <Period> 30. Sep. ~ 3. Oct. 2022</Period>
+                    <Period> 30. Sep. – 3. Oct. 2022</Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Phantom: interact with invisible beings </Accent> <br/> 
                         - NATURE WEEK Exploration HMG Nature Observation 2.0 
                     </Text> 
-                    <Period> 22. Nov. ~ 2. Dec. 2021</Period> 
+                    <Period> 22. Nov. – 2. Dec. 2021</Period> 
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> TransWall </Accent> <br/> 
                         - Nexperium, Shinsegae Art & Science 
                     </Text>
-                    <Period> 27. Aug. 2021 ~ </Period>
+                    <Period> 27. Aug. 2021 – </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Isle of Reflections </Accent> <br/> 
                         - SIGGRAPH 2021 ArtGallery 
                     </Text>
-                    <Period> 9 ~ 13. Aug. 2021</Period> 
+                    <Period> 9 – 13. Aug. 2021</Period> 
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Snow Clock </Accent> <br/> 
                         - HCI Korea 2020 Creative Award 
                     </Text>
-                    <Period> 19 ~ 21. Aug. 2020</Period>           
+                    <Period> 19 – 21. Aug. 2020</Period>           
                 </TwoColumn>
             </Wrapper>
             <Text> &nbsp; </Text>
