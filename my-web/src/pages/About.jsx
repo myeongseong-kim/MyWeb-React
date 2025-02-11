@@ -124,18 +124,22 @@ const About = () => {
                 <TwoColumn>
                     <Text>
                         <Accent> Software Engineer at MAXST </Accent> <br/>
+                        - XR & Spatial Computing, Computer Graphics <br/>
+                        {/* *Alternative Military Service */}
                     </Text>
                     <Period> Jan. 2024 –<br/> Present </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Mechatronics Engineer at Bear Robotics </Accent> <br/>
+                        - Mechatronics, Embedded Systems <br/>
                     </Text>
                     <Period> Sep. 2023 –<br/> Jan. 2024 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Research Assistant at Wonder Lab, KAIST </Accent> <br/>
+                        - HCI, Interaction Design, New Media <br/>
                     </Text>
                     <Period> Aug. 2020 –<br/> Sep. 2023 </Period>
                 </TwoColumn>
