@@ -32,6 +32,7 @@ const BlankLine = styled.div`
     padding: 0.25em 0em;
     margin: 0.25em 0em;
     font-size: 1.2rem;
+    
     @media screen and (min-width: 1024px) {
         font-size: 1.6rem;
     }
@@ -44,6 +45,16 @@ const Text = styled.p`
 
     @media screen and (min-width: 1024px) {
         font-size: 1.6rem;
+    }
+`;
+
+const Note = styled.p`
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin: 0.25em 0em;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.2rem;
     }
 `;
 
@@ -138,7 +149,7 @@ const CardGrid = styled.div`
 
 
 export { 
-    Wrapper, Header, SubHeader, BlankLine, Text, Anchor, Accent, 
+    Wrapper, Header, SubHeader, BlankLine, Text, Note, Anchor, Accent, 
     OneShot, MultiShots, Video,
     CardList, CardGrid 
 };

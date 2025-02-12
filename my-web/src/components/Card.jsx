@@ -87,7 +87,7 @@ const CardDate = styled.span`
 
 const CardMembers  = styled.p`
     font-weight: 300;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     font-style: oblique;
     margin: 0.25em 0em;
 
