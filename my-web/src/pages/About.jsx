@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from "styled-components";
 
-import { Wrapper, Header, BlankLine, Text, Anchor, Accent } from "../components/Styles"
+import { Wrapper, Header, BlankLine, Text, Note, Anchor, Accent } from "../components/Styles"
 
 
 const StyledAbout = styled.div`
@@ -124,22 +124,22 @@ const About = () => {
                 <TwoColumn>
                     <Text>
                         <Accent> Software Engineer at MAXST </Accent> <br/>
-                        - XR & Spatial Computing, Computer Graphics <br/>
-                        {/* *Alternative Military Service */}
+                        XR & Spatial Computing, Computer Graphics <br/>
+                        <Note>*Alternative Military Service - Specialized Research Personnel</Note>
                     </Text>
                     <Period> Jan. 2024 –<br/> Present </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Mechatronics Engineer at Bear Robotics </Accent> <br/>
-                        - Mechatronics, Embedded Systems <br/>
+                        Mechatronics, Embedded Systems <br/>
                     </Text>
                     <Period> Sep. 2023 –<br/> Jan. 2024 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Research Assistant at Wonder Lab, KAIST </Accent> <br/>
-                        - HCI, Interaction Design, New Media <br/>
+                        HCI, Interaction Design, New Media <br/>
                     </Text>
                     <Period> Aug. 2020 –<br/> Sep. 2023 </Period>
                 </TwoColumn>
@@ -150,14 +150,14 @@ const About = () => {
             <Wrapper>
                 <TwoColumn>
                     <Text>
-                        <Accent> M.S. at Dept. Industrial Design, KAIST </Accent> <br/>
+                        <Accent> M.S. in Industrial Design, KAIST </Accent> <br/>
                         Advisor: Prof. Woohun Lee
                     </Text>
                     <Period> Sep. 2020 –<br/> Aug. 2023 </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
-                        <Accent> B.S. at Dept. Industrial Design, KAIST </Accent> <br/>
+                        <Accent> B.S. in Industrial Design, KAIST </Accent> <br/>
                         Minor: Mechanical Engineering
                     </Text>
                     <Period> Mar. 2014 –<br/> Aug. 2020 </Period>
@@ -268,7 +268,7 @@ const About = () => {
                 <OneColumn>
                     <Text>
                         <Accent> "Red Dot: Best of the Best" - Red Dot Award 2023 Design Concept : Time to Snow </Accent> <br/>
-                        -&nbsp;
+                        {/* -&nbsp; */}
                         <Anchor href="https://www.red-dot.org/project/time-to-snow-65892" target="blank"> 
                             https://www.red-dot.org/project/time-to-snow-65892 
                         </Anchor>
@@ -277,7 +277,7 @@ const About = () => {
                 <OneColumn>
                     <Text>
                         <Accent> "Red Dot: Best of the Best" - Red Dot Award 2021 Design Concept : Isle of Reflections </Accent> <br/>
-                        -&nbsp;
+                        {/* -&nbsp; */}
                         <Anchor href="https://www.red-dot.org/project/isle-of-reflections-54298" target="blank"> 
                             https://www.red-dot.org/project/isle-of-reflections-54298 
                         </Anchor>
@@ -296,56 +296,56 @@ const About = () => {
                 {/* <TwoColumn>
                     <Text>
                         <Accent> Time to Snow </Accent> <br/> 
-                        - Blueprint: Feasible Blue 
+                        Blueprint: Feasible Blue 
                     </Text>
                     <Period> 17 – 22. Dec. 2023</Period> 
                 </TwoColumn> */}
                 <TwoColumn>
                     <Text>
                         <Accent> Time to Snow </Accent> <br/> 
-                        - SIGGRAPH 2023 ArtGallery 
+                        SIGGRAPH 2023 ArtGallery 
                     </Text>
                     <Period> 6 – 10. Aug. 2023</Period> 
                 </TwoColumn>
                 {/* <TwoColumn>
                     <Text>
                         <Accent> Snow Clock </Accent> <br/>
-                        - Inventive Minds and Ideas, Seoul DDP
+                        Inventive Minds and Ideas, Seoul DDP
                     </Text>
                     <Period> 17. Dec. – 26. Dec. 2022</Period>
                 </TwoColumn> */}
                 <TwoColumn>
                     <Text>
                         <Accent> WOW-Flow </Accent> <br/>
-                        - ZER01NE DAY 2022 
+                        ZER01NE DAY 2022 
                     </Text>
                     <Period> 30. Sep. – 3. Oct. 2022</Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Phantom: interact with invisible beings </Accent> <br/> 
-                        - NATURE WEEK Exploration HMG Nature Observation 2.0 
+                        NATURE WEEK Exploration HMG Nature Observation 2.0 
                     </Text> 
                     <Period> 22. Nov. – 2. Dec. 2021</Period> 
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> TransWall </Accent> <br/> 
-                        - Nexperium, Shinsegae Art & Science 
+                        Nexperium, Shinsegae Art & Science 
                     </Text>
                     <Period> 27. Aug. 2021 – </Period>
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Isle of Reflections </Accent> <br/> 
-                        - SIGGRAPH 2021 ArtGallery 
+                        SIGGRAPH 2021 ArtGallery 
                     </Text>
                     <Period> 9 – 13. Aug. 2021</Period> 
                 </TwoColumn>
                 <TwoColumn>
                     <Text>
                         <Accent> Snow Clock </Accent> <br/> 
-                        - HCI Korea 2020 Creative Award 
+                        HCI Korea 2020 Creative Award 
                     </Text>
                     <Period> 19 – 21. Aug. 2020</Period>           
                 </TwoColumn>
