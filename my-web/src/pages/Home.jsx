@@ -23,7 +23,7 @@ const IntroContainer = styled.div`
     display: flex;
     justify-content: start;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
@@ -84,32 +84,32 @@ const SelfIntroduction = () => {
     return (
         <SelfIntro>
             <Text> 
-                My name is <Accent>Myeongseong Kim / 김명성 / 金明星</Accent>.
+                <Accent>Myeongseong Kim / 김명성 / 金明星</Accent>.
             </Text>
             <Text> 
-                I am <Accent>a maker</Accent>, which includes 
-                    an interaction designer, 
+                I am <Accent>a maker</Accent>—an 
+                    interaction designer, 
                     mechanical engineer, 
                     software developer, 
                     media artist, 
-                    and HCI researcher.
-                As a maker, I used to build novel interfaces, products, and installations based on physical computing.
+                    and HCI researcher. 
+                As a maker, I create computing-based novel interfaces, products, and installations spanning hardware to software. 
             </Text>
             <Text> 
-                My interest is designing
-                &nbsp;<Accent>nature-inspired natural interaction</Accent> 
-                &nbsp;in domains of tangible media, shape-changing, robotics, digital fabrication, and XR. 
-                I believe, like many aesthetic and functional nature-mimetic designs in everyday life, 
-                interactions between human and computer can also create new values by mimicking nature's way.
+                My interest lies in 
+                designing <Accent>natural interactions, inspired by nature and physical phenomena</Accent>,
+                to seamlessly <Accent>blend the physical and the virtual</Accent>. 
+                I take creative and experimental approaches across diverse domains, including tangible media, digital fabrication, robotics, AI, and XR, 
+                exploring new possibilities at the intersection of <Accent>engineering, art, and design</Accent>. 
             </Text>
             <Text> 
-                {/* Currently, I am a Master student
-                at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST. */}
-                After receiving
-                &nbsp;B.Sc.(Industrial Design, minor: Mechanical Engineering) and
-                &nbsp;M.Sc.(Industrial Design, from <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>),
-                {/* &nbsp;I am working as a Mechatronics Engineer at <Anchor href="https://www.bearrobotics.ai/" target="_blank">Bear Robotics</Anchor>. */}
-                &nbsp;I am currently working as a Software Engineer at <Anchor href="https://maxst.com/" target="_blank">MAXST</Anchor>.
+                After receiving 
+                a B.S. in Industrial Design (with a minor in Mechanical Engineering) from KAIST and
+                an M.S. in Industrial Design from KAIST (<Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>), 
+                I am currently working as a Software Engineer under the Alternative Military Service program. 
+                {/* I am currently working as a Software Engineer at <Anchor href="https://maxst.com/" target="_blank">MAXST</Anchor>. */}
+                {/* I am currently working as a Mechatronics Engineer at <Anchor href="https://www.bearrobotics.ai/" target="_blank">Bear Robotics</Anchor>. */}
+                {/* Currently, I am a Master student at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST. */}
             </Text>
         </SelfIntro>
     );
