@@ -215,49 +215,49 @@ const About = () => {
             <Wrapper>
                 <OneColumn>
                     <Publication
-                        title='Time to Snow'
-                        authors='Myeongseong Kim, Sunwoo Baek, Woohun Lee'
-                        proceeding='ACM SIGGRAPH 2023 Art Gallery, Article 14, 1-2'
-                        doi='https://doi.org/10.1145/3588428.3593822'
+                        title="Time to Snow"
+                        authors="Myeongseong Kim, Sunwoo Baek, Woohun Lee"
+                        proceeding="ACM SIGGRAPH 2023 Art Gallery (SIGGRAPH '23), Article 14, 1-2"
+                        doi="https://doi.org/10.1145/3588428.3593822"
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
                     <Publication
-                        title='Thermoformable Shell for Repeatable Thermoforming'
-                        authors='Donghyeon Ko, Myeongseong Kim, Woohun Lee'
-                        proceeding='Adjunct Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology, Article 61, 1-3'
-                        doi='https://doi.org/10.1145/3526114.3558632'
+                        title="Thermoformable Shell for Repeatable Thermoforming"
+                        authors="Donghyeon Ko, Myeongseong Kim, Woohun Lee"
+                        proceeding="Adjunct Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology (UIST '22 Adjunct), Article 61, 1-3"
+                        doi="https://doi.org/10.1145/3526114.3558632"
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
                     <Publication
-                        title='Isle of Reflections'
-                        authors='Chaeun Lee, Myeongseong Kim, Hyunjung Kim'
-                        proceeding='ACM SIGGRAPH 2021 Art Gallery, Article 7, 1-3'
-                        doi='https://doi.org/10.1145/3450507.3457434'
+                        title="Isle of Reflections"
+                        authors="Chaeun Lee, Myeongseong Kim, Hyunjung Kim"
+                        proceeding="ACM SIGGRAPH 2021 Art Gallery (SIGGRAPH '21), Article 7, 1-3"
+                        doi="https://doi.org/10.1145/3450507.3457434"
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
                     <Publication
-                        title='Ambiguus Tiles: Origami Rhombic Pyramid Tiles for Creating Dual-View Tile Mosaics'
-                        authors='Hyunjung Kim, Myeongseong Kim, Yujin Lee'
-                        proceeding='Leonardo 54 (2), 206-207'
-                        doi='https://doi.org/10.1162/leon_a_01977'
+                        title="Ambiguus Tiles: Origami Rhombic Pyramid Tiles for Creating Dual-View Tile Mosaics"
+                        authors="Hyunjung Kim, Myeongseong Kim, Yujin Lee"
+                        proceeding="Leonardo (MIT Press Journal) 54 (2), 206-207"
+                        doi="https://doi.org/10.1162/leon_a_01977"
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
                     <Publication
-                        title='Rolling Pixels: Robotic Steinmetz Solids for Creating Physical Animations'
-                        authors='*Yujin Lee, *Myeongseong Kim, Hyunjung Kim (* Both authors contributed equally to this work)'
-                        proceeding='Proceedings of the Fourteenth International Conference on Tangible, Embedded, and Embodied Interaction, 557-564'
-                        doi='https://doi.org/10.1145/3374920.3374987'
+                        title="Rolling Pixels: Robotic Steinmetz Solids for Creating Physical Animations"
+                        authors="*Yujin Lee, *Myeongseong Kim, Hyunjung Kim (* Both authors contributed equally to this work)"
+                        proceeding="Proceedings of the Fourteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI '20), 557-564"
+                        doi="https://doi.org/10.1145/3374920.3374987"
                     > </Publication>
                 </OneColumn>
                 <OneColumn>
                     <Publication
-                        title='Snow Clock'
-                        authors='Myeongseong Kim, Donghyuk Yun, Woohun Lee'
-                        proceeding='Proceedings of HCIK 2020, 1323-1324'
+                        title="Snow Clock"
+                        authors="Myeongseong Kim, Donghyuk Yun, Woohun Lee"
+                        proceeding="Proceedings of HCIK 2020, 1323-1324"
                     > </Publication>
                 </OneColumn>                
             </Wrapper>
