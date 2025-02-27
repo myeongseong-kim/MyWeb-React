@@ -20,6 +20,12 @@ const StyledHeader = styled.header`
     `}
 
     transition: height 0.5s ease-in-out;
+
+    @media print {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+    }
 `;
 
 const ImgBox = styled.div`

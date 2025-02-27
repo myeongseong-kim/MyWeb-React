@@ -3,8 +3,13 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     margin: 1.0rem 0rem;
+    
     @media screen and (min-width: 768px) {
-        margin: 1.0rem 10px;
+        margin: 1.0rem 1.0rem;
+    }
+
+    @media print {
+        margin: 1.0rem 1.0rem !important;
     }
 `;
 

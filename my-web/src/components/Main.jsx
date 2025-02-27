@@ -59,6 +59,10 @@ const StyledMain = styled.main`
         margin-left: auto;
         margin-right: auto;
     }
+
+    @media print {
+        padding-top : 0;
+    }
 `;
 
 

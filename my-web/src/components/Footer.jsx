@@ -11,6 +11,12 @@ const StyledFooter = styled.footer`
     font-weight: 300;
     padding: 4em;
     background-color: var(--white-smoky);
+
+    @media print {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+    }
 `;
 
 const Socials = styled.div`

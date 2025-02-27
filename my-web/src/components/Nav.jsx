@@ -23,6 +23,12 @@ const StyledNav = styled.nav`
     padding: 0.5em 0.5em;
 
     background-color: rgba(0, 0, 0, 0);
+
+    @media print {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+    }
 `;
 
 // const NavLogo = styled(Link)`
