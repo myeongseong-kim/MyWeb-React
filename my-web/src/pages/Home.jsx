@@ -106,7 +106,8 @@ const SelfIntroduction = () => {
                 After receiving 
                 a B.S. in Industrial Design (with a minor in Mechanical Engineering) from KAIST and
                 an M.S. in Industrial Design from KAIST (<Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>), 
-                I am currently working as a Software Engineer under the Alternative Military Service program. 
+                I am currently working as a Research Assistant at KIST, under the Alternative Military Service program. 
+                {/* I am currently working as a Software Engineer under the Alternative Military Service program.  */}
                 {/* I am currently working as a Software Engineer at <Anchor href="https://maxst.com/" target="_blank">MAXST</Anchor>. */}
                 {/* I am currently working as a Mechatronics Engineer at <Anchor href="https://www.bearrobotics.ai/" target="_blank">Bear Robotics</Anchor>. */}
                 {/* Currently, I am a Master student at <Anchor href="https://wonderlab.kaist.ac.kr" target="_blank">WonderLab</Anchor>, KAIST. */}
