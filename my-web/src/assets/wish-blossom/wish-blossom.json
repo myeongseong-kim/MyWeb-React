@@ -1,0 +1,41 @@
+{
+    "id" : 16,
+    "directory" : "wish-blossom",
+    
+    "title" : "Wish Blossom",
+    "date" : "Jan, 2025",
+    "team" : "Myeongseong Kim, Kyeongho Park, Sohyun Park, Wonyoung Lee, Seunghyeon Han, Woohun Lee",
+    "thumbnail" : "wish-blossom_thumbnail.jpg",
+    "summary" : [
+        "an interactive installation that transforms fleeting cherry blossom petals into a poetic expression of visitors’ wishes. ", 
+        "As petals flutter and settle, a symbolic keyword emerges, capturing the essence of each wish in a moment of ephemeral beauty."
+    ],
+    
+    "fullcontent" : [
+
+        {"paragraph" : [
+            "“Video comming soon.”" 
+        ]},
+        {"blank" : ""},
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "“Wish Blossom” is an interactive installation that creates a magical experience, ", 
+            "inviting visitors to interact with gently fluttering cherry blossom petals carried by a soft spring breeze, ", 
+            "sending their wishes and immersing themselves in the moment. ",
+            "Cherry blossoms, often seen as a symbol of spring and fleeting beauty, carry the myth that catching a falling petal can make a wish come true. ", 
+            "The installation mirrors a parallel between the limited duration of a festive exhibition and the ephemeral nature of cherry blossoms, ", 
+            "while capturing the essence of the visitors’ wishes and expressing the hope that they will come true. "
+        ]},
+        {"blank" : ""},
+        
+        {"img" : "wish-blossom_heroshot.jpg"}, 
+        {"blank" : ""},
+
+        {"paragraph" : [
+            "“More details coming soon.”" 
+        ]},
+        {"blank" : ""}
+    
+    ]
+}
