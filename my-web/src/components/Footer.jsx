@@ -111,15 +111,15 @@ const Footer = forwardRef((props, ref) => {
         <StyledFooter ref={ref}>
             {/* socials: github, youtube, linkedin, instagram */}
             <Socials>
-                <Icon onClick={() => window.open("https://github.com/MyeongseongKim", "_blank")}>
+                <Icon onClick={() => window.open("https://github.com/myeongseong-kim", "_blank")}>
                     <Brands name='github' type='color' icon={faGithub} />
                     <Brands name='github' type='bw' icon={faGithub} />
                 </Icon>
-                <Icon onClick={() => window.open("https://www.youtube.com/@myeongseongkim", "_blank")}>
+                <Icon onClick={() => window.open("https://www.youtube.com/@myeongseong-kim", "_blank")}>
                     <Brands name='youtube' type='color' icon={faYoutube} />
                     <Brands name='youtube' type='bw' icon={faYoutube} />
                 </Icon>
-                <Icon onClick={() => window.open("https://www.linkedin.com/in/myeongseong", "_blank")}>
+                <Icon onClick={() => window.open("https://www.linkedin.com/in/myeongseong-kim", "_blank")}>
                     <Brands name='linkedin' type='color' icon={faLinkedin} />
                     <Brands name='linkedin' type='bw' icon={faLinkedin} />
                 </Icon>
